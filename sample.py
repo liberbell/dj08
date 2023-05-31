@@ -6,6 +6,7 @@ print("hello world")
 comment
 """
 name = input("what is your name:")
+age = 18
 print("your name: ", name)
 
-print("My name is = {}".format(name))
+print("My name is:{}, age is:{}".format(name, age))
