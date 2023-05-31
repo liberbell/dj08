@@ -9,3 +9,5 @@ if age < Legal_AGE:
     print("under 20")
 else:
     print("adult")
+
+print(f'age = {age}')
