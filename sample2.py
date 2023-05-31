@@ -11,3 +11,4 @@ else:
     print("adult")
 
 print(f'age = {age}')
+print(f'{age=}')
