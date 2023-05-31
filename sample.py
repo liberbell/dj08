@@ -5,3 +5,5 @@ print("hello world")
 """
 comment
 """
+name = input("what is your name:")
+print("your name: ", name)
