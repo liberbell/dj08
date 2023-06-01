@@ -28,3 +28,10 @@ print(height + 10)
 value = 8
 print(value >> 2)
 print(value << 3)
+
+print(12 & 21)
+print(12 | 21)
+
+value = 12
+value &= 21
+print(value)
