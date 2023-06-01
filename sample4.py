@@ -5,3 +5,5 @@ print(value)
 
 value = value + 3
 print(value)
+print(value * 4)
+print(value / 3)
