@@ -22,3 +22,9 @@ value += 3
 height = 175.5
 print(height)
 print(type(height))
+
+print(height + 10)
+
+value = 8
+print(value >> 2)
+print(value << 3)
