@@ -18,3 +18,8 @@ grape
 print(fruits)
 fruit = "banana"
 print(fruit[2])
+print(fruit[-1])
+
+byte_fruit = fruit.encode('utf-8')
+print(byte_fruit)
+print(type(byte_fruit))
