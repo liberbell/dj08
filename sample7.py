@@ -16,3 +16,5 @@ grape
 """
 
 print(fruits)
+fruit = "banana"
+print(fruit[2])
