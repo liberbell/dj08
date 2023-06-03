@@ -32,3 +32,7 @@ msg = "ABCDEFGABCDEFG"
 print(msg.count("ABC"))
 
 print(msg.startswith("BCD"))
+
+msg = " ABC "
+print(msg)
+print(msg.strip())
