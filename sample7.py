@@ -27,3 +27,6 @@ print(type(byte_fruit))
 str_fruit = byte_fruit.decode('utf-8')
 print(str_fruit)
 print(type(str_fruit))
+
+msg = "ABCDEFGABCDEFG"
+print(msg.count("A"))
