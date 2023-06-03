@@ -9,3 +9,10 @@ print(fruit_10)
 
 new_fruit = fruit + " banana"
 print(new_fruit)
+
+fruits = """apple
+banana
+grape
+"""
+
+print(fruits)
