@@ -10,3 +10,5 @@ print(a, b)
 print(a + b)
 print(a - b)
 print(a * b)
+
+print(a.real, a.imag)
