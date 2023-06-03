@@ -39,3 +39,5 @@ print(msg.strip())
 
 msg = "ABCDEFGABCDEFABC"
 print(msg.strip("CBA"))
+print(msg.lstrip("CBA"))
+print(msg.rstrip("CBA"))
