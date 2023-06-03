@@ -36,3 +36,6 @@ print(msg.startswith("BCD"))
 msg = " ABC "
 print(msg)
 print(msg.strip())
+
+msg = "ABCDEFGABCDEFABC"
+print(msg.strip("CBA"))
