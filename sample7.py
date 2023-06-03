@@ -29,4 +29,6 @@ print(str_fruit)
 print(type(str_fruit))
 
 msg = "ABCDEFGABCDEFG"
-print(msg.count("A"))
+print(msg.count("ABC"))
+
+print(msg.startswith("BCD"))
