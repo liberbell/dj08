@@ -63,3 +63,6 @@ print(msg[1:6])
 msg = "APPLE"
 print(msg.islower())
 print(msg.isupper())
+
+msg = "ABCDEABC"
+print(msg.find("ABC"))
