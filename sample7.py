@@ -48,4 +48,8 @@ msg_l = msg.lower()
 msg_s = msg.swapcase()
 print(msg_u, msg_l, msg_s)
 
+msg = "ABCDEABC"
+msg_r = msg.replace("ABC", "FFF")
+print(msg_r)
+
 
