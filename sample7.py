@@ -59,3 +59,6 @@ msg = "hello, my name is bob"
 print(msg[:5])
 print(msg[6:])
 print(msg[1:6])
+
+msg = "appLe"
+print(msg.islower())
