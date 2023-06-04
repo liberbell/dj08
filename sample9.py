@@ -18,3 +18,9 @@ print(list_b)
 
 list_a.append("apple")
 print(list_a)
+
+list_a.extend(["banana", "lemon"])
+print(list_a)
+
+list_a.insert(1, "grage")
+print(list_a)
