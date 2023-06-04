@@ -66,3 +66,7 @@ print(msg.isupper())
 
 msg = "ABCDEABC"
 print(msg.find("ABC"))
+print(msg.rfind("ABC"))
+
+print(msg.index("ABC"))
+print(msg.rindex("ABC"))
