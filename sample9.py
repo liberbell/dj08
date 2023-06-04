@@ -32,3 +32,6 @@ list_a = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4]
 print(list_a)
 list_a.remove(3)
 print(list_a)
+
+value = list_a.pop()
+print(value)
