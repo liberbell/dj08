@@ -70,3 +70,6 @@ print(msg.rfind("ABC"))
 
 print(msg.index("ABC"))
 print(msg.rindex("ABC"))
+
+print(msg.find("ABCE"))
+print(msg.index("ABCE"))
