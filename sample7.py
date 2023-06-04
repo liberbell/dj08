@@ -49,7 +49,8 @@ msg_s = msg.swapcase()
 print(msg_u, msg_l, msg_s)
 
 msg = "ABCDEABC"
-msg_r = msg.replace("ABC", "FFF")
+msg_r = msg.replace("ABC", "FFF", 1)
 print(msg_r)
 
-
+msg = "hello world"
+print(msg.capitalize())
