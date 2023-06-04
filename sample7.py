@@ -60,5 +60,6 @@ print(msg[:5])
 print(msg[6:])
 print(msg[1:6])
 
-msg = "appLe"
+msg = "APPLE"
 print(msg.islower())
+print(msg.isupper())
