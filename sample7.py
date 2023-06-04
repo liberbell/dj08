@@ -45,4 +45,7 @@ print(msg.rstrip("CBA"))
 msg = "abcABC"
 msg_u = msg.upper()
 msg_l = msg.lower()
-print(msg_u, msg_l)
+msg_s = msg.swapcase()
+print(msg_u, msg_l, msg_s)
+
+
