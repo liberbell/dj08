@@ -6,3 +6,6 @@ print(list_a[0], list_b)
 
 list_a = [1, [1, 2, "apple"], 3, "banana"]
 print(list_a[1][2])
+
+list_a[1][2] = "lemon"
+print(list_a[])
