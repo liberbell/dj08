@@ -54,3 +54,6 @@ print(msg_r)
 
 msg = "hello world"
 print(msg.capitalize())
+
+msg = "hello, my name is bob"
+print(msg[:5])
