@@ -41,3 +41,8 @@ msg = "ABCDEFGABCDEFABC"
 print(msg.strip("CBA"))
 print(msg.lstrip("CBA"))
 print(msg.rstrip("CBA"))
+
+msg = "abcABC"
+msg_u = msg.upper()
+msg_l = msg.lower()
+print(msg_u, msg_l)
