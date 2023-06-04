@@ -24,3 +24,6 @@ print(list_a)
 
 list_a.insert(1, "grage")
 print(list_a)
+
+# list_a.clear()
+# print(list_a)
