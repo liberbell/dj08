@@ -39,6 +39,7 @@ print(list_a.count(1))
 
 print(list_a.index(2))
 print(list_a)
-list_b = list_a
+
+list_b = list_a.copy()
 list_b[0] = "AAAAA"
-print(list_a)
+print(list_a, list_b)
