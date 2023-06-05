@@ -43,3 +43,8 @@ print(list_a)
 list_b = list_a.copy()
 list_b[0] = "AAAAA"
 print(list_a, list_b)
+
+list_a = ["banana", "apple", "lemon", "grape"]
+print(list_a)
+list_a.sort()
+print(list_a)
