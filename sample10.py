@@ -10,3 +10,6 @@ print(car.items())
 for k, v in car.items():
     print("key is:", k)
     print("value is:", v)
+
+if "brand" in car:
+    print("brand is", car["brand"])
