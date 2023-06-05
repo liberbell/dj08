@@ -6,3 +6,7 @@ print(car.get(1))
 print(car.keys())
 print(car.values())
 print(car.items())
+
+for k, v in car.items():
+    print("key is:", k)
+    print("value is:", v)
