@@ -46,5 +46,6 @@ print(list_a, list_b)
 
 list_a = ["banana", "apple", "lemon", "grape"]
 print(list_a)
-list_a.sort()
+# list_a.sort()
+list_a = sorted(list_a)
 print(list_a)
