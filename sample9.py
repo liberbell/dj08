@@ -34,4 +34,4 @@ list_a.remove(3)
 print(list_a)
 
 value = list_a.pop()
-print(value)
+print(list_a, value)
