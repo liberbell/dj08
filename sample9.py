@@ -38,3 +38,7 @@ print(list_a, value)
 print(list_a.count(1))
 
 print(list_a.index(2))
+print(list_a)
+list_b = list_a
+list_b[0] = "AAAAA"
+print(list_a)
