@@ -35,3 +35,6 @@ print(list_a)
 
 value = list_a.pop()
 print(list_a, value)
+print(list_a.count(1))
+
+print(list_a.index(2))
