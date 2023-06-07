@@ -16,3 +16,9 @@ print(value)
 value = car.pop("model")
 print(car)
 print(value)
+
+car.clear()
+print(car)
+
+del car
+print(car)
