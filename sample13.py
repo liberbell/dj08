@@ -1,2 +1,4 @@
-set_a = {"a", "b", "c", "d", "a", 12, ["a", "b"]}
+set_a = {"a", "b", "c", "d", "a", 12}
 print(set_a)
+
+print("e" in set_a)
