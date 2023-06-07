@@ -12,3 +12,7 @@ print(car)
 value = car.popitem()
 print(car)
 print(value)
+
+value = car.pop("model")
+print(car)
+print(value)
