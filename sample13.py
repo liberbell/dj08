@@ -8,3 +8,7 @@ print(len(set_a))
 
 set_a.add("A")
 print(set_a)
+set_a.remove("a")
+print(set_a)
+set_a.discard(12)
+print(set_a)
