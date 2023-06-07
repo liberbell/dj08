@@ -9,3 +9,6 @@ fruit = fruit + ("orange",)
 print(fruit)
 
 list_fruit = ["apple", "banana"]
+fruit = tuple(list_fruit)
+print(fruit)
+print(type(fruit))
