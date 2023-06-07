@@ -21,3 +21,4 @@ t = {"apple", "banana", "lemon"}
 u = {"cherry"}
 
 print(s.issubset(t))
+print(s.issuperset(t))
