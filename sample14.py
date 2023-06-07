@@ -21,4 +21,6 @@ t = {"apple", "banana", "lemon"}
 u = {"cherry"}
 
 print(s.issubset(t))
-print(s.issuperset(t))
+print(t.issuperset(s))
+print(t.isdisjoint(s))
+print(t.isdisjoint(u))
