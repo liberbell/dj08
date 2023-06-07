@@ -13,3 +13,6 @@ print(set_a)
 set_a.discard(12)
 set_a.discard(1)
 print(set_a)
+
+val = set_a.pop()
+print(val, set_a)
