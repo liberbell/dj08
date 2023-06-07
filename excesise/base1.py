@@ -11,3 +11,7 @@ print(num_list)
 
 num_tuple = tuple(num_list)
 print(type(num_tuple))
+
+val = input("enter the number:")
+num_tuple += (val,)
+print(num_tuple)
