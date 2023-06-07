@@ -6,5 +6,8 @@ print(type(num_str))
 num_list = [num_str, "20", "30"]
 print("num_list={}".format(num_list))
 
-num_list.append("50")
+num_list.append("40")
 print(num_list)
+
+num_tuple = tuple(num_list)
+print(type(num_tuple))
