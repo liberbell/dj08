@@ -5,5 +5,7 @@ print(type(fruit))
 
 # fruit[1] = "orange"
 
-fruit = fruit + ("orange")
+fruit = fruit + ("orange",)
 print(fruit)
+
+list_fruit = ["apple", "banana"]
