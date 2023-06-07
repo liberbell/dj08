@@ -16,3 +16,6 @@ print(set_a)
 
 val = set_a.pop()
 print(val, set_a)
+
+set_a.clear()
+print(set_a)
