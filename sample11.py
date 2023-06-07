@@ -8,3 +8,7 @@ print(car)
 car["city"] = "Toyota-shi"
 car["year"] = 2017
 print(car)
+
+value = car.popitem()
+print(car)
+print(value)
