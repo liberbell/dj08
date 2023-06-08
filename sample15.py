@@ -9,7 +9,8 @@ class ClassA:
         else:
             return False
 
-var = []
+var = ClassA("B")
+
 print("bool calculation:{}".format(bool(var)))
 if var:
     print("inside if route")
