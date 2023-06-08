@@ -28,3 +28,7 @@ print(num_dict.get("myKey", "does not exist"))
 
 num_list.extend(["50", "60"])
 print(num_list)
+
+val = input("input number:")
+is_under_50 = int(val) < 50
+print(is_under_50)
