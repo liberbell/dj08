@@ -32,3 +32,6 @@ print(num_list)
 val = input("input number:")
 is_under_50 = int(val) < 50
 print(is_under_50)
+
+print(f"num_str ={num_str}")
+print(dir(num_dict))
