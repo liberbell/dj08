@@ -18,3 +18,8 @@ print("num_tuple ={}".format(num_tuple))
 
 num_set = {"40", "50", "60"}
 print("num_set ={}".format(num_set))
+
+print(set(num_tuple) | num_set)
+
+num_dict = {num_tuple: num_str}
+print(len(num_list))
