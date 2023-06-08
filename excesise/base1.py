@@ -14,4 +14,6 @@ print(type(num_tuple))
 
 val = input("enter the number:")
 num_tuple += (val,)
-print(num_tuple)
+print("num_tuple ={}".format(num_tuple))
+
+num_set = {"40", "50", "60"}
