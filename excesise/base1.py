@@ -25,3 +25,6 @@ num_dict = {num_tuple: num_str}
 print(len(num_list))
 
 print(num_dict.get("myKey", "does not exist"))
+
+num_list.extend(["50", "60"])
+print(num_list)
