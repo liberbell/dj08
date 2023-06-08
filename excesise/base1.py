@@ -17,3 +17,4 @@ num_tuple += (val,)
 print("num_tuple ={}".format(num_tuple))
 
 num_set = {"40", "50", "60"}
+print("num_set ={}".format(num_set))
