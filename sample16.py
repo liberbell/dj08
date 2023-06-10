@@ -18,8 +18,8 @@ elif age >= 60:
 else:
     print("some age.")
 
-gender = "male"
-age = 30
+gender = "female"
+age = 40
 
 if gender == "male" or age < 20:
     print("under 20 or male")
