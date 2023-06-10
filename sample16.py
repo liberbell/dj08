@@ -23,3 +23,6 @@ age = 40
 
 if gender == "male" or age < 20:
     print("under 20 or male")
+
+if not gender == "male":
+    print("not male")
