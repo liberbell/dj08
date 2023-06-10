@@ -8,8 +8,10 @@ elif msg == "red":
 else:
     print("warning")
 
-age = 10
+age = 61
 if age < 20:
     print("under 20")
 elif age <= 40:
     print("under 40 and over 20")
+elif age >= 60:
+    print("over 60")
