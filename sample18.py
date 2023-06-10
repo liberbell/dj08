@@ -12,3 +12,12 @@ sample = ("John", "Paul", "George", "Ringo")
 
 for member in sample:
     print(member)
+
+human = {
+    "name": "Bob",
+    "age": 22,
+    "gender": "Male"
+}
+
+for h in human:
+    print(h)
