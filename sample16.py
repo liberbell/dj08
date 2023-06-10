@@ -19,7 +19,7 @@ else:
     print("some age.")
 
 gender = "male"
-age = 10
+age = 30
 
-if gender == "male" and age < 20:
-    print("under 20 male")
+if gender == "male" or age < 20:
+    print("under 20 or male")
