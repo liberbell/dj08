@@ -1,5 +1,5 @@
 
-def divide(a, b):
+def devide(a, b):
     if b == 0:
         raise ZeroDivisionError("Divide by zero")
     else:
