@@ -1,7 +1,12 @@
 
+class MyException(Exception):
+    pass
+
+
 def devide(a, b):
     if b == 0:
-        raise ZeroDivisionError("Divide by zero")
+        # raise ZeroDivisionError("Divide by zero")
+        raise MyException
     else:
         return a / b
     
