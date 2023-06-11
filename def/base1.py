@@ -4,7 +4,7 @@ def print_hello():
 
 print_hello()
 
-def num_max(a, b):
+def num_max(a: int, b: int):
     print("a: {}, b: {}".format(a, b))
     if a > b:
         return a
@@ -12,3 +12,4 @@ def num_max(a, b):
         return b
 
 print(num_max(b=100, a=20))
+print(num_max(110, 10))
