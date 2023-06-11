@@ -20,4 +20,4 @@ human = {
 }
 
 for h in human:
-    print(h)
+    print(h, human.get(h))
