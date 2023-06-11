@@ -10,3 +10,5 @@ def num_max(a, b):
         return a
     else:
         return b
+
+print(num_max(b=100, a=20))
