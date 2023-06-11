@@ -6,7 +6,7 @@ class MyException(Exception):
 def devide(a, b):
     if b == 0:
         # raise ZeroDivisionError("Divide by zero")
-        raise MyException
+        raise MyException("Divide by zero")
     else:
         return a / b
     
