@@ -5,3 +5,14 @@ for i in range(10):
 
 else:
     print("end of loop")
+
+num = 0
+while num < 10:
+    if num == 5:
+        num += 1
+        continue
+    if num == 7:
+        break
+
+    print(num)
+    num += 1
