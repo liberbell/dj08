@@ -21,3 +21,4 @@ human = {
 
 for h in human:
     print(h, human.get(h))
+
