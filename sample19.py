@@ -11,8 +11,10 @@ while num < 10:
     if num == 5:
         num += 1
         continue
-    if num == 7:
-        break
+    # if num == 7:
+    #     break
 
     print(num)
     num += 1
+else:
+    print("end of loop")
