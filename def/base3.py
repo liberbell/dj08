@@ -1,5 +1,6 @@
 
 def print_animal():
+    global animal
     animal="cat"
     print("inside def animal:{} id={}".format(animal, id(animal)))
 
