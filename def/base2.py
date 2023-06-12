@@ -22,3 +22,9 @@ def spam3(arg1, *arg2, **arg3):
     print("arg1: {}, arg2: {}, arg3: {}".format(arg1, arg2, arg3))
 
 spam3(1, 2, 3, 4, 5, name="Bob", age=23)
+
+def sample2():
+    return 1, 2
+
+a, b = sample2()
+print(a, b)
