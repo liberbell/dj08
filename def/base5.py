@@ -9,3 +9,5 @@ def generator(max):
 gen = generator(10)
 n = next(gen)
 print("n = {}".format(n))
+n = next(gen)
+print("n = {}".format(n))
