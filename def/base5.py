@@ -7,4 +7,5 @@ def generator(max):
         print("yield!")
 
 gen = generator(10)
-next(gen)
+n = next(gen)
+print("n = {}".format(n))
