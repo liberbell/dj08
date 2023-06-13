@@ -21,4 +21,6 @@ gen = generator(10)
 
 next(gen)
 gen.send(100)
-gen.throw(ValueError("Invalid value"))
+# gen.throw(ValueError("Invalid value"))
+gen.close()
+next(gen)
