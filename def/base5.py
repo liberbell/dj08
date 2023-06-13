@@ -3,9 +3,12 @@ def generator(max):
 
     print("create Generator")
     for n in range(max):
-        x = yield n
-        print("x = {}".format(x))
-        print("yield!")
+        try:
+            x = yield n
+            print("x = {}".format(x))
+            print("yield!")
+        except ValueError:
+            print("execute thorw")
 
 gen = generator(10)
 # n = next(gen)
@@ -18,3 +21,4 @@ gen = generator(10)
 
 next(gen)
 gen.send(100)
+gen.throw.ValueError("Invalid value")
