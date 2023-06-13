@@ -17,4 +17,4 @@ gen = generator(10)
 #     print("x = {}".format(x))
 
 next(gen)
-next(gen)
+gen.send(100)
