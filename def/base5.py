@@ -3,7 +3,8 @@ def generator(max):
 
     print("create Generator")
     for n in range(max):
-        yield n
+        x = yield n
+        print("x = {}".format(x))
         print("yield!")
 
 gen = generator(10)
@@ -12,5 +13,8 @@ gen = generator(10)
 # n = next(gen)
 # print("n = {}".format(n))
 
-for x in gen:
-    print("x = {}".format(x))
+# for x in gen:
+#     print("x = {}".format(x))
+
+next(gen)
+next(gen)
