@@ -7,7 +7,7 @@ def generator(max):
             x = yield n
             print("x = {}".format(x))
             print("yield!")
-        except ValueError:
+        except ValueError as e:
             print("execute thorw")
 
 gen = generator(10)
@@ -21,4 +21,4 @@ gen = generator(10)
 
 next(gen)
 gen.send(100)
-gen.throw.ValueError("Invalid value")
+gen.throw(ValueError("Invalid value"))
