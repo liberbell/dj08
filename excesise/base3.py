@@ -1,3 +1,4 @@
+from random import randint
 
 def generator_enemy_hand():
     while True:
@@ -28,7 +29,7 @@ while True:
     if my_hand not in ("1", "2", "3"):
         print("Wrong input.")
         continue
-    enemy_hand = next(enemy_hands)
+    enemy_hand = randint(1, 3)
     print("Your hand: {}. Computer hand: {}".format(hand_dict.get(my_hand), hand_dict.get(enemy_hand)))
     if my_hand == enemy_hand:
         print("equal")
