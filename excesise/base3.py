@@ -40,4 +40,6 @@ while True:
         if lose_count == 3:
             print("lost")
             break
+        else:
+            print("lost again.")
 
