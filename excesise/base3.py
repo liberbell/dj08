@@ -9,3 +9,9 @@ hand_dict = {"1": "rock", "2": "scissors", "3": "paper"}
 
 lose_count = 0
 enemy_hands = generator_enemy_hand()
+
+while True:
+    my_hand = input("What is your hand? 1:rock, 2:scissors, 3:paper":)
+    if my_hand not in ("1", "2", "3"):
+        print("Wrong input.")
+        continue
