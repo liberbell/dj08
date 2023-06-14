@@ -8,8 +8,11 @@ def generator_enemy_hand():
 def is_win(my_hand, enemy_hand):
     if my_hand == "1" and enemy_hand == "2":
         return True
-    elif my_hand == "1" and enemy_hand == "3":
-        return False
+    elif my_hand == "2" and enemy_hand == "3":
+        return True
+    elif my_hand == "3" and enemy_hand == "1":
+        return True
+    return False
 
 hand_dict = {
     "1": "rock",
@@ -27,4 +30,14 @@ while True:
         continue
     enemy_hand = next(enemy_hands)
     print("Your hand: {}. Computer hand: {}".format(hand_dict.get(my_hand), hand_dict.get(enemy_hand)))
-    if my_hand == enemy_hand
+    if my_hand == enemy_hand:
+        print("equal")
+    elif is_win(my_hand, enemy_hand):
+        print("win")
+        break
+    else:
+        lose_count += 1
+        if lose_count == 3:
+            print("lost")
+            break
+
