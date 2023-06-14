@@ -8,3 +8,4 @@ def print_goodbye():
 
 var = ["AA", "BB", print_hello, print_goodbye]
 var[2]()
+var[3]()
