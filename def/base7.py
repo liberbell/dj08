@@ -12,7 +12,7 @@ def sub_generator():
 def generator():
     yield "generator"
     res = yield from sub_generator()
-    print("res ={}".format(res))
+    print("res = {}".format(res))
 
 gen = generator()
 print(next(gen))
