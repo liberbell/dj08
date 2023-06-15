@@ -13,5 +13,8 @@
 def print_world(msg):
     print("{} world".format(msg))
 
+def print_say_hello():
+    print("say hello")
+
 def print_hello():
     print("Hello")
