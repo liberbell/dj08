@@ -16,5 +16,9 @@ def print_world(msg):
 def print_say_hello():
     print("say hello")
 
-def print_hello():
-    print("Hello")
+def print_hello(func):
+    func("hello")
+    return print_say_hello
+
+var = print_hello(print_world)
+var()
