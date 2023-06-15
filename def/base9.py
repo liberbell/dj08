@@ -13,4 +13,4 @@ print(lambda_b(2, 3, 4))
 
 lambda_c = lambda x, y: y if x < y else x
 
-print(lambda_c(2, 4))
+print(lambda_c(6, 4))
