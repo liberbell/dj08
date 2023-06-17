@@ -17,3 +17,4 @@ def func_b(*args, **kwargs):
     print(args)
 
 func_a(1, 2, 3)
+func_b(1, 2, 3)
