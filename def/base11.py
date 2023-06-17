@@ -23,3 +23,6 @@ def func(n):
             return True
         else:
             return False
+        
+list_a = [x for x in range(100) if func(x) == False]
+print(list_a)
