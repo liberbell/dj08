@@ -7,3 +7,5 @@ def my_decorator(func):
     return wrapper
 
 @my_decorator
+def func_a(*args, **kwargs):
+    print("execute func_a")
