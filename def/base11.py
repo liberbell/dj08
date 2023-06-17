@@ -11,4 +11,5 @@ dict_a = {
     "b": "Banana",
 }
 
-list_c = [for x in list_a if type(x) == str]
+list_c = [dict_a.get(x) for x in list_a if type(x) == str]
+print(list_c)
