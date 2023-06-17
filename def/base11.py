@@ -14,5 +14,5 @@ dict_a = {
 list_c = [dict_a.get(x) for x in list_a if type(x) == str]
 print(list_c)
 
-list_a = [x for x in range(100)]
+list_a = tuple(x for x in range(100))
 print(type(list_a))
