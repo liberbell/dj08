@@ -16,3 +16,10 @@ print(list_c)
 
 list_a = tuple(x for x in range(100))
 print(type(list_a))
+
+def func(n):
+    for x in range(2, n):
+        if n % x == 0:
+            return True
+        else:
+            return False
