@@ -22,3 +22,5 @@ def calculate(x, y, z):
         return x - y
     
 map_sample = map(calculate, range(5), [3, 3, 3, 3, 3], ["plus", "minus", "plus", "minus", "plus"])
+for x in map_sample:
+    print(x)
