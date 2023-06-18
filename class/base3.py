@@ -8,6 +8,7 @@ class SampleClass():
 
     def __del__(self):
         print("execute destructor")
+        print("name ={}".format(self.name))
 
     def print_msg(self):
         print(self.msg)
