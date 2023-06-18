@@ -5,3 +5,8 @@ class SampleClass():
         print("call the constructor")
         self.msg = msg
         self.name = name
+
+    def print_msg(self):
+        print(self.msg)
+
+    def
