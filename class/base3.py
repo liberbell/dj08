@@ -6,6 +6,9 @@ class SampleClass():
         self.msg = msg
         self.name = name
 
+    def __del__(self):
+        print("execute destructor")
+
     def print_msg(self):
         print(self.msg)
 
