@@ -9,4 +9,5 @@ class SampleClass():
     def print_msg(self):
         print(self.msg)
 
-    def
+    def print_name(self):
+        print(self.name)
