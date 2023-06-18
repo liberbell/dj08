@@ -16,7 +16,7 @@ for x in map_man:
     print(x)
 
 def calculate(x, y, z):
-    if z == "add":
+    if z == "plus":
         return x + y
     elif z == "minus":
         return x - y
