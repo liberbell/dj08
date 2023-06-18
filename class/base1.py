@@ -7,3 +7,6 @@ class Car:
     def print_name(self):
         print("execute name print")
         print(self.name)
+
+my_car = Car()
+print(my_car.year)
