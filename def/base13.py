@@ -14,3 +14,11 @@ man = {
 map_man = map(lambda x: x + "," + man.get(x), man)
 for x in map_man:
     print(x)
+
+def calculate(x, y, z):
+    if z == "add":
+        return x + y
+    elif z == "minus":
+        return x - y
+    
+map_sample = map(calculate, range(5), [3, 3, 3, 3, 3], ["plus", "minus", "plus", "minus", "plus"])
