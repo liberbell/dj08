@@ -17,3 +17,4 @@ print(isinstance_a.__class__.class_val)
 isinstance_b = SampleA()
 isinstance_b.set_val()
 isinstance_b.print_val()
+isinstance_a.__class__.class_val = "class val 2"
