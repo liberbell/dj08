@@ -19,3 +19,4 @@ class SampleClass():
 var_1 = SampleClass("hello", "Eric")
 var_1.print_msg()
 var_1.print_name()
+del var_1
