@@ -14,3 +14,4 @@ my_car.print_name()
 
 list_a = ["apple", "banana", Car]
 second_car = list_a[2]()
+second_car.print_name()
