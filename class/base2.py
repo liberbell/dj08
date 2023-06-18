@@ -11,3 +11,4 @@ class SampleA():
 isinstance_a = SampleA()
 isinstance_a.set_val()
 print(isinstance_a.instance_val)
+isinstance_a.print_val()
