@@ -20,4 +20,6 @@ isinstance_b.print_val()
 isinstance_a.__class__.class_val = "class val 2"
 isinstance_b.print_val()
 
+print("*****")
 print(id(isinstance_a.__class__.class_val))
+print(id(isinstance_b.__class__.class_val))
