@@ -10,3 +10,4 @@ class Car:
 
 my_car = Car()
 print(my_car.year)
+my_car.print_name()
