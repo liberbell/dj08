@@ -11,3 +11,5 @@ class SampleClass():
 
     def print_name(self):
         print(self.name)
+
+var_1 = SampleClass("hello", "Eric")
