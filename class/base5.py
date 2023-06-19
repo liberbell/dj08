@@ -10,6 +10,9 @@ class Human:
     def __str__(self):
         return self.name + "," + str(self.age) + "," + self.phone_number
     
+    def __eq__(self, other):
+        return (self.name == other.name)
+    
 
     
 man = Human("Alex", 32, "111-222-3333")
