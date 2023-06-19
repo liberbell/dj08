@@ -7,8 +7,9 @@ class Human:
         self.age = age
         self.phone_number = phone_number
 
-    def __str__(self):
-        return "human"
+    # def __str__(self):
+    #     return "human"
     
 man = Human("Alex", 32, "111-222-3333")
-print(man)
+man_str = str(man)
+print(man_str)
