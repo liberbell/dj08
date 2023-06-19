@@ -24,3 +24,5 @@ class Human:
 Human.print_class_name("Hello")
 man = Human("Eric", 65)
 man.print_name_age()
+man.print_msg("Hello static")
+Human.print_msg("Hello static")
