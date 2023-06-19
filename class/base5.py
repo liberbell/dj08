@@ -11,12 +11,12 @@ class Human:
         return self.name + "," + str(self.age) + "," + self.phone_number
     
     def __eq__(self, other):
-        return (self.name == other.name)
+        return (self.name == other.name) and (self.phone_number == other.phone_number)
     
 
     
 man = Human("Alex", 32, "111-222-3333")
-man2 = Human("Alex", 18, "111-222-3333")
+man2 = Human("Alex", 18, "111-222-4444")
 man_str = str(man)
 print(man_str)
 print(man == man2)
