@@ -22,3 +22,5 @@ class Human:
         print(msg)
 
 Human.print_class_name("Hello")
+man = Human("Eric", 65)
+man.print_name_age()
