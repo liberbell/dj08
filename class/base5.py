@@ -9,3 +9,6 @@ class Human:
 
     def __str__(self):
         return "human"
+    
+man = Human("Alex", 32, "111-222-3333")
+print(man)
