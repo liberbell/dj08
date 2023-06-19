@@ -15,3 +15,7 @@ class Human:
         print("execute class method")
         print(cls.class_name)
         print(msg)
+
+    @staticmethod
+    def print_msg(msg):
+        print("execute static method")
