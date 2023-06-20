@@ -34,4 +34,4 @@ for x in set_men:
 if man:
     print("Man is true")
 if man2:
-    print("Man is false")
+    print("Man2 is false")
