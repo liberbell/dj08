@@ -20,7 +20,11 @@ class Human:
     
 man = Human("Alex", 32, "111-222-3333")
 man2 = Human("Alex", 18, "111-222-3333")
+man3 = Human("Eric", 18, "111-222-4444")
 man_str = str(man)
 print(man_str)
 print(man == man2)
-print(hash("eric"))
+
+set_men = {man, man2, man3}
+for x in set_men:
+    print(x)
