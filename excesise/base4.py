@@ -21,3 +21,5 @@ class AllCharacters:
         cls.alive_characters.remove(name)
 
 class Character:
+
+    def __init__(self, name, hp, offense, defense):
