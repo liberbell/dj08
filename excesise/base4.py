@@ -10,6 +10,8 @@ class AllCharacters:
 
     @classmethod
     def character_append(cls, name):
+        if name in cls.all_characters:
+            raise CharacterAlreadyExistsException("character already exists.")
         cls.all_characters.append(name)
         cls.alive_characters.append(name)
 
