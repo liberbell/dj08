@@ -1,4 +1,7 @@
 
+class CharacterAlreadyExistsException(Exception):
+    pass
+
 class AllCharacters:
 
     all_characters = []
