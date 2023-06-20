@@ -19,10 +19,13 @@ class Human:
     def __bool__(self):
         return True if self.age >- 20 else False
     
+    def __len__(self):
+        return len(self.name)
+    
     
 man = Human("Alex", 32, "111-222-3333")
 man2 = Human("Alex", 18, "111-222-3333")
-man3 = Human("Eric", 18, "111-222-4444")
+man3 = Human("Bob", 18, "111-222-4444")
 man_str = str(man)
 print(man_str)
 print(man == man2)
