@@ -38,3 +38,6 @@ if man:
     print("Man is true")
 if man2:
     print("Man2 is false")
+
+print(len(man))
+print(len(man3))
