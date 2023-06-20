@@ -23,3 +23,11 @@ class AllCharacters:
 class Character:
 
     def __init__(self, name, hp, offense, defense):
+        AllCharacters.character_append(name)
+        self.name = name
+        self.hp = hp
+        self.offense = offense
+        self.defense = defense
+
+    def attack(self, enemy):
+        
