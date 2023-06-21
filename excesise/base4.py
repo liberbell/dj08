@@ -32,7 +32,7 @@ class Character:
         if self.hp <= 0:
             print("character is dead.")
             return
-        apptack_point = self.offense - enemy.offense
+        apptack_point = self.offense - enemy.defense
         apptack_point = 1 if apptack_point <= 0 else apptack_point
         enemy.hp -= apptack_point * critical_point
         if enemy.hp <= 0:
@@ -45,5 +45,8 @@ Character_a = Character("Bob", 10, 5, 3)
 Character_b = Character("Eric", 8, 6, 2)
 
 print(Character_b.hp)
-Character_a.attack(Character_b)
+Character_a.critical_hit(Character_b)
 print(Character_b.hp)
+
+print(AllCharacters.alive_characters)
+Character_a.attack(Character_b)
