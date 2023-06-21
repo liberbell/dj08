@@ -8,3 +8,4 @@ class Person:
         print("Hello {}".format(self.name))
 
     def say_age(self):
+        print("{} years old.".format(self.age))
