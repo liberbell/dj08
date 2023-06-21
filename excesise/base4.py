@@ -53,3 +53,5 @@ print(AllCharacters.dead_characters)
 Character_a.attack(Character_b)
 print(AllCharacters.alive_characters)
 print(AllCharacters.dead_characters)
+
+Character_b.attack(Character_a)
