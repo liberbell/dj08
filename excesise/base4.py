@@ -50,3 +50,4 @@ print(Character_b.hp)
 
 print(AllCharacters.alive_characters)
 Character_a.attack(Character_b)
+print(AllCharacters.alive_characters)
