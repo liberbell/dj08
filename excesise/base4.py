@@ -49,5 +49,7 @@ Character_a.critical_hit(Character_b)
 print(Character_b.hp)
 
 print(AllCharacters.alive_characters)
+print(AllCharacters.dead_characters)
 Character_a.attack(Character_b)
 print(AllCharacters.alive_characters)
+print(AllCharacters.dead_characters)
