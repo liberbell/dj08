@@ -32,3 +32,6 @@ class Character:
     def attack(self, enemy):
         apptack_point = self.offense - enemy.offense
         apptack_point = 1 if apptack_point <= 0 else apptack_point
+        enemy.hp -= apptack_point
+        if enemy.hp <= 0:
+            AllCharacters.character_remove(enemy.name)
