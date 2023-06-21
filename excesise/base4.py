@@ -46,4 +46,4 @@ Character_b = Character("Eric", 8, 6, 2)
 
 print(Character_b.hp)
 Character_a.attack(Character_b)
-print(Character_b)
+print(Character_b.hp)
