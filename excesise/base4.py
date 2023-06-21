@@ -29,12 +29,14 @@ class Character:
         self.offense = offense
         self.defense = defense
 
-    def attack(self, enemy):
+    def attack(self, enemy, critical_point = 1):
         if self.hp > 0:
             print("character is dead.")
             return
         apptack_point = self.offense - enemy.offense
         apptack_point = 1 if apptack_point <= 0 else apptack_point
-        enemy.hp -= apptack_point
+        enemy.hp -= apptack_point * critical_point
         if enemy.hp <= 0:
             AllCharacters.character_remove(enemy.name)
+
+    def critical_hit(self, enemy):
