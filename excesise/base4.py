@@ -30,6 +30,9 @@ class Character:
         self.defense = defense
 
     def attack(self, enemy):
+        if self.hp > 0:
+            print("character is dead.")
+            return
         apptack_point = self.offense - enemy.offense
         apptack_point = 1 if apptack_point <= 0 else apptack_point
         enemy.hp -= apptack_point
