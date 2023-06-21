@@ -21,7 +21,6 @@ class AllCharacters:
         cls.alive_characters.remove(name)
 
 class Character:
-
     def __init__(self, name, hp, offense, defense):
         AllCharacters.character_append(name)
         self.name = name
@@ -44,3 +43,7 @@ class Character:
 
 Character_a = Character("Bob", 10, 5, 3)
 Character_b = Character("Eric", 8, 6, 2)
+
+print(Character_b.hp)
+Character_a.attack(Character_b)
+print(Character_b)
