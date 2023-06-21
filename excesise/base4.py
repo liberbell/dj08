@@ -29,7 +29,7 @@ class Character:
         self.defense = defense
 
     def attack(self, enemy, critical_point=1):
-        if self.hp > 0:
+        if self.hp <= 0:
             print("character is dead.")
             return
         apptack_point = self.offense - enemy.offense
