@@ -41,3 +41,6 @@ class Character:
 
     def critical_hit(self, enemy):
         self.attack(enemy, 2)
+
+Character_a = Character("Bob", 10, 5, 3)
+Character_b = Character("Eric", 8, 6, 2)
