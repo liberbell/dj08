@@ -55,3 +55,5 @@ print(AllCharacters.alive_characters)
 print(AllCharacters.dead_characters)
 
 Character_b.attack(Character_a)
+
+Character_c = Character("Bob", 8, 6, 2)
