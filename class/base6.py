@@ -24,3 +24,6 @@ class Employee(Person):
 
     # def greeting(self, age):
     #     print("over load")
+
+man = Employee("Eric", 45, "111-222-3333")
+man.greeting()
