@@ -14,3 +14,6 @@ class Employee(Person):
     def __init__(self, name, age, number):
         super().__init__(name, age)
         self.number = number
+
+    def say_number(self):
+        print("my number is {}".format(self.number))
