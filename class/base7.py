@@ -7,7 +7,7 @@ class ClassA:
         print("execute ClassA method")
         print("a = {}".format(self.a_name))
 
-    def print(self):
+    def print_hi(self):
         print("A hi")
 
 class ClassB:
@@ -18,7 +18,7 @@ class ClassB:
         print("execute ClassB method")
         print("b = {}".format(self.b_name))
 
-    def print(self):
+    def prin_hi(self):
         print("B hi")
 
 class NewClass(ClassA, ClassB):
@@ -31,4 +31,4 @@ class NewClass(ClassA, ClassB):
         print("name = {}".format(self.name))
 
     def print_hi(self):
-        
+        ClassA.print_
