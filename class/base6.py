@@ -11,5 +11,6 @@ class Person:
         print("{} years old.".format(self.age))
 
 class Employee(Person):
-    def __init__(self, name, age):
+    def __init__(self, name, age, number):
         super().__init__(name, age)
+        self.number = number
