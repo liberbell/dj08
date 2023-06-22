@@ -25,3 +25,10 @@ class NewClass(ClassA, ClassB):
     def __init__(self, a_name, b_name):
         ClassA.__init__(self, a_name)
         ClassB.__init__(self, b_name)
+        self.name = name
+
+    def print_new_name(self):
+        print("name = {}".format(self.name))
+
+    def print_hi(self):
+        
