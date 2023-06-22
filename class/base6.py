@@ -27,3 +27,5 @@ class Employee(Person):
 
 man = Employee("Eric", 45, "111-222-3333")
 man.greeting()
+man.say_age()
+man.say_number()
