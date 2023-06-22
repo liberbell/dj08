@@ -33,3 +33,4 @@ class NewClass(ClassA, ClassB):
     def print_hi(self):
         ClassA.print_hi(self)
         ClassB.print_hi(self)
+        print("New Class hi")
