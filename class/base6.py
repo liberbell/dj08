@@ -9,3 +9,7 @@ class Person:
 
     def say_age(self):
         print("{} years old.".format(self.age))
+
+class Employee(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
