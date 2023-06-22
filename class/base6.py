@@ -17,3 +17,7 @@ class Employee(Person):
 
     def say_number(self):
         print("my number is {}".format(self.number))
+
+    def greeting(self):
+        super().greeting()
+        print("My phone number is {}".format(self.number))
