@@ -20,3 +20,8 @@ class ClassB:
 
     def print(self):
         print("B hi")
+
+class NewClass(ClassA, ClassB):
+    def __init__(self, a_name, b_name):
+        ClassA.__init__(self, a_name)
+        ClassB.__init__(self, b_name)
