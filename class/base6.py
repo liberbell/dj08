@@ -21,3 +21,6 @@ class Employee(Person):
     def greeting(self):
         super().greeting()
         print("My phone number is {}".format(self.number))
+
+    # def greeting(self, age):
+    #     print("over load")
