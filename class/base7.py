@@ -34,3 +34,9 @@ class NewClass(ClassA, ClassB):
         ClassA.print_hi(self)
         ClassB.print_hi(self)
         print("New Class hi")
+
+sample = NewClass("AName", "BName", "New Class Name")
+sample.print_a()
+sample.print_b()
+sample.print_new_name()
+sample.print_hi()
