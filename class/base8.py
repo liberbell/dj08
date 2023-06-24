@@ -16,5 +16,6 @@ class Meta1(type):
     
 class ClassA(metaclass=Meta1):
     a = "123"
+    my_var = "eric"
     pass
 
