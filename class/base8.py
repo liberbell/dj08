@@ -9,8 +9,8 @@ class Meta1(type):
         print("name = {}".format(name))
         print("bases = {}".format(bases))
         print("class_dict = {}".format(class_dict))
-        if "my_var" not in class_dict.keys():
-            raise MetaException("set my_var")
+        # if "my_var" not in class_dict.keys():
+        #     raise MetaException("set my_var")
         
         for base in bases:
             if isinstance(base, Meta1):
@@ -23,3 +23,5 @@ class ClassA(metaclass=Meta1):
     my_var = "eric"
     pass
 
+class SubClassA(ClassA):
+    pass
