@@ -1,5 +1,5 @@
 
-from abc import abstractmethod as ABCmeta
+from abc import abstractmethod, ABCmeta
 
 class Human(metaclass=ABCmeta):
 
