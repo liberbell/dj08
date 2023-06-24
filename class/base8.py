@@ -11,6 +11,10 @@ class Meta1(type):
         print("class_dict = {}".format(class_dict))
         if "my_var" not in class_dict.keys():
             raise MetaException("set my_var")
+        
+        for base in bases:
+            if isinstance(base, Meta1):
+                raise MetaException("cannot set base")
 
         return super().__new__(metacls, name, bases, class_dict)
     
