@@ -1,6 +1,6 @@
 
 class ClassA:
-    def __init__(sel, name):
+    def __init__(self, name):
         self.a_name = name
 
     def print_a(self):
