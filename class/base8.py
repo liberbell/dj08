@@ -8,3 +8,8 @@ class Meta1(type):
         print("class_dict = {}".format(class_dict))
 
         return super().__new__(metacls, name, bases, class_dict)
+    
+class ClassA(metaclass=Meta1):
+    a = "123"
+    pass
+
