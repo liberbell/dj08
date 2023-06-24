@@ -1,4 +1,7 @@
 
+class MetaException(Exception):
+    pass
+
 class Meta1(type):
 
     def __new__(metacls, name, bases, class_dict):
@@ -6,6 +9,8 @@ class Meta1(type):
         print("name = {}".format(name))
         print("bases = {}".format(bases))
         print("class_dict = {}".format(class_dict))
+        if "my_var" not in class_dict.keys():
+            raise MetaException("set my_var")
 
         return super().__new__(metacls, name, bases, class_dict)
     
