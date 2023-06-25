@@ -5,10 +5,10 @@ class Human:
 
     def __init__(self, name, age):
         self.__name = name
-        self.age = age
+        self.__age = age
 
     def print_msg(self):
-        print("name = {}, age = {}".format(self.__name, self.age))
+        print("name = {}, age = {}".format(self.__name, self.__age))
 
 
 human = Human("George", 61)
