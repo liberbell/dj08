@@ -13,3 +13,7 @@ class Human:
     def get_age(self):
         print("call getter age")
         return self.__age
+    
+    def set_name(self, name):
+        print("call setter name")
+        self.__name = name
