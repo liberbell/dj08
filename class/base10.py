@@ -7,6 +7,9 @@ class Human:
         self.__name = name
         self.age = age
 
+    def print_msg(self):
+        print("name = {}, age = {}".format(self.__name, self.age))
+
 
 human = Human("George", 61)
-print(human._Human__name)
+human.print_msg()
