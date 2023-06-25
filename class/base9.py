@@ -7,7 +7,7 @@ class Human(metaclass=ABCMeta):
         self.name = name
 
     @abstractmethod
-    def say_somthing(self):
+    def say_something(self):
         pass
 
     def say_name(self):
@@ -28,4 +28,7 @@ if num == "0":
     human = Man("Eric")
 elif num == "1":
     human = Woman("Alex")
-human = Woman("alex")
+else:
+    print("Invalid input")
+
+human.say_something()
