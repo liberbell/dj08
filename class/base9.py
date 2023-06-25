@@ -14,6 +14,8 @@ class Human(metaclass=ABCMeta):
         print(self.name)
 
 class Woman(Human):
-    pass
+    
+    def say_something(self):
+        print("Woman: name={}".format(self.name))
 
 human = Woman("alex")
