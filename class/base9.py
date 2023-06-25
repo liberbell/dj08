@@ -23,4 +23,9 @@ class Man(Human):
     def say_something(self):
         print("Man: name={}".format(self.name))
 
+num = input("input 1 or 0:")
+if num == "0":
+    human = Man("Eric")
+elif num == "1":
+    human = Woman("Alex")
 human = Woman("alex")
