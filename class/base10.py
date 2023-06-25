@@ -9,4 +9,4 @@ class Human:
 
 
 human = Human("George", 61)
-print(human.__name)
+print(human._Human__name)
