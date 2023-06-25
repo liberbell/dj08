@@ -18,4 +18,9 @@ class Woman(Human):
     def say_something(self):
         print("Woman: name={}".format(self.name))
 
+class Man(Human):
+    
+    def say_something(self):
+        print("Man: name={}".format(self.name))
+
 human = Woman("alex")
