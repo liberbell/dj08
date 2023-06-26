@@ -15,6 +15,10 @@ class Human:
         return self.__age
     
     @name.setter
-    def name(self, value):
+    def name(self, name):
         print("call setter name")
-        self.__name = value
+        self.__name = name
+
+    @age.setter
+    def age(self, age):
+        print("call setter age")
