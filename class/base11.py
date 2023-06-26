@@ -21,3 +21,11 @@ class Human:
     def set_age(self, age):
         print("call setter age")
         self.__age = age
+
+    name = property(get_name, set_name)
+    age = property(get_age, set_age)
+
+    def print_msg(self):
+        print(self.name, self.age)
+
+human = Human("Eric", 67)
