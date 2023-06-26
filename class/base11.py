@@ -17,3 +17,7 @@ class Human:
     def set_name(self, name):
         print("call setter name")
         self.__name = name
+
+    def set_age(self, name):
+        print("call setter age")
+        self.__age = age
