@@ -22,3 +22,7 @@ class Human:
     @age.setter
     def age(self, age):
         print("call setter age")
+        if age < 0:
+            print("set up to zero")
+            return
+        self.__age = age
