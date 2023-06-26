@@ -26,3 +26,6 @@ class Human:
             print("set up to zero")
             return
         self.__age = age
+
+human = Human("Alex", 35)
+human.name = "Elton"
