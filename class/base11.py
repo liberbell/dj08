@@ -30,3 +30,7 @@ class Human:
 
 human = Human("Eric", 67)
 human.name = "Bob"
+human.age = 71
+
+print(human.name)
+print(human.age)
