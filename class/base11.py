@@ -32,5 +32,6 @@ human = Human("Eric", 67)
 human.name = "Bob"
 human.age = 71
 
-print(human.name)
-print(human.age)
+name = human.name
+age = human.age
+print(name, age)
