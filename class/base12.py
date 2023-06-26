@@ -12,3 +12,9 @@ class Human:
     @property
     def age(self):
         print("call getter age")
+        return self.__age
+    
+    @name.setter
+    def name(self, value):
+        print("call setter name")
+        self.__name = value
