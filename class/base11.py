@@ -29,3 +29,4 @@ class Human:
         print(self.name, self.age)
 
 human = Human("Eric", 67)
+human.name = "Bob"
