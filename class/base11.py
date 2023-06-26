@@ -35,3 +35,5 @@ human.age = 71
 name = human.name
 age = human.age
 print(name, age)
+
+human.print_msg()
