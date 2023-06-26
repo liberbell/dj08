@@ -18,6 +18,6 @@ class Human:
         print("call setter name")
         self.__name = name
 
-    def set_age(self, name):
+    def set_age(self, age):
         print("call setter age")
         self.__age = age
