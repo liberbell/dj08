@@ -30,3 +30,4 @@ class Human:
 human = Human("Alex", 35)
 human.name = "Elton"
 print(human.name)
+human.age = -1
