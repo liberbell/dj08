@@ -22,3 +22,5 @@ f.close()
 with open(file_path, mode="r", encoding="utf-8") as f:
     liens = f.readlines()
     print(liens)
+
+# print(f.read())
