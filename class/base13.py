@@ -10,7 +10,11 @@ f = open(file_path, mode="r", encoding="utf-8")
 # for x in lines:
 #     print(x.rstrip("\n"))
 
-line = f.readline()
-while line:
+# line = f.readline()
+# while line:
+#     print(line.rstrip("\n"))
+#     line = f.readline()
+while (line  := f.readline()):
     print(line.rstrip("\n"))
-    line = f.readline()
+
+f.close()
