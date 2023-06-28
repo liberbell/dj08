@@ -8,6 +8,7 @@ class WithTest:
     def __enter__(self):
         print("entr called")
         print(self.msg)
+        self.__file = opne("self.__file_name")
 
     def __exit__(self, exc_type, exc_val, traceback):
         print("exit called")
