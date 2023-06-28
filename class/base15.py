@@ -1,9 +1,9 @@
 
 class WithTest:
 
-    def __init__(self, msg):
+    def __init__(self, file_name):
         print("init called")
-        self.msg = msg
+        self.__file_name = file_name
 
     def __enter__(self):
         print("entr called")
