@@ -10,6 +10,9 @@ class WithTest:
         print(self.msg)
         self.__file = open("self.__file_name", mode="w", encoding="utf-8")
         return self
+    
+    def write(self, msg):
+        self.__file.write(msg)
 
     def __exit__(self, exc_type, exc_val, traceback):
         print("exit called")
