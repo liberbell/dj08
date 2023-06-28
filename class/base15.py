@@ -18,5 +18,5 @@ class WithTest:
         print("exit called")
         self.__file.close()
 
-with WithTest("hello") as t:
+with WithTest("../resources/output1.txt") as t:
     print("inside with")
