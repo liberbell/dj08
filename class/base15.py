@@ -9,3 +9,6 @@ class WithTest:
 
     def __exit__(self, exc_type, exc_val, traceback):
         print("exit called")
+
+with WithTest() as t:
+    print("inside with")
