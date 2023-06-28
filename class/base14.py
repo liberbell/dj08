@@ -9,4 +9,6 @@ with open(file_path, mode="a", encoding="utf-8", newline="\n")as f:
         ["A", "B", "C"],
         ["a", "b", "c"]
     ]
-    f.writelines(list_a[0])
+    for x in list_a:
+        f.write(", ".join(x))
+    # f.writelines(list_a[0])
