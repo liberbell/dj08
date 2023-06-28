@@ -7,7 +7,7 @@ class WithTest:
 
     def __enter__(self):
         print("entr called")
-        self.__file = open("self.__file_name", mode="w", encoding="utf-8")
+        self.__file = open(self.__file_name, mode="w", encoding="utf-8")
         return self
     
     def write(self, msg):
