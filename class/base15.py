@@ -6,3 +6,6 @@ class WithTest:
 
     def __enter__(self):
         print("entr called")
+
+    def __exit__(self, exc_type, exc_val, traceback):
+        print("exit called")
