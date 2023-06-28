@@ -10,5 +10,6 @@ with open(file_path, mode="a", encoding="utf-8", newline="\n")as f:
         ["a", "b", "c"]
     ]
     for x in list_a:
+        f.write("\n")
         f.write(", ".join(x))
     # f.writelines(list_a[0])
