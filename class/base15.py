@@ -20,3 +20,4 @@ class WithTest:
 
 with WithTest("../resources/output1.txt") as t:
     print("inside with")
+    t.write("this is text.")
