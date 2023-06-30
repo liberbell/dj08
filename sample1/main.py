@@ -9,6 +9,7 @@
 # class_a.print_a()
 # print(sub.VAR)
 
-from sub import sample_a
+from sub import sample_a as sa, ClassA as ca
 
-sample_a()
+sa()
+ca()
