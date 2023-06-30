@@ -15,7 +15,7 @@
 # ins = ca()
 # ins.print_a()
 
-from sub import *
+# from sub import *
 
-print(VAR)
-sample_a()
+# print(VAR)
+# sample_a()
