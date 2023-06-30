@@ -12,4 +12,5 @@
 from sub import sample_a as sa, ClassA as ca
 
 sa()
-ca()
+ins = ca()
+ins.print_a()
