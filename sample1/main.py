@@ -25,3 +25,6 @@ base1.print_msg()
 
 import dir1.base2 as base2
 base2.print_msg()
+
+from dir1.base1 import print_msg
+from dir1.base2 import print_msg
