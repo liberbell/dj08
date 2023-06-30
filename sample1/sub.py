@@ -1,4 +1,4 @@
-var = "sub"
+VAR = "sub"
 
 def sample_a():
     print("execute sample_a")
