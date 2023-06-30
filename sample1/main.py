@@ -22,3 +22,6 @@
 
 import dir1.base1 as base1
 base1.print_msg()
+
+import dir1.base2 as base2
+base2.print_msg()
