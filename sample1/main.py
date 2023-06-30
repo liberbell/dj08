@@ -9,8 +9,13 @@
 # class_a.print_a()
 # print(sub.VAR)
 
-from sub import sample_a as sa, ClassA as ca
+# from sub import sample_a as sa, ClassA as ca
 
-sa()
-ins = ca()
-ins.print_a()
+# sa()
+# ins = ca()
+# ins.print_a()
+
+from sub import *
+
+print(VAR)
+sample_a()
