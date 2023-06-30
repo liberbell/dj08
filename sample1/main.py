@@ -19,3 +19,6 @@
 
 # print(VAR)
 # sample_a()
+
+import dir1.base1
+dir1.base1.print_msg()
