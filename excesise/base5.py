@@ -8,3 +8,5 @@ ages_2 = {
     "Elton": 38
 }
 
+ages_3 = {**ages, **ages_2}
+print(ages_3)
