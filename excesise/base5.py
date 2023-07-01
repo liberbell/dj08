@@ -13,3 +13,6 @@ print(ages_3)
 
 def name_age(name, age):
     print(f"name: {name}")
+    print(f"age: {age}")
+
+name_age("George", 40)
