@@ -34,3 +34,4 @@
 
 from dir1 import *
 base1.print_msg()
+base2.print_msg()
