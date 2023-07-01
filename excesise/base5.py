@@ -21,4 +21,4 @@ man = {
 }
 
 name_age("George", 40)
-name_age(man)
+name_age(**man)
