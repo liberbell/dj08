@@ -36,5 +36,9 @@
 # base1.print_msg()
 # base2.print_msg()
 
-from dir1 import base1_msg
+# from dir1 import base1_msg
+# base1_msg()
+
+from dir1 import *
+base2_msg()
 base1_msg()
