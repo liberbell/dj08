@@ -26,8 +26,11 @@
 # import dir1.base2 as base2
 # base2.print_msg()
 
-from dir1.base1 import print_msg as base1_print
-from dir1.base2 import print_msg as base2_print
+# from dir1.base1 import print_msg as base1_print
+# from dir1.base2 import print_msg as base2_print
 
-base1_print()
-base2_print()
+# base1_print()
+# base2_print()
+
+from dir1 import *
+base1.print_msg()
