@@ -41,4 +41,5 @@
 
 from dir1 import *
 base2_msg()
+from dir1 import base1_msg
 base1_msg()
