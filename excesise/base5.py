@@ -10,3 +10,6 @@ ages_2 = {
 
 ages_3 = {**ages, **ages_2}
 print(ages_3)
+
+def name_age(name, age):
+    print(f"name: {name}")
