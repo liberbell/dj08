@@ -24,3 +24,5 @@ print_msg("hello")
 def print_fruits(fruits: list[str]):
     for fruit in fruits:
         print(fruit)
+
+print_fruits(["apple", "grape"])
