@@ -19,4 +19,8 @@ def print_msg(msg: str):
     print(msg.upper())
 
 print_msg("hello")
-print_msg(21)
+# print_msg(21)
+
+def print_fruits(fruits: list[str]):
+    for fruit in fruits:
+        print(fruit)
