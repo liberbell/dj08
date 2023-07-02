@@ -1,5 +1,5 @@
 
-msg = " Hello world"
+msg = "Hello world, Hello"
 msg2 = msg.removeprefix("He")
 msg3 = msg.replace("He", "")
 print(msg2)
