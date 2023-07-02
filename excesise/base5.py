@@ -5,7 +5,8 @@ ages = {
 
 ages_2 = {
     "Alex": 18,
-    "Elton": 38
+    "Elton": 38,
+    "Bob": 40,
 }
 
 ages_3 = {**ages, **ages_2}
