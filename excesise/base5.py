@@ -23,3 +23,6 @@ man = {
 
 name_age("George", 40)
 name_age(**man)
+
+ages_4 = ages | ages_2
+print(ages_4)
