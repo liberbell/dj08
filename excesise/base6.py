@@ -7,3 +7,7 @@ print(msg3)
 
 msg = "Hello world"
 print(msg.removesuffix("world"))
+
+import math
+
+print(math.gcd(12, 32, 46))
