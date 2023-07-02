@@ -15,7 +15,8 @@ print(math.lcm(12, 32, 44))
 def add(a: int, b:int):
     return a + b
 
-def print_msg(msg):
+def print_msg(msg: str):
     print(msg.upper())
 
 print_msg("hello")
+print_msg(21)
