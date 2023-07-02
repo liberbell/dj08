@@ -26,3 +26,8 @@ def print_fruits(fruits: list[str]):
         print(fruit)
 
 print_fruits(["apple", "grape"])
+
+class ClassA:
+    pass
+
+class_a = ClassA()
