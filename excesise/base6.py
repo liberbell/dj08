@@ -31,3 +31,6 @@ class ClassA:
     pass
 
 class_a = ClassA()
+
+def func_a(class_a: ClassA):
+    pass
