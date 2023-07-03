@@ -6,4 +6,4 @@ def index(request):
     return HttpResponse("<h1>Good bye</h1>")
 
 def user_page(request, user_name):
-    return HttpResponse(f"<h1>{user_name}\`s page</h1>")
+    return HttpResponse(f"<h1>{user_name}\'s page</h1>")
