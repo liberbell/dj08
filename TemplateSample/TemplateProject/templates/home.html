@@ -18,4 +18,7 @@
 
 {% if "age" in my_info %}
     <p>Age in my_info</p>
+    {% if my_info.age < 71 %}
+        <p>younger than 71</p>
+    {% endif %}
 {% endif %}
