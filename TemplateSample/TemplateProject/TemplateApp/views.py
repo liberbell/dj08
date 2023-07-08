@@ -35,3 +35,12 @@ def sample(request):
     msg = """Hello
     my name is eric"""
     msg2 = "0123456789"
+
+    return render(request, "sample.html", context={
+                  "name": name,
+                  "height": height,
+                  "weight": weight,
+                  "bmi": bmi,
+                  "msg": msg,
+                  "msg2": msg2
+    })
