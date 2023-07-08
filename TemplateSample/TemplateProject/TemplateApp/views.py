@@ -23,3 +23,11 @@ def sample1(request):
 
 def sample2(request):
     return render(request, "sample2.html")
+
+def sample(request):
+    name = "eric clapton"
+    height = 181.4
+    weight = 72.5
+    bmi = weight / (height / 100)**2
+
+    page_url = "HomePage: https://www.google.com"
