@@ -40,6 +40,8 @@ def sample(request):
                   "name": name,
                   "height": height,
                   "weight": weight,
+                  "page_url": page_url,
+                  "favorite_fruits": favorite_fruits,
                   "bmi": bmi,
                   "msg": msg,
                   "msg2": msg2
