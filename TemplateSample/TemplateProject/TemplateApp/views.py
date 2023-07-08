@@ -31,3 +31,7 @@ def sample(request):
     bmi = weight / (height / 100)**2
 
     page_url = "HomePage: https://www.google.com"
+    favorite_fruits = ["apple", "grape", "lemon"]
+    msg = """Hello
+    my name is eric"""
+    msg2 = "0123456789"
