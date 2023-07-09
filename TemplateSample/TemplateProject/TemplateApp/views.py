@@ -5,8 +5,8 @@ def index(request):
     val = "Good bye!"
     return render(request, "TemplateApp/index.html", context={"value": val})
 
-def home(request):
-    my_name = "Eric"
+def home(request, first_name, last_name):
+    my_name = f"{first_name} {last_name}"
     favorite_fruits = ["apple", "lemon", "grape"]
     my_info = {
         "name": "Eric",
