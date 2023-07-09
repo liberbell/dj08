@@ -3,4 +3,5 @@
 <p>BMI:{{ bmi|floatformat:2 }}</p>
 
 <p>Salary: {{ salary|default:"secret" }}</p>
-<p>Fruit: {{ favorite_fruits|random|lower }}</p>
+<p>Fruit: {{ fruits|random|lower }}</p>
+<p>{{ fruits|join:", " }}</p>
