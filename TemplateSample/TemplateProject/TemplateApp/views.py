@@ -55,8 +55,8 @@ class Country:
         self.population = population
         self.capital = capital
 
-    def sample3(request):
-        country = Country("Japan", 100000000, "Tokyo")
-        return render(request, "sample3.html", context={
-            "country": country
-        })
+def sample3(request):
+    country = Country("Japan", 100000000, "Tokyo")
+    return render(request, "sample3.html", context={
+        "country": country
+    })
