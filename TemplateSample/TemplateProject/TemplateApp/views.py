@@ -48,3 +48,9 @@ def sample(request):
                   "msg": msg,
                   "msg2": msg2
     })
+
+class Country:
+    def __init__(self, name, population, capital):
+        self.name = name
+        self.population = population
+        self.capital = capital
