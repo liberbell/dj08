@@ -11,10 +11,10 @@ class Member:
         self.picture_path = picture_path
 
 member_list = [
-    Member(0, "Eric", "2023/01/10", "image/eric.jpg"),
-    Member(1, "Bob", "2023/01/20", "image/bob.jpg"),
-    Member(2, "Alex", "2023/01/05", "image/alex.jpg"),
-    Member(3, "Elton", "2023/02/04", "image/elton.jpg")
+    Member(0, "Eric", "2023/01/10", "img/eric.jpg"),
+    Member(1, "Bob", "2023/01/20", "img/bob.jpg"),
+    Member(2, "Alex", "2023/01/05", "img/alex.jpg"),
+    Member(3, "Elton", "2023/02/04", "img/elton.jpg")
 ]
 
 
@@ -22,4 +22,11 @@ def home(request):
     return render(request, "home.html")
 
 def members(request):
-    pass
+    return render(request, "members.html", context={
+        "members": member_list
+    })
+
+def member(request, id):
+    return render(request, "member_detail.html", context={
+        "member": member_list[id]
+    })
