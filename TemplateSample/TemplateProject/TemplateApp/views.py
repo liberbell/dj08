@@ -50,9 +50,9 @@ def sample(request):
     })
 
 class Country:
-    def __init__(self, name, population, capital):
+    def __init__(self, name, poplation, capital):
         self.name = name
-        self.population = population
+        self.poplation = poplation
         self.capital = capital
 
 def sample3(request):
