@@ -10,3 +10,5 @@ def calculate_datetime_to_now(value):
     now_datetime = datetime.now()
     diff_datetime = now_datetime - joined_datetime
     diff_days = diff_datetime.days
+    diff_years = math.floor(diff_days / 365)
+    diff_months = math.floor((diff_days - 365 * diff_years) / 30)
