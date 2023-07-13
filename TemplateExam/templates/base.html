@@ -12,5 +12,7 @@
             <a href="{% url 'app:home' %}" class="navbar-brand">Home</a>
             <a href="{% url 'app:members' %}" class="navbar-brand">Member List</a>
         </nav>
+        {% block content %}
+        {% endblock %}
     </body>
 </html>
