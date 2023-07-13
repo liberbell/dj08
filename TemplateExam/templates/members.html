@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Member List {{ block.super }}{% endblock title %}
+
+{% block content %}
+{% for member in members %}
+<p><a href="{% url 'app:member' id=member.id %}">{{ member.name }}</a></p>
+{% endfor %}
+{% endblock %}
