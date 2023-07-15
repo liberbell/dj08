@@ -6,4 +6,4 @@ class Person(models.Model):
     last_name = models.CharField(max_length=30)
 
 class Sales(models.Model):
-    fees = models.IntegerField()
+    fee = models.IntegerField()
