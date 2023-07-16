@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Person(models.Model):
@@ -9,4 +10,4 @@ class Person(models.Model):
     salary = models.FloatField(null=True)
     momo = models.TextField()
     web_site = models.URLField(null=True, blank=True)
-    create_at = models.DateTimeField()
+    create_at = models.DateTimeField(default=timezone.datetime.now)
