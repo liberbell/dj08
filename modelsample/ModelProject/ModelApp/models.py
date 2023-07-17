@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils import timezone
+import pytz
 
 # Create your models here.
 
 class BaseMeta(models.Model):
-    create_at = models.DateTimeField(default=timezone.datetime.now)
-    update_at = models.DateTimeField(default=timezone.datetime.now)
+    create_at = models.DateTimeField(default=timezone.datetime.now(pytz.timezone("Asia/Tokyo")))
+    update_at = models.DateTimeField(default=timezone.datetime.now(pytz.timezone("Asia/Tokyo")))
 
     class Meta:
         abstract = True
