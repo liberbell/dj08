@@ -22,3 +22,8 @@ Person.objects.create(
     first_name = "Alex", last_name = "Hepp", email = "alex@example.com", salary = 1500, memo = "class method",
     web_site = None
 )
+
+obj, created = Person.objects.get_or_create(
+    first_name = "Alex", last_name = "Hepp", email = "alex@example.com", salary = 1500, memo = "class method",
+    web_site = None
+)
