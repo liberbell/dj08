@@ -11,11 +11,11 @@ p = Person(
     web_site = "https://www.google.com"
 )
 
-# p = Person(
-#     first_name = "Eric", last_name = "Clapton", birthday = "2000-01-01",
-#     email = "eric@example.com", salary =None , memo = "This is a memo",
-#     web_site = ""
-# )
+p = Person(
+    first_name = "Eric", last_name = "Clapton", birthday = "2000-01-01",
+    email = "eric@example.com", salary =None , memo = "This is a memo",
+    web_site = "https://yahoo.com"
+)
 p.save()
 
 # Person.objects.create(
