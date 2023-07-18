@@ -13,3 +13,6 @@ for person in persons:
 # person = Person.objects.get(first_name="Eric")
 person = Person.objects.get(pk=1)
 print(person.id, person)
+
+persons = Person.objects.filter(first_name="Eric")
+print(person.id, person)
