@@ -24,7 +24,7 @@ p = Person(
 # )
 
 obj, created = Person.objects.get_or_create(
-    first_name = "George", last_name = "Harrison", email = "george@example.com", salary = 1500, memo = "class method",
+    first_name = "Elton", last_name = "Jhon", email = "elton@example.com", salary = 4500, memo = "class method",
     web_site = None
 )
 print(obj)
