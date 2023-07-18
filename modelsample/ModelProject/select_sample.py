@@ -16,6 +16,7 @@ for person in persons:
 
 persons = Person.objects.filter(first_name="Eric").all()
 print(persons)
+print(persons[0].email)
 
 for person in persons:
     print(person.id, person, person.salary)
