@@ -10,5 +10,6 @@ persons = Person.objects.all()
 for person in persons:
     print(person.id, person, person.salary)
 
-person = Person.objects.get(first_name="Eric")
+# person = Person.objects.get(first_name="Eric")
+person = Person.objects.get(pk=1)
 print(person.id, person)
