@@ -9,3 +9,6 @@ persons = Person.objects.all()
 
 for person in persons:
     print(person.id, person, person.salary)
+
+person = Person.objects.get(first_name="Eric clapton")
+print(person.id, person)
