@@ -15,4 +15,7 @@ for person in persons:
 # print(person.id, person)
 
 persons = Person.objects.filter(first_name="Eric").all()
-print(persons.id, persons)
+print(persons)
+
+for person in persons:
+    print(person.id, person, person.salary)
