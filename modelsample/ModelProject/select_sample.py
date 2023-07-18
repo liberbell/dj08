@@ -15,4 +15,4 @@ for person in persons:
 # print(person.id, person)
 
 persons = Person.objects.filter(first_name="Eric").all()
-print(person.id, person)
+print(persons.id, persons)
