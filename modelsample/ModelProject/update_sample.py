@@ -12,3 +12,8 @@ print(person)
 person.birthday = "2022-01-01"
 person.update_at = timezone.datetime.now(pytz.timezone("Asia/Tokyo"))
 person.save()
+
+persons = Person.objects.filter(first_name="Eric")
+for person in persons:
+    person.first_name = person.first_name.lower()
+    person.update_at = timezone.datetime.now(pytz.timezone("Asia/Tokyo"))
