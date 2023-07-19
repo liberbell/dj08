@@ -17,9 +17,9 @@ persons = Person.objects.filter(first_name="Eric")
 for person in persons:
     person.first_name = person.first_name.lower()
     person.update_at = timezone.datetime.now(pytz.timezone("Asia/Tokyo"))
-    person.save()
+    # person.save()
 
 Person.objects.filter(first_name="Alex").update(
-    web_site = "https://example.com"
+    web_site = "https://example.com",
     update_at = timezone.datetime.now(pytz.timezone("Asia/Tokyo"))
 )
