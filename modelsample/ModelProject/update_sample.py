@@ -8,3 +8,6 @@ from django.utils import timezone
 import pytz
 
 person = Person.objects.get(id=1)
+print(person)
+person.birthday = "2022-01-01"
+person.save()
