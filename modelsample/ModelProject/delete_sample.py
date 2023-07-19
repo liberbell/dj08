@@ -6,4 +6,4 @@ setup()
 from ModelApp.models import Person
 from django.utils import timezone
 
-Person.objects.filter(first_name="alex").delete()
+Person.objects.filter(first_name="Alex").delete()
