@@ -9,3 +9,5 @@ from django.utils import timezone
 Person.objects.filter(first_name="Alex").delete()
 
 Person.objects.filter(first_name="eric", birthday="2000-01-01").delete()
+
+Person.objects.all().delete()
