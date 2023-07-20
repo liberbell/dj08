@@ -40,9 +40,13 @@ class Students(models.Model):
 
 class Schools(models.Model):
     name = models.CharField(max_length=20)
-    prefecture = models.ForeignKey(
-        "Prefectures", on_delete=models.CASCADE
-    )
+    prefecture = models.ForeignKey("Prefectures", on_delete=models.CASCADE)
 
     class Meta:
         db_table = "schools"
+
+class Prefectures(models.Model):
+    name = models.CharField(max_length=20)
+    
+    class Meta:
+        db_table = "prefectures"
