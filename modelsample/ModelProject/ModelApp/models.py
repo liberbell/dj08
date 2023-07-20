@@ -28,8 +28,12 @@ class Person(BaseMeta):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
     
-    class Students(models.Model):
+class Students(models.Model):
 
-        name = models.CharField(max_length=20)
-        age = models.IntegerField()
-        major = models.CharField(max_length=20)
+    name = models.CharField(max_length=20)
+    age = models.IntegerField()
+    major = models.CharField(max_length=20)
+    school = models.ForeignKey("School", on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "students" 
