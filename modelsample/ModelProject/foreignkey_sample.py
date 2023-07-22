@@ -31,3 +31,5 @@ def insert_record():
                     school=school
                 )
                 student.save()
+
+insert_record()
