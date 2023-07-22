@@ -12,11 +12,13 @@ students = ["Eric", "Alex", "John"]
 def insert_record():
     for prefecture_name in prefectures:
         prefecture = Prefectures(
-            name = prefecture_name
+            name=prefecture_name
         )
         prefecture.save()
+
         for school_name in schools:
             school = Schools(
-                name = school_name
-                prefecture = prefecture
+                name=school_name,
+                prefecture=prefecture
             )
+            school.save()
