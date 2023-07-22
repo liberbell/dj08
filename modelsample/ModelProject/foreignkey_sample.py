@@ -37,4 +37,6 @@ def insert_record():
 def select_students():
     students=Students.objects.all()
     for student in students:
-        print(student.id, student.name, student.school.id)
+        print(student.id, student.name, student.school.id, student.school.name, student.prefecture.id, student.prefecture.name)
+
+select_students()
