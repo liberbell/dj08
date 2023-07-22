@@ -32,4 +32,9 @@ def insert_record():
                 )
                 student.save()
 
-insert_record()
+# insert_record()
+
+def select_students():
+    students=Students.objects.all()
+    for student in students:
+        print(student.id, student.name, student.school.id)
