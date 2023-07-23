@@ -64,3 +64,4 @@ class Restaurants(models.Model):
     place = models.OneToOneField(
         Places, on_delete=models.CASCADE, primary_key=True
     )
+    name = models.CharField(max_length=50)
