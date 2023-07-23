@@ -33,14 +33,14 @@ class Students(models.Model):
     name = models.CharField(max_length=20)
     age = models.IntegerField()
     major = models.CharField(max_length=20)
-    school = models.ForeignKey("Schools", on_delete=models.SET_NULL, null=True)
+    school = models.ForeignKey("Schools", on_delete=models.RESTRICT)
 
     class Meta:
         db_table = "students"
 
 class Schools(models.Model):
     name = models.CharField(max_length=20)
-    prefecture = models.ForeignKey("Prefectures", on_delete=models.SET_NULL, null=True)
+    prefecture = models.ForeignKey("Prefectures", on_delete=models.RESTRICT)
 
     class Meta:
         db_table = "schools"
