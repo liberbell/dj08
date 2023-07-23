@@ -34,6 +34,7 @@ class Students(models.Model):
     age = models.IntegerField()
     major = models.CharField(max_length=20)
     school = models.ForeignKey("Schools", on_delete=models.RESTRICT)
+    prefecture = models.ForeignKey("Prefectures", on_delete=CASCADE)
 
     class Meta:
         db_table = "students"
