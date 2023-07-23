@@ -57,7 +57,7 @@ class Places(models.Model):
     name = models.CharField(max_length=50)
     address = models.CharField(max_length=80)
 
-    class class Meta:
+    class Meta:
         db_table = 'places'
 
 class Restaurants(models.Model):
@@ -65,3 +65,6 @@ class Restaurants(models.Model):
         Places, on_delete=models.CASCADE, primary_key=True
     )
     name = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'restaurants'
