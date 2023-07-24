@@ -15,3 +15,6 @@ def insert_books():
     book3.save()
 
 def insert_authors():
+    author1 = Authors(name="Mark")
+    author2 = Authors(name="Earnest")
+    author3 = Authors(name="")
