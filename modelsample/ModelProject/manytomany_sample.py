@@ -17,4 +17,8 @@ def insert_books():
 def insert_authors():
     author1 = Authors(name="Mark")
     author2 = Authors(name="Earnest")
-    author3 = Authors(name="")
+    author3 = Authors(name="Edgar")
+
+    author1.save()
+    author2.save()
+    author3.save()
