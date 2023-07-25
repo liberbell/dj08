@@ -12,3 +12,5 @@ print(s.prefecture.name)
 st = s.students_set
 print(type(st))
 print(dir(st))
+
+print(st.all())
