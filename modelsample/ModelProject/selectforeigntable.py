@@ -14,3 +14,4 @@ print(type(st))
 print(dir(st))
 
 print(st.all())
+print(s.students_set.all())
