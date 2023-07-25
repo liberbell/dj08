@@ -27,8 +27,10 @@ def insert_authors():
 # insert_authors()
 
 book1 = Books.objects.get(pk=1)
+book3 = Books.objects.get(pk=3)
 author1 = Authors.objects.get(pk=1)
 author2 = Authors.objects.get(pk=2)
+author3 = Authors.objects.get(pk=3)
 # book1.authors.add(author1, author2)
 
-print(book1.authors.all)
+print(book1.authors.all())
