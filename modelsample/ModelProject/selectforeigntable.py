@@ -5,5 +5,6 @@ from django import setup
 setup()
 from ModelApp.models import Students, Schools, Prefectures
 
-s = Schools.objects.all()
+s = Schools.objects.first()
 print(s)
+print(dir(s))
