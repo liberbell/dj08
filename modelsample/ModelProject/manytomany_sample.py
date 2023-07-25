@@ -32,5 +32,7 @@ author1 = Authors.objects.get(pk=1)
 author2 = Authors.objects.get(pk=2)
 author3 = Authors.objects.get(pk=3)
 # book1.authors.add(author1, author2)
-
+book3.authors.add(author1)
+book3.authors.add(author2, author3)
 print(book1.authors.all())
+print(book3.authors.all())
