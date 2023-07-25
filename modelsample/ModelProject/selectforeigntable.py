@@ -5,13 +5,18 @@ from django import setup
 setup()
 from ModelApp.models import Students, Schools, Prefectures
 
-s = Schools.objects.first()
-print(s)
-print(dir(s))
-print(s.prefecture.name)
-st = s.students_set
-print(type(st))
-print(dir(st))
+# s = Schools.objects.first()
+# print(s)
+# print(dir(s))
+# print(s.prefecture.name)
+# st = s.students_set
+# print(type(st))
+# print(dir(st))
 
-print(st.all())
-print(s.students_set.all())
+# print(st.all())
+# print(s.students_set.all())
+
+from ModelApp.models import Places, Restaurants
+
+p = Places.objects.first()
+print(type(p), print(dir(p)))
