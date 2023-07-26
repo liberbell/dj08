@@ -14,5 +14,6 @@ from ModelApp.models import Students
 # print(Students.objects.filter(name="John").all())
 # print(Students.objects.filter(age=17).all())
 
-print(Students.objects.filter(name='John', pk=9).all())
-print(Students.objects.filter(name="John", pk_gt=13).all())
+# print(Students.objects.filter(name='John', pk=9).all())
+print(Students.objects.filter(name="John", pk__gt=13).all())
+print(Students.objects.filter(name="John", pk__lt=6).all())
