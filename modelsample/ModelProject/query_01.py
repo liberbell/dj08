@@ -15,3 +15,4 @@ from ModelApp.models import Students
 # print(Students.objects.filter(age=17).all())
 
 print(Students.objects.filter(name='John', pk=9).all())
+print(Students.objects.filter(name="John", pk_gt=13).all())
