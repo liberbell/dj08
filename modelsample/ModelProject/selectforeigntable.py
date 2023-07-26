@@ -28,3 +28,5 @@ from ModelApp.models import Books, Authors
 
 b = Books.objects.first()
 print(b.authors.all())
+r = Authors.objects.first()
+print(r.books_set.all())
