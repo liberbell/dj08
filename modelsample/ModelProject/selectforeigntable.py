@@ -18,8 +18,13 @@ from ModelApp.models import Students, Schools, Prefectures
 
 from ModelApp.models import Places, Restaurants
 
-p = Places.objects.first()
-print(type(p), print(dir(p)))
-print(p.restaurants.name)
-r = Restaurants.objects.first()
-print(r.place.name)
+# p = Places.objects.first()
+# print(type(p), print(dir(p)))
+# print(p.restaurants.name)
+# r = Restaurants.objects.first()
+# print(r.place.name)
+
+from ModelApp.models import Books, Authors
+
+b = Books.objects.first()
+print(b.authors.all())
