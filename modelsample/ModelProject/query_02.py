@@ -9,4 +9,6 @@ from ModelApp.models import Students
 # print(Students.objects.all())
 
 ids = [13, 14, 15]
-print(Students.objects.filter(pk__in=ids).all())
+# print(Students.objects.filter(pk__in=ids).all())
+
+print(Students.objects.filter(name__contains="h").all())
