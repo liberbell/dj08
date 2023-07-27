@@ -24,4 +24,4 @@ from ModelApp.models import Students
 # print(Students.objects.filter(name__endswith="x").all())
 
 from django.db.models import Q
-print(Students.objects.filter(Q(name="John") | Q(age__gt=19)))
+print(Students.objects.filter(Q(name="John") | Q(age__gt=19)).all())
