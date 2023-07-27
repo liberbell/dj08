@@ -19,6 +19,9 @@ from ModelApp.models import Students
 # print(Students.objects.filter(name="John", pk__lt=6).all())
 # print(Students.objects.filter(name="John", pk__gt=6, pk__lt=20).all())
 
-print(Students.objects.all())
-print(Students.objects.filter(name__startswith="J").all())
-print(Students.objects.filter(name__endswith="x").all())
+# print(Students.objects.all())
+# print(Students.objects.filter(name__startswith="J").all())
+# print(Students.objects.filter(name__endswith="x").all())
+
+from django.db.models import Q
+print(Students.objects.filter(Q(name="John") | Q(age__gt=19)))
