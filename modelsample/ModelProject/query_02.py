@@ -20,5 +20,6 @@ ids = [13, 14, 15]
 # )
 # p.save()
 
-print(Person.objects.filter(salary__isnull=True).all())
-print(Person.objects.exclude(salary__isnull=True).all())
+# print(Person.objects.filter(salary__isnull=True).all())
+# print(Person.objects.exclude(salary__isnull=True).all())
+print(Students.objects.exclude(name="John").all())
