@@ -14,8 +14,8 @@ ids = [13, 14, 15]
 # print(Students.objects.filter(name__contains="h").all())
 
 p = Person(
-    first_name = "Eric", last_name = "Clapton", birthday = "2000-01-01",
-    email = "eric@example.com", salary =None , memo = "This is a memo",
+    first_name = "Alex", last_name = "Hepp", birthday = "2000-01-01",
+    email = "alex@example.com", salary =100 , memo = "This is a memo",
     web_site = "https://www.google.com"
 )
 p.save()
