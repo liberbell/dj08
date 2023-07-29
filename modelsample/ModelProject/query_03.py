@@ -7,3 +7,4 @@ setup()
 from ModelApp.models import Students
 
 print(Students.objects.count())
+print(Students.objects.filter(name="John").count())
