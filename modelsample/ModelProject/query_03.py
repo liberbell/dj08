@@ -11,4 +11,4 @@ from ModelApp.models import Students
 
 from django.db.models import Count, Max, Avg, Min, Sum
 
-print(Students.objects.aaggregate(Count("pk"), Max("pk"), Min("pk"), Avg("pk"), Sum("pk")))
+print(Students.objects.aaggregate(Count("pk")))
