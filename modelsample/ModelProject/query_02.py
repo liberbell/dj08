@@ -27,4 +27,4 @@ print(Students.objects.values("name", "age").all().query)
 
 students = Students.objects.values("id", "name", "age").all()
 for student in students:
-    print(student["name"]["id"])
+    print(student["name"], student["id"])
