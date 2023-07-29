@@ -25,6 +25,6 @@ ids = [13, 14, 15]
 # print(Students.objects.exclude(name="John").all())
 print(Students.objects.values("name", "age").all().query)
 
-students = Students.objects.values("name", "age").all()
+students = Students.objects.values("id", "name", "age").all()
 for student in students:
-    print(student["name"])
+    print(student["name"]["id"])
