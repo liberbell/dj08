@@ -30,4 +30,4 @@ ids = [13, 14, 15]
 #     print(student["name"], student["id"])
 
 # print(Students.objects.all())
-print(Students.objects.order_by("name").all())
+print(Students.objects.order_by("-name", "-id").all())
