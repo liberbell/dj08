@@ -23,8 +23,11 @@ ids = [13, 14, 15]
 # print(Person.objects.filter(salary__isnull=True).all())
 # print(Person.objects.exclude(salary__isnull=True).all())
 # print(Students.objects.exclude(name="John").all())
-print(Students.objects.values("name", "age").all().query)
+# print(Students.objects.values("name", "age").all().query)
 
-students = Students.objects.values("id", "name", "age").all()
-for student in students:
-    print(student["name"], student["id"])
+# students = Students.objects.values("id", "name", "age").all()
+# for student in students:
+#     print(student["name"], student["id"])
+
+# print(Students.objects.all())
+print(Students.objects.order_by("name").all())
