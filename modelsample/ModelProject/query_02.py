@@ -24,3 +24,7 @@ ids = [13, 14, 15]
 # print(Person.objects.exclude(salary__isnull=True).all())
 # print(Students.objects.exclude(name="John").all())
 print(Students.objects.values("name", "age").all().query)
+
+students = Students.objects.values("name", "age").all()
+for student in students:
+    print(student["name"])
