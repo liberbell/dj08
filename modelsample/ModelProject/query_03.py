@@ -6,5 +6,7 @@ setup()
 
 from ModelApp.models import Students
 
-print(Students.objects.count())
-print(Students.objects.filter(name="John").count())
+# print(Students.objects.count())
+# print(Students.objects.filter(name="John").count())
+
+from django.db.models import Count, Max, Avg, Min
