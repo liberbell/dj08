@@ -20,3 +20,8 @@ from ModelApp.models import Students, Schools
 print("-"*20)
 for student in Students.objects.order_by("-school__name").all():
     print(student.name, student.school.name)
+
+print("-"*20)
+from django.db.models import Count
+
+print(Students.objects.values("school_name").annotate(Count("id")))
