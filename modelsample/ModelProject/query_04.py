@@ -12,5 +12,7 @@ from ModelApp.models import Students, Schools
 # for student in Students.objects.filter(school__name="West high school").all():
 #     print(student.name, student.school.name, student.school.prefecture.name)
 
-for student in Students.objects.exclude(school__name="West high school").all():
-    print(student.name, student.school.name, student.school.prefecture.name)
+# for student in Students.objects.exclude(school__name="West high school").all():
+#     print(student.name, student.school.name, student.school.prefecture.name)
+
+print(Schools.objects.filter(student__name="Eric").all())
