@@ -18,5 +18,5 @@ from ModelApp.models import Students, Schools
 # print(Schools.objects.filter(students__name="Eric").all().query)
 
 print("-"*20)
-for student in Students.objects.all():
+for student in Students.objects.order_by("-school__name").all():
     print(student.name, student.school.name)
