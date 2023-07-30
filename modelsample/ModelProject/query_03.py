@@ -19,3 +19,8 @@ from django.db.models import Count, Max, Avg, Min, Sum
 print(Students.objects.values("name", "age").annotate(
    max_id=Max("pk"), min_id=Min("pk")
 ))
+
+for student in Students.objects.values("name", "age").annotate(
+   max_id=Max("pk"), min_id=Min("pk")
+):
+    print(student["name"], student["max_id"])
