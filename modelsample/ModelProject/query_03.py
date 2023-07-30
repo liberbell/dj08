@@ -16,6 +16,6 @@ from django.db.models import Count, Max, Avg, Min, Sum
 
 # print(aggregate_student["pk__avg"])
 
-print(Students.objects.values("name").annotate(
-    Max("pk"), Min("pk")
+print(Students.objects.values("name", "age").annotate(
+   max_id=Max("pk"), min_id=Min("pk")
 ))
