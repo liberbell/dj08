@@ -22,6 +22,6 @@ for student in Students.objects.order_by("-school__name").all():
     print(student.name, student.school.name)
 
 print("-"*20)
-from django.db.models import Count
+from django.db.models import Count, Max
 
-print(Students.objects.values("school_name").annotate(Count("id")))
+print(Students.objects.values("school__name").annotate(Count("id"), Max("id")))
