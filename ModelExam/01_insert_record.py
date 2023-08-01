@@ -7,5 +7,11 @@ setup()
 from ModelApp.models import Students, TestResults, Tests, Classes
 from random import randint
 
-class_name = ["Class" + c for c in "ABCDEFGHIJ"]
-print(class_name)
+class_names = ["Class" + c for c in "ABCDEFGHIJ"]
+student_names = ["Student" + c for c in "ABCDEFGHIJ"]
+test_names = ["math", "grammer", "science"]
+
+# print(class_name)
+
+inserted_tests = []
+for test_name in 
