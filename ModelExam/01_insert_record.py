@@ -1,6 +1,6 @@
 import os
 
-os.environ.setdefault("django_SETINGS_MODLE", "ModelExam.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ModelExam.settings")
 from django import setup
 setup()
 
