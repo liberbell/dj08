@@ -22,5 +22,7 @@ for class_summary in Classes.objects.values("name", "students__testresults__test
     class_summary["name"],
     class_summary["students__testresults__test__name"],
     class_summary["max_score"],
-    
+    class_summary["min_score"],
+    class_summary["avg_score"],
+    class_summary["sum_score"],
     )
