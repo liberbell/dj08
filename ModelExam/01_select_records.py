@@ -12,9 +12,10 @@ for test_result in student.testresults_set.all():
 
 from django.db.models import Sum, Avg, Max, Min
 
-for class_summary in Classes.objects.values("name", "students__testresults__name").annotate(
+for class_summary in Classes.objects.values("name", "students__testresults__test__name").annotate(
     max_score = Max("students__testresults__score"),
-    max_score = Max("students__testresults__score"),
-    max_score = Max("students__testresults__score"),
-    max_score = Max("students__testresults__score"), 
-)
+    min_score = Min("students__testresults__score"),
+    avg_score = Avg("students__testresults__score"),
+    sum_score = Sum("students__testresults__score"), 
+):
+    print(class_summary["name"], class_summary["students__testresults__test__name"] )
