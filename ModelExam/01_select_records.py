@@ -18,4 +18,9 @@ for class_summary in Classes.objects.values("name", "students__testresults__test
     avg_score = Avg("students__testresults__score"),
     sum_score = Sum("students__testresults__score"), 
 ):
-    print(class_summary["name"], class_summary["students__testresults__test__name"] )
+    print
+    class_summary["name"],
+    class_summary["students__testresults__test__name"],
+    class_summary["max_score"],
+    
+    )
