@@ -17,3 +17,8 @@ inserted_tests = []
 for test_name in test_names:
     test = Tests(name=test_name)
     test.save()
+    inserted_tests.append(test)
+
+for class_name in class_names:
+    insert_class = Classes(name=class_name)
+    insert_class.save()
