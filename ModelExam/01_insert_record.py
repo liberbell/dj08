@@ -14,4 +14,6 @@ test_names = ["math", "grammer", "science"]
 # print(class_name)
 
 inserted_tests = []
-for test_name in 
+for test_name in test_names:
+    test = Tests(name=test_name)
+    test.save()
