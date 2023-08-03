@@ -14,6 +14,7 @@ def form_page(request):
             print(
                 f"name: {form.cleaned_data['name']}, mail:{form.cleaned_data['mail']}, age:{form.cleaned_data['age']}"
             )
+            print(form.cleaned_data)
     return render(request, "formapp/form_page.html", context={
         "form": form
     })
