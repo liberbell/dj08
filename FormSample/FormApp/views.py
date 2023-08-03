@@ -11,7 +11,9 @@ def form_page(request):
         form = forms.UserInfo(request.POST)
         if form.is_valid():
             print("validation successful")
-            print(f"name:{form.cleaned_data["name"]}, mail:{form.cleaned_data["mail"]}, age:{form.cleaned_data["age"]}")
+            print(
+                f"name: {form.cleaned_data['name']}, mail:{form.cleaned_data['mail']}, age:{form.cleaned_data['age']}"
+            )
     return render(request, "formapp/form_page.html", context={
         "form": form
     })
