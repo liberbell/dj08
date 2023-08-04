@@ -12,7 +12,7 @@ class UserInfo(forms.Form):
         (2, "Temporary"),
         (3, "Student"),
         (4, "No job")
-    ))
+    ), widget=forms.RadioSelect)
     hobbies = forms.MultipleChoiceField(choices=(
         (1, "Baseball"),
         (2, "Books"),
