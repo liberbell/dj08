@@ -20,3 +20,4 @@ class UserInfo(forms.Form):
         (4, "Other")
     ))
     homepage = forms.URLField(required=False)
+    memo = forms.CharField(label="Memo", widget=forms.Textarea)
