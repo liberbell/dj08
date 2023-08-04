@@ -4,7 +4,7 @@ class UserInfo(forms.Form):
     name = forms.CharField(label="Name")
     age = forms.IntegerField(label="Age")
     mail = forms.EmailField(label="E-mail", widget=forms.TextInput)
-    is_married = forms.BooleanField()
+    is_married = forms.BooleanField(label="Married")
     birthday = forms.DateField()
     salary = forms.IntegerField()
     job = forms.ChoiceField(choices=(
