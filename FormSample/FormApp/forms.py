@@ -3,8 +3,11 @@ from django import forms
 class UserInfo(forms.Form):
     name = forms.CharField(label="Name")
     age = forms.IntegerField(label="Age")
-    mail = forms.EmailField(label="E-mail", widget=forms.TextInput)
-    is_married = forms.BooleanField(label="Married")
+    mail = forms.EmailField(
+        label="E-mail",
+        widget=forms.TextInput(attrs={"placeholder": "sample@example.com"})
+    )
+    is_married = forms.BooleanField(label="Married", initial=True)
     birthday = forms.DateField(initial="1900-01-01")
     salary = forms.IntegerField()
     job = forms.ChoiceField(choices=(
