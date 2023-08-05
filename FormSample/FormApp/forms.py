@@ -5,7 +5,7 @@ class UserInfo(forms.Form):
     age = forms.IntegerField(label="Age")
     mail = forms.EmailField(
         label="E-mail",
-        widget=forms.TextInput(attrs={"placeholder": "sample@example.com"})
+        widget=forms.TextInput(attrs={"class": "mail_class", "placeholder": "sample@example.com"})
     )
     is_married = forms.BooleanField(label="Married", initial=True)
     birthday = forms.DateField(initial="1900-01-01")
