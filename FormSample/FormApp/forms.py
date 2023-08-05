@@ -1,7 +1,7 @@
 from django import forms
 
 class UserInfo(forms.Form):
-    name = forms.CharField(label="Name")
+    name = forms.CharField(label="Name", min_length=2, max_length=15)
     age = forms.IntegerField(label="Age")
     mail = forms.EmailField(
         label="E-mail",
