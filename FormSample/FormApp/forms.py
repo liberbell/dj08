@@ -18,6 +18,6 @@ class UserInfo(forms.Form):
         (2, "Books"),
         (3, "Movies"),
         (4, "Other")
-    ))
+    ), widget=forms.CheckboxSelectMultiple)
     homepage = forms.URLField(required=False)
     memo = forms.CharField(label="Memo", widget=forms.Textarea)
