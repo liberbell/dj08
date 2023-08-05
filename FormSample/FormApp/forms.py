@@ -5,7 +5,7 @@ class UserInfo(forms.Form):
     age = forms.IntegerField(label="Age")
     mail = forms.EmailField(label="E-mail", widget=forms.TextInput)
     is_married = forms.BooleanField(label="Married")
-    birthday = forms.DateField()
+    birthday = forms.DateField(initial="1900-01-01")
     salary = forms.IntegerField()
     job = forms.ChoiceField(choices=(
         (1, "Permanent"),
