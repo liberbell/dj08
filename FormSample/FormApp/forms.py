@@ -2,7 +2,7 @@ from django import forms
 
 class UserInfo(forms.Form):
     name = forms.CharField(label="Name", min_length=2, max_length=15)
-    age = forms.IntegerField(label="Age", validators=[varidators.MinValueValidator()])
+    age = forms.IntegerField(label="Age", validators=[validators.MinValueValidator()])
     mail = forms.EmailField(
         label="E-mail",
         widget=forms.TextInput(attrs={"class": "mail_class", "placeholder": "sample@example.com"})
