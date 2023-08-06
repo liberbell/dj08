@@ -6,7 +6,7 @@ def check_name(value):
         raise validators.ValidationError("Name Error")
 
 class UserInfo(forms.Form):
-    name = forms.CharField(label="Name", min_length=2, max_length=15)
+    name = forms.CharField(label="Name", min_length=2, max_length=15, validators=[check_name])
     age = forms.IntegerField(label="Age", validators=[validators.MinValueValidator(20, message="Input over 20")])
     mail = forms.EmailField(
         label="E-mail",
