@@ -29,3 +29,6 @@ class UserInfo(forms.Form):
         super(UserInfo, self).__init__(*args, **kwargs)
         self.fields["job"].widget.attrs["id"] = "id_job"
         self.fields["hobbies"].widget.attrs["class"] = "hobbies_class"
+
+    def clean_homepage(self):
+        homepage = self.cleaned_data["homepage"]
