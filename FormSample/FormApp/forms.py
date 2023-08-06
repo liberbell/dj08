@@ -1,5 +1,6 @@
 from django import forms
 from django.core import validators
+from .models import Post
 
 def check_name(value):
     if value == "abc":
@@ -50,3 +51,8 @@ class UserInfo(forms.Form):
         verify_mail = cleaned_data['verify_mail']
         if mail != verify_mail:
             raise forms.ValidationError("Unmatch email")
+
+class PostModelForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = '__all__'
