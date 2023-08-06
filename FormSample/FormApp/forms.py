@@ -12,6 +12,10 @@ class UserInfo(forms.Form):
         label="E-mail",
         widget=forms.TextInput(attrs={"class": "mail_class", "placeholder": "sample@example.com"})
     )
+    verify_mail = forms.EmailField(
+        label="Verify E-mail",
+        widget=forms.TextInput(attrs={"class": "mail_class", "placeholder": "sample@example.com"})
+    )
     is_married = forms.BooleanField(label="Married", initial=True)
     birthday = forms.DateField(initial="1900-01-01")
     salary = forms.IntegerField()
@@ -39,3 +43,7 @@ class UserInfo(forms.Form):
         homepage = self.cleaned_data["homepage"]
         if not homepage.startswith("https"):
             raise forms.ValidationError("Please enter https")
+        
+    def clean(self):
+        cleaned_data = super().clean()
+        mail = cleaned_data["mail"]
