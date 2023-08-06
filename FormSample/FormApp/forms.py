@@ -47,3 +47,6 @@ class UserInfo(forms.Form):
     def clean(self):
         cleaned_data = super().clean()
         mail = cleaned_data["mail"]
+        verify_mail = cleaned_data["verify_mail"]
+        if mail != verify_mail:
+            raise forms.ValidationError("Unmatch email")
