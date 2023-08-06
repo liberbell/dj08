@@ -1,4 +1,5 @@
 from django import forms
+from django.core import validators
 
 class UserInfo(forms.Form):
     name = forms.CharField(label="Name", min_length=2, max_length=15)
