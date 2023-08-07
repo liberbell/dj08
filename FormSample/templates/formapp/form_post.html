@@ -9,9 +9,7 @@
 <body>
     <form method="POST">
         {% csrf_token %}
-        <table>
-            {{form.as_table}}
-        </table>
+        {{ form.name.label }}{{ form.name }}
         <input type="submit" value="send">
     </form>
 </body>
