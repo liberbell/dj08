@@ -51,6 +51,11 @@ class UserInfo(forms.Form):
         verify_mail = cleaned_data['verify_mail']
         if mail != verify_mail:
             raise forms.ValidationError("Unmatch email")
+        
+class BaseForm(forms.ModelForm):
+
+    def save(self, *args, **kwargs):
+        print(f"Form: {self.__class__.__name__}done.")
 
 class PostModelForm(forms.ModelForm):
     memo = forms.CharField(max_length=255, widget=forms.Textarea(
