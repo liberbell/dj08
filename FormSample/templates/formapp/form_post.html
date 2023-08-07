@@ -9,7 +9,9 @@
 <body>
     <form method="POST">
         {% csrf_token %}
-        {{ form.name.label }}{{ form.name }}
+        <div style="color:red;">
+            {{ form.name.label }}: {{ form.name }}
+        </div>
         <input type="submit" value="send">
     </form>
 </body>
