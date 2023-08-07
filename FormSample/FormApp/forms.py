@@ -56,8 +56,9 @@ class BaseForm(forms.ModelForm):
 
     def save(self, *args, **kwargs):
         print(f"Form: {self.__class__.__name__}done.")
+        return super(BaseForm, self).save(*args, **kwargs)
 
-class PostModelForm(forms.ModelForm):
+class PostModelForm(BaseForm):
     memo = forms.CharField(max_length=255, widget=forms.Textarea(
         attrs={"rows": 30, "cols": 20})
     )
