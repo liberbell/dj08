@@ -55,7 +55,7 @@ class UserInfo(forms.Form):
 class BaseForm(forms.ModelForm):
 
     def save(self, *args, **kwargs):
-        print(f"Form: {self.__class__.__name__}done.")
+        print(f"Form: {self.__class__.__name__} done.")
         return super(BaseForm, self).save(*args, **kwargs)
 
 class PostModelForm(BaseForm):
