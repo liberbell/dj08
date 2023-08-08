@@ -59,8 +59,11 @@ class BaseForm(forms.ModelForm):
         return super(BaseForm, self).save(*args, **kwargs)
 
 class PostModelForm(BaseForm):
-    memo = forms.CharField(max_length=255, widget=forms.Textarea(
-        attrs={"rows": 30, "cols": 20})
+    name = forms.CharField(label="Name2")
+    title = forms.CharField(label="Title2")
+    memo = forms.CharField(max_length=255,
+        label="Memo2",
+        widget=forms.Textarea(attrs={"rows": 30, "cols": 20})
     )
     class Meta:
         model = Post
