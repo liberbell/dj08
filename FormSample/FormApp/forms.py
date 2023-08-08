@@ -84,3 +84,9 @@ class PostModelForm(BaseForm):
         if name == "abc":
             raise forms.ValidationError("cant register name")
         return name
+    
+    def clean_title(self):
+        title = self.cleaned_data.get("title")
+        if title == "test":
+            raise forms.ValidationError("cant register title")
+        return title
