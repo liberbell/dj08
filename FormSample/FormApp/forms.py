@@ -80,7 +80,7 @@ class PostModelForm(BaseForm):
         return obj
     
     def clean_name(self):
-        name = self.cleaned_data.get["name"]
+        name = self.cleaned_data.get("name")
         if name == "abc":
             raise forms.ValidationError("cant register name")
         return name
