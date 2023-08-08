@@ -10,8 +10,8 @@
     <form method="POST">
         {% csrf_token %}
         {% if form.errors %}
-            {% for key, value in form.errors.item %}}
-                <p>{{ key }} {{ value }}</p>
+            {% for key, value in form.errors.items %}}
+                <p>{{ key }}: {{ value.as_text }}</p>
             {% endfor %}
         {% endif %}
         <div style="color:red;">
