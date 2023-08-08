@@ -9,6 +9,9 @@
 <body>
     <form method="POST">
         {% csrf_token %}
+        {% if form.errors %}
+            {% for key, values in  %}{% endfor %}
+        {% endif %}
         <div style="color:red;">
             {{ form.name.label }}: {{ form.name }}
             {% if form.name.errors %}
