@@ -78,3 +78,6 @@ class PostModelForm(BaseForm):
         print("Saved!")
         obj.save()
         return obj
+    
+    def clean_name(self):
+        name = self.cleaned_data.get["name"]
