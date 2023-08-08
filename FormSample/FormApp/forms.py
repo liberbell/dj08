@@ -83,3 +83,4 @@ class PostModelForm(BaseForm):
         name = self.cleaned_data.get["name"]
         if name == "abc":
             raise forms.ValidationError("cant register name")
+        return name
