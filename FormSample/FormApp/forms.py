@@ -90,3 +90,6 @@ class PostModelForm(BaseForm):
         if title == "test":
             raise forms.ValidationError("cant register title")
         return title
+    
+    def clean(self):
+        clead_data = super().clean()
