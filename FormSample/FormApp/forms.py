@@ -93,3 +93,7 @@ class PostModelForm(BaseForm):
     
     def clean(self):
         clead_data = super().clean()
+        title = clead_data.get("title")
+        is_exists = Post.objects.filter(title=title).first()
+        if is_exists:
+            raise forms.ValidationError("The title is already registered")
