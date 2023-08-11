@@ -33,6 +33,6 @@ def form_set_post(request):
     formset = TestFormset()
     return render(
         request,
-        "formapp/formset_set_post.html",
+        "formapp/form_set_post.html",
         context={'formset': formset}
     )
