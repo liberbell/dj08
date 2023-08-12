@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.forms import formset_factory, modelformset_factory
 from . import forms
 from .models import ModelSetPost
+import os
 from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
@@ -55,3 +56,4 @@ def upload_sample(request):
     if request.method == "POST" and request.FILES["upload_file"]:
         upload_file = request.FILES["upload_file"]
         fs = FileSystemStorage()
+        file_path = os.path.join('upload', upload_file.name)
