@@ -1,6 +1,6 @@
 from django import forms
 from django.core import validators
-from .models import Post
+from .models import Post, ModelSetPost
 
 def check_name(value):
     if value == "abc":
@@ -105,3 +105,7 @@ class FormSetPost(forms.Form):
 class ModelFormSetPost(forms.ModelForm):
     title = forms.CharField(label="Title")
     memo = forms.CharField(label="Memo")
+
+    class Meta:
+        model = ModelSetPost
+        fields = '__all__'
