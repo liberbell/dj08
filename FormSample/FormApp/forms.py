@@ -101,3 +101,7 @@ class PostModelForm(BaseForm):
 class FormSetPost(forms.Form):
     title = forms.CharField(label="Title")
     memo = forms.CharField(label="Memo")
+
+class ModelFormSetPost(forms.ModelForm):
+    title = forms.CharField(label="Title")
+    memo = forms.CharField(label="Memo")
