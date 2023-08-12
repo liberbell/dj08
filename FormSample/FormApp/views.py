@@ -46,3 +46,5 @@ def modelform_set_post(request):
     formset = TestFormSet(request.POST or None)
     if formset.is_valid():
         formset.save()
+    return render(request, "formapp/modelformset_post.html",
+                  context={'formset': formset})
