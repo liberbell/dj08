@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form Post</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% comment %} {{ formset.as_p }} {% endcomment %}
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{ form.as_p}}
+            <hr>
+        {% endfor %}
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
