@@ -67,3 +67,10 @@ def upload_sample(request):
 def upload_model_form(request):
     if request.method == "POST":
         form = forms.UserForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    else:
+        form = forms.UserForm()
+        return render(request.POST,
+                      "formapp/upload_model_form.html",
+                      context={})
