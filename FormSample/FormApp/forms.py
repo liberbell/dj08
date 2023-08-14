@@ -1,6 +1,6 @@
 from django import forms
 from django.core import validators
-from .models import Post, ModelSetPost
+from .models import Post, ModelSetPost, User
 
 def check_name(value):
     if value == "abc":
