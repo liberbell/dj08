@@ -62,3 +62,4 @@ def upload_sample(request):
         return render(request, "formapp/upload_file.html",
                       context={'uploaded_file_url': uploaded_file_url}
         )
+    return render(request, "formapp/upload_file.html")
