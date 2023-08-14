@@ -7,11 +7,13 @@
 <body>
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="upload_file"><br>
+        {{ form.as_p}}
         <input type="submit" value="Save">
     </form>
-    {% if uploaded_file_url %}
-        <p>Save to: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    {% if user %}
+        <p>Name: {{ user.name }}</p>
+        <p>Age: {{ user.age }}</p>
+        <img src="{{ user.picture.url }}" alt="">
     {% endif %}
 </body>
 </html>
