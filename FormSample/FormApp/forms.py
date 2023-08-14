@@ -109,3 +109,8 @@ class ModelFormSetPost(forms.ModelForm):
     class Meta:
         model = ModelSetPost
         fields = '__all__'
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = '__all__'
