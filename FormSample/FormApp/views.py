@@ -53,7 +53,7 @@ def modelform_set_post(request):
                   context={'formset': formset})
 
 def upload_sample(request):
-    if request.method == "POST" and request.FILES['upload_file']:
+    if request.method == 'POST' and request.FILES['upload_file']:
         upload_file = request.FILES['upload_file']
         fs = FileSystemStorage()
         file_path = os.path.join('upload', upload_file.name)
