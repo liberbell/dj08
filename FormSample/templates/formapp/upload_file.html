@@ -5,6 +5,10 @@
     <title>File upload</title>
 </head>
 <body>
-    
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="Upload file"><br>
+        <input type="submit" value="Save">
+    </form>
 </body>
 </html>
