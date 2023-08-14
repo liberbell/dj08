@@ -72,6 +72,6 @@ def upload_model_form(request):
             user = form.save()
     else:
         form = forms.UserForm()
-        return render(request,
-                      "formapp/upload_model_form.html",
-                      context={'form': form, 'user': user})
+    return render(request,
+                    "formapp/upload_model_form.html",
+                    context={'form': form, 'user': user})
