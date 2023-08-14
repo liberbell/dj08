@@ -54,7 +54,7 @@ def modelform_set_post(request):
 
 def upload_sample(request):
     if request.method == "POST" and request.FILES['upload_file']:
-        upload_file = request.FILES["upload_file"]
+        upload_file = request.FILES['upload_file']
         fs = FileSystemStorage()
         file_path = os.path.join('upload', upload_file.name)
         file = fs.save(file_path, upload_file)
