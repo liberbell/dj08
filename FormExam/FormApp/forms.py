@@ -7,3 +7,7 @@ class StudentInsertForm(forms.ModelForm):
     age = forms.IntegerField(label="Age: ")
     grade = forms.IntegerField(label="Grade: ")
     picture = forms.FileField(label="Picture: ")
+
+    class Meta:
+        model = Students
+        fields = "__all__"
