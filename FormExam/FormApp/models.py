@@ -6,3 +6,6 @@ class Students(models.Model):
     age = models.IntegerField()
     grade = models.IntegerField()
     picture = models.FileField(upload_to='student/')
+
+    class Meta:
+        db_table = 'students'
