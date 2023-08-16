@@ -1,14 +1,2 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Django Form{% endblock title %}</title>
-</head>
-<body>
-    <header>
-        <a href=""></a>
-    </header>
-    {% block content %}
-    {% endblock content %}
-</body>
-</html>
+{% extends 'formapp/base.html' %}
+{% block title %}Add member{% endblock title %}
