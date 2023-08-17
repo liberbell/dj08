@@ -20,7 +20,7 @@ def students_list(request):
 
 def edit_student(request, id):
     student = Students.objects.get(id=id)
-    update_form = forms.StudentEditForm(
+    edit_form = forms.StudentEditForm(
         initial={
             "name": student.name,
             "age": student.age,
@@ -28,3 +28,9 @@ def edit_student(request, id):
             "picture": student.picture
         }
     )
+    if request.method == "POST":
+        pass
+
+    return render(request, "formapp/edit_student.html",
+                  context={"eidt_form": edit_form,
+                           "student": student})
