@@ -20,3 +20,11 @@ def students_list(request):
 
 def edit_student(request, id):
     student = Students.objects.get(id=id)
+    update_form = forms.StudentEditForm(
+        initial={
+            "name": student.name,
+            "age": student.age,
+            "grade": student.grade,
+            "picture": student.picture
+        }
+    )
