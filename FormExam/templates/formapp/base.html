@@ -6,7 +6,8 @@
 </head>
 <body>
     <header>
-        <a href="{% url '' %}"></a>
+        <a href="{% url 'formapp:insert_student' %}">Add member</a>
+        <a href="{% url 'formapp:students_list' %}">Member list</a>
     </header>
     {% block content %}
     {% endblock content %}
