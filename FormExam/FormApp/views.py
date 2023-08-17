@@ -17,3 +17,6 @@ def students_list(request):
         request, "formapp/students_list.html",
         context={"students": students},
     )
+
+def edit_student(request, id):
+    student = Students.objects.get(id=id)
