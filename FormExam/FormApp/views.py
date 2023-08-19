@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from . import forms
 from .models import Students
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 def insert_student(request):
@@ -35,6 +36,8 @@ def edit_student(request, id):
             student.age = edit_form.cleaned_data["age"]
             student.grade = edit_form.cleaned_data["grade"]
             picture = edit_form.cleaned_data["picture"]
+            if picture:
+                fs = FileSys
 
             student.save()
 
