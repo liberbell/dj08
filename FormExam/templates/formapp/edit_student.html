@@ -5,7 +5,7 @@
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ edit_form.as_p }}
-        <input type="submit" value="Edit member">
+        <input type="submit" value="Edit">
         <p><img src="{{ student.picture.url }}" alt=""></p>
     </form>
 {% endblock content %}
