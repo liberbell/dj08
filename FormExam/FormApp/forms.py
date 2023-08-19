@@ -16,4 +16,4 @@ class StudentEditForm(forms.Form):
     name = forms.CharField(label="Name: ")
     age = forms.IntegerField(label="Age: ")
     grade = forms.IntegerField(label="Grade: ")
-    picture = forms.FileField(label="Picture: ")
+    picture = forms.FileField(label="Picture: ", required=False)
