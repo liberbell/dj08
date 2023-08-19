@@ -29,7 +29,14 @@ def edit_student(request, id):
         }
     )
     if request.method == "POST":
-        pass
+        edit_form = forms.StudentEditForm(request.POST or None, request.FILES or None)
+        if edit_form.is_valid():
+            student.name = edit_form.cleaned_data["name"]
+            student.age = edit_form.cleaned_data["age"]
+            student.grade = edit_form.cleaned_data["grade"]
+            picture = edit_form.cleaned_data["picture"]
+
+            student.save()
 
     return render(request, "formapp/edit_student.html",
                   context={'eidt_form': edit_form,
