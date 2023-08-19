@@ -32,5 +32,5 @@ def edit_student(request, id):
         pass
 
     return render(request, "formapp/edit_student.html",
-                  context={"eidt_form": edit_form,
-                           "student": student})
+                  context={'eidt_form': edit_form,
+                           'student': student})
