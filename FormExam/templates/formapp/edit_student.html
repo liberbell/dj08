@@ -6,6 +6,6 @@
         {% csrf_token %}
         {{ edit_form.as_p }}
         <input type="submit" value="Edit">
-        <p><img src="{{ student.picture.url }}"></img></p>
+        <p><img src={{ student.picture.url }}></img></p>
     </form>
 {% endblock content %}
