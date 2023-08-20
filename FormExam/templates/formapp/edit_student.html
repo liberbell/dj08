@@ -2,7 +2,7 @@
 {% block title %}Edit member{{ block.super }}{% endblock title %}
 
 {% block content %}
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ edit_form.as_p }}
         <input type="submit" value="Edit">
