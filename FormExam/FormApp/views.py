@@ -2,7 +2,8 @@ from django.shortcuts import render
 from . import forms
 from .models import Students
 from django.core.files.storage import FileSystemStorage
-import _osx_support
+import os
+from django.forms import modelformset_factory
 
 # Create your views here.
 def insert_student(request):
@@ -51,3 +52,5 @@ def delete_student(request, id):
     delete_form = forms.StudentDeleteForm(
         initial={"id": id}
     )
+
+# def insert_multiple
