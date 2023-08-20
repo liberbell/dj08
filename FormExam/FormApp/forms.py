@@ -18,5 +18,5 @@ class StudentEditForm(forms.Form):
     grade = forms.IntegerField(label="Grade: ")
     picture = forms.FileField(label="Picture: ", required=False)
 
-class StudetDeleteForm(forms.Form):
+class StudentDeleteForm(forms.Form):
     id = forms.IntegerField(widget=forms.HiddenInput)
