@@ -46,3 +46,8 @@ def edit_student(request, id):
     return render(request, "formapp/edit_student.html",
                   context={'update_form': update_form,
                            'student': student})
+
+def delete_student(request, id):
+    delete_form = forms.StudentDeleteForm(
+        initial={"id": id}
+    )
