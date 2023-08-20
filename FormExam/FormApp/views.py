@@ -40,8 +40,7 @@ def edit_student(request, id):
             if picture:
                 fs = FileSystemStorage()
                 file_name = fs.save(os.path.join("student", picture.name), picture)
-
-
+                student.picture = file_name
             student.save()
 
     return render(request, "formapp/edit_student.html",
