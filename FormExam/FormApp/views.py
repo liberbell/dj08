@@ -31,12 +31,12 @@ def edit_student(request, id):
         }
     )
     if request.method == "POST":
-        edit_form = forms.StudentEditForm(request.POST or None, request.FILES or None)
-        if edit_form.is_valid():
-            student.name = edit_form.cleaned_data["name"]
-            student.age = edit_form.cleaned_data["age"]
-            student.grade = edit_form.cleaned_data["grade"]
-            picture = edit_form.cleaned_data["picture"]
+        update_form = forms.StudentEditForm(request.POST or None, request.FILES or None)
+        if update_form.is_valid():
+            student.name = update_form.cleaned_data["name"]
+            student.age = update_form.cleaned_data["age"]
+            student.grade = update_form.cleaned_data["grade"]
+            picture = update_form.cleaned_data["picture"]
             if picture:
                 fs = FileSystemStorage()
                 file_name = fs.save(os.path.join("student", picture.name), picture)
@@ -44,5 +44,5 @@ def edit_student(request, id):
             student.save()
 
     return render(request, "formapp/edit_student.html",
-                  context={'eidt_form': edit_form,
+                  context={'update_form': update_form,
                            'student': student})
