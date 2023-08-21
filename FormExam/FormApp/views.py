@@ -65,5 +65,5 @@ def insert_multiple_students(request):
     if insert_form.is_valid():
         insert_form.save()
     
-    return render(request, "formapp/multiple_students.html",
+    return render(request, "formapp/insert_multiple_students.html",
                   context={'insert_form': insert_form})
