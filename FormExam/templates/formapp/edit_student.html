@@ -8,5 +8,5 @@
         <input type="submit" value="Edit">
         <p><img src={{ student.picture.url }}></img></p>
     </form>
-    <p><a href="{% url 'formapp:delete_student' id=student.id %}">Delete</a></p>
+    <p><a href="{% url 'form_app:delete_student' id=student.id %}">Delete</a></p>
 {% endblock content %}
