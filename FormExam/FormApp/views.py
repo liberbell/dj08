@@ -59,4 +59,6 @@ def delete_student(request, id):
     return render(request, "formapp/delete_student.html",
                   context={'delete_form': delete_form})
 
-# def insert_multiple
+def insert_multiple_students(request):
+    StudentsFormSet = modelformset_factory(Students, fields="__all__", extra=3)
+    insert_form = students_list(request.POST or None, request.FILES or None)
