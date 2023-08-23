@@ -15,3 +15,6 @@ def item_detal(request, id):
 
 def to_google(request):
     return redirect("https://google.com")
+
+def one_item(request):
+    return redirect("store:item_detail", id=1)
