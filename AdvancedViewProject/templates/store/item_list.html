@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Item list</title>
 </head>
 <body>
     <table>
@@ -11,6 +11,12 @@
             <th>Name:</th>
             <th>Price:</th>
         </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+        </tr>
+        {% endfor %}
     </table>
 </body>
 </html>
