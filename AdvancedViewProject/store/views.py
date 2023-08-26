@@ -6,14 +6,15 @@ from django.http import Http404
 
 def item_list(request):
     items = Items.objects.all()
+    items = get_list_or_404(Items, pk__gt=2)
     return render(request, 'store/item_list.html',
                   context={'items': items})
 
 def item_detal(request, id):
     if id == 0:
         raise Http404
-    # item = Items.objects.filter(pk=id).first()
-    item = get_object_or_404(Items, pk=id)
+    item = Items.objects.filter(pk=id).first()
+    # item = get_object_or_404(Items, name="Milk", pk=id)
     if item is None:
         return redirect("store:item_list")
     return render(request, "store/item_detail.html",
