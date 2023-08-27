@@ -10,3 +10,11 @@ class Userform(forms.ModelForm):
     class Meta:
         model = User
         fields = ("username", "email", "password")
+
+class ProfileForm(forms.ModelForm):
+    website = forms.URLField(label="Website")
+    picture = forms.FileField(label="Picture")
+
+    class Meta:
+        model = Profile
+        fields = ("website","picture")
