@@ -14,3 +14,4 @@ def register(request):
     profile_form = ProfileForm(request.POST or None, request.FILES or None)
     if user_form.is_valid() and profile_form.is_valid():
         user = user_form.save()
+        user.set_password(user.password)
