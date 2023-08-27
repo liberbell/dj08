@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from user.forms import Profile, Userform
+from user.forms import Userform, ProfileForm
 
 
 # Create your views here.
@@ -10,4 +10,4 @@ def index(request):
     return render(request, "user/index.html")
 
 def register(request):
-    user_form = 
+    user_form = Userform(request.POST or None)
