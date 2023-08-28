@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from user.forms import Userform, ProfileForm
+from user.forms import Userform, ProfileForm, LoginForm
 
 
 # Create your views here.
@@ -22,3 +22,7 @@ def register(request):
     return render(request, "user/registration.html",
                   context={'user_form': user_form,
                            'profile_form': profile_form})
+
+def user_login(request):
+    login_form = LoginForm(request.POST or None)
+    if login_form.is_valid():
