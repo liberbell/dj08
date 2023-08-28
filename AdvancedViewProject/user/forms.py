@@ -22,3 +22,11 @@ class ProfileForm(forms.ModelForm):
 class LoginForm(forms.Form):
     usrename = forms.CharField(label="Name:", max_length=150)
     password = forms.CharField(label="Password:", widget=forms.PasswordInput())
+    confirm_password = forms.CharField(label="Reinput password:", widget=forms.PasswordInput())
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data["password"]
+        confirm_password = cleaned_data["confirm_password"]
+        if password != confirm_password:
+            raise forms.ValidationError("Password not match.")
