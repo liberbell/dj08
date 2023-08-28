@@ -18,3 +18,7 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ("website","picture")
+
+class LoginForm(forms.Form):
+    usrename = forms.CharField(label="Name:", max_length=150)
+    password = forms.CharField(label="Password:", widget=forms.PasswordInput())
