@@ -26,3 +26,4 @@ def register(request):
 def user_login(request):
     login_form = LoginForm(request.POST or None)
     if login_form.is_valid():
+        usernmae = login_form.cleaned_data.get("username")
