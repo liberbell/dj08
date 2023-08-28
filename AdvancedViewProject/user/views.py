@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from user.forms import Userform, ProfileForm, LoginForm
+from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
@@ -26,4 +28,6 @@ def register(request):
 def user_login(request):
     login_form = LoginForm(request.POST or None)
     if login_form.is_valid():
-        usernmae = login_form.cleaned_data.get("username")
+        username = login_form.cleaned_data.get("username")
+        password = login_form.cleaned_data.get("password")
+
