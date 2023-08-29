@@ -46,3 +46,7 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect("user:index")
+
+@login_required
+def info(request):
+    return HttpResponse("You are logged in")
