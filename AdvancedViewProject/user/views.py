@@ -37,3 +37,7 @@ def user_login(request):
                 return redirect("user:index")
             else:
                 return HttpResponse("Account is not active")
+        else:
+            return HttpResponse("User is not exist")
+    return render(request, "user/login.html",
+                  context={'login_form': login_form})
