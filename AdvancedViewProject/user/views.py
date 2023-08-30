@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from user.forms import Userform, ProfileForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.password_validation import validate_password
 
 # Create your views here.
 def user_list(request):
@@ -15,9 +16,12 @@ def register(request):
     user_form = Userform(request.POST or None)
     profile_form = ProfileForm(request.POST or None, request.FILES or None)
     if user_form.is_valid() and profile_form.is_valid():
-        user = user_form.save()
+        user = user_form.save(commit=False)
         user.set_password(user.password)
         user.save()
+        try:
+            validate_password(user_form.cleaned_data.get("password"), user)
+
         profile = profile_form.save(commit=False)
         profile.user = user
         profile.save()
