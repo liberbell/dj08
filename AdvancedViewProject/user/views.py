@@ -39,7 +39,7 @@ def user_login(request):
                 return HttpResponse("Account is not active")
         else:
             return HttpResponse("User is not exist")
-    return render(request, "user/login.html",
+    return render(request, "user/user_login.html",
                   context={'login_form': login_form})
 
 @login_required
