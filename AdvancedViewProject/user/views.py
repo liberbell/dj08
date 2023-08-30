@@ -39,8 +39,8 @@ def register(request):
 def user_login(request):
     login_form = LoginForm(request.POST or None)
     if login_form.is_valid():
-        username = login_form.cleaned_data.get("username")
-        password = login_form.cleaned_data.get("password")
+        username = login_form.cleaned_data.get('username')
+        password = login_form.cleaned_data.get('password')
         user = authenticate(username=username, password=password)
         if user:
             if user.is_active:
