@@ -15,7 +15,7 @@ class ProfileForm(forms.ModelForm):
     website = forms.URLField(label="Website")
     picture = forms.FileField(label="Picture")
 
-    class Meta:
+    class Meta():
         model = Profile
         fields = ("website","picture")
 
