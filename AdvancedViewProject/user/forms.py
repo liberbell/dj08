@@ -20,7 +20,7 @@ class ProfileForm(forms.ModelForm):
         fields = ("website","picture")
 
 class LoginForm(forms.Form):
-    usrename = forms.CharField(label="Name:", max_length=150)
+    username = forms.CharField(label="Name:", max_length=150)
     password = forms.CharField(label="Password:", widget=forms.PasswordInput())
     confirm_password = forms.CharField(label="Reinput password:", widget=forms.PasswordInput())
 
