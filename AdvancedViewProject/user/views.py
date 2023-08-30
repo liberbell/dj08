@@ -34,7 +34,8 @@ def register(request):
         profile.save()
     return render(request, "user/registration.html",
                   context={'user_form': user_form,
-                           'profile_form': profile_form})
+                           'profile_form': profile_form,
+                           })
 
 def user_login(request):
     login_form = LoginForm(request.POST or None)
