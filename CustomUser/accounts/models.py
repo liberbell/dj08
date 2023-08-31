@@ -10,4 +10,5 @@ class User(AbstractBaseUser, PermissionsMixin):
     website = models.URLField(null=True)
     picture = models.FileField(null=True)
 
-    USERNAME_FIELD = 'username'
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
