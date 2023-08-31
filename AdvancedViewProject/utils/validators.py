@@ -11,7 +11,7 @@ class CustomPasswordValidator():
             (re.search('[0-9]', password),
              re.search('[a-z]', password),
              re.search('[A-Z]', password))
-             )
+             ):
             return
         raise ValidationError("Password require 0-9, a-z and A-Z")
     
