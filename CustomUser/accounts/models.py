@@ -5,7 +5,11 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Permis
 class UserManager(BaseUserManager):
 
     def create_user(self, username, email, password=None):
-        
+        if not email:
+            raise ValueError("Enter email address")
+        user = self.model(
+            username=username
+        )
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150)
