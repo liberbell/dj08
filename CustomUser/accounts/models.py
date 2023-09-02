@@ -22,6 +22,9 @@ class UserManager(BaseUserManager):
             )
         user.set_password(password)
         user.is_staff = True
+        user.is_active = True
+        user.is_superuser = True
+        user.save(using=self._db)
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150)
