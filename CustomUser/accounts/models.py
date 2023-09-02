@@ -25,6 +25,7 @@ class UserManager(BaseUserManager):
         user.is_active = True
         user.is_superuser = True
         user.save(using=self._db)
+        return user
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150)
