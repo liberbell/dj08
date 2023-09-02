@@ -4,3 +4,6 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 
 user = get_user_model()
+
+class UserCreationForm(forms.ModelForm):
+    password = forms.CharField(label="Password:", widget=forms.PasswordInput)
