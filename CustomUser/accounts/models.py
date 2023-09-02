@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 
 # Create your models here.
+class UserManager(BaseUserManager):
+
+    def create_user(self, username, email, password=None):
+        
+
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150)
     email = models.EmailField(max_length=255, unique=True)
@@ -12,3 +17,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
+
+    objects = UserManager()
+
+    def __str__(self):
+        return self.email
