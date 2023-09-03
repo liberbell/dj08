@@ -59,3 +59,4 @@ class Schools(models.Model):
 
     class Meta:
         db_table = 'schools'
+        verbose_name_plural = 'School'
