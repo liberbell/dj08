@@ -11,7 +11,7 @@ class CustomizeUserAdmin(UserAdmin):
     add_form = UserCreationForm
 
     list_display = ("username", "email", "is_staff")
-    fieldset = (
+    fieldsets = (
         ("User information",
             {"fields": ("username", "email", "password", "website", "picture")}
         ),
