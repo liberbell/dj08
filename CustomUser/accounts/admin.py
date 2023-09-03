@@ -24,3 +24,5 @@ class CustomizeUserAdmin(UserAdmin):
         ("User information",
             {"fields": ("username", "email", "password", "confirm_password")}),
     )
+
+admin.site.register(User, CustomizeUserAdmin)
