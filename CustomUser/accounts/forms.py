@@ -40,6 +40,7 @@ class UserChangeForm(forms.ModelForm):
             "password",
             "is_staff",
             "is_active",
+            "is_superuser",
             "website",
             "picture"
             )
