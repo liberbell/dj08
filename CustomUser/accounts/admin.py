@@ -17,5 +17,10 @@ class CustomizeUserAdmin(UserAdmin):
         ),
         ("Permissions", 
             {"fields": ("is_staff", "is_active", "is_supersuer")}
-        )
+        ),
+    )
+
+    add_fieldsets = (
+        ("User information",
+            {"fields": ("username", "email", "password", "confirm_password")}),
     )
