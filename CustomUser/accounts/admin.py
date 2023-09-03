@@ -5,3 +5,6 @@ from .forms import UserChangeForm, UserCreationForm
 
 # Register your models here.
 User = get_user_model()
+
+class CustomizeUserAdmin(UserAdmin):
+    form = UserChangeForm
