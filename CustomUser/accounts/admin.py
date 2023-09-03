@@ -16,7 +16,7 @@ class CustomizeUserAdmin(UserAdmin):
             {"fields": ("username", "email", "password", "website", "picture")}
         ),
         ("Permissions", 
-            {"fields": ("is_staff", "is_active", "is_supersuer")}
+            {"fields": ("is_staff", "is_active", "is_superuser")}
         ),
     )
 
