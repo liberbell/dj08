@@ -21,7 +21,7 @@ class UserCreationForm(forms.ModelForm):
         if password != confirm_password:
             raise ValidationError("Invalid password")
     
-    def save(self):
+    def save(self, commit=False):
         user= super().save(commit=False)
         user.set_password(self.cleaned_data.get("password"))
         user.save()
