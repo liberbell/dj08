@@ -53,6 +53,7 @@ class Students(models.Model):
 
     class Meta:
         db_table = 'students'
+        verbose_name_plural = 'Student'
 
 class Schools(models.Model):
     name = models.CharField(max_length=20)
