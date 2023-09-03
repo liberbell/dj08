@@ -8,3 +8,9 @@ User = get_user_model()
 
 class CustomizeUserAdmin(UserAdmin):
     form = UserChangeForm
+    add_form = UserCreationForm
+
+    list_display = ("username", "email", "is_staff")
+    fieldset = (
+        "User information", {"field": ("username", "email", "password", "website", "picture")}
+    )
