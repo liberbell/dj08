@@ -30,6 +30,7 @@ class CustomizeUserAdmin(UserAdmin):
 class StudentAdmin(admin.ModelAdmin):
 
     fields = ("name", "score", "age", "school")
+    list_display = ("id", "name", "age", "score", "school")
 
 admin.site.register(User, CustomizeUserAdmin)
 admin.site.register(Schools)
