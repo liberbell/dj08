@@ -45,5 +45,7 @@ class SchoolsAdmin(admin.ModelAdmin):
         print(type(obj))
         count = obj.students_set.count()
         return count
+    
+    student_count.short_description = "Student counts"
 
 admin.site.register(User, CustomizeUserAdmin)
