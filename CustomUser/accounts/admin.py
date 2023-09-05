@@ -34,6 +34,7 @@ class StudentAdmin(admin.ModelAdmin):
     list_display_links = ("name",)
     search_fields = ("name", "age")
     list_filter = ("name", "age", "score", "school")
+    list_editable = ("age", "score")
 
 admin.site.register(User, CustomizeUserAdmin)
 admin.site.register(Schools)
