@@ -36,12 +36,13 @@ class StudentAdmin(admin.ModelAdmin):
     list_filter = ("name", "age", "score", "school")
     list_editable = ("age", "score")
 
-@admin.site.register(Schools)
+@admin.register(Schools)
 class SchoolsAdmin(admin.ModelAdmin):
     
     list_display = ("name", "student_count")
 
     def student_count(self, obj):
+        print(type(obj))
         count = obj.students_set.count()
         return count
 
