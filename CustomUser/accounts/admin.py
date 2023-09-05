@@ -36,5 +36,13 @@ class StudentAdmin(admin.ModelAdmin):
     list_filter = ("name", "age", "score", "school")
     list_editable = ("age", "score")
 
+@admin.site.register(Schools)
+class SchoolsAdmin(admin.ModelAdmin):
+    
+    list_display = ("name", "student_count")
+
+    def student_count(self, obj):
+        count = obj.students_set.count()
+        return count
+
 admin.site.register(User, CustomizeUserAdmin)
-admin.site.register(Schools)
