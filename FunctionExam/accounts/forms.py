@@ -10,7 +10,7 @@ class RegistForm(forms.ModelForm):
     password = forms.CharField(label="Password:", widget=forms.PasswordInput())
     confirm_password = forms.CharField(label="Confirm Password:", widget=forms.PasswordInput())
 
-    class Meta:
+    class Meta():
         model = Users
         fields = ("username", "age", "email", "password")
 
