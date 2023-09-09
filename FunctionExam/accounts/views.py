@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import forms
+from django.core.exceptions import ValidationError
 
 # Create your views here.
 def home(request):
@@ -8,7 +9,10 @@ def home(request):
 def regist(request):
     regist_form = forms.RegistForm(request.POST)
     if regist_form.is_valid():
-        regist_form.save()
+        try:
+            regist_form.save()
+        except ValidationError as e:
+            regist_form.add_error("password", e)
 
     return render(request, 'accounts/regist.html',
                   context={
