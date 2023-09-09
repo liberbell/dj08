@@ -17,5 +17,5 @@ def regist(request):
 
     return render(request, 'accounts/regist.html',
                   context={
-                      "resit_form": regist_form,
+                      "regist_form": regist_form,
                   })
