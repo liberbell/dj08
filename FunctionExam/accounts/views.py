@@ -7,7 +7,7 @@ def home(request):
     return render(request, "accounts/home.html")
 
 def regist(request):
-    regist_form = forms.RegistForm(request.POST)
+    regist_form = forms.RegistForm(request.POST or None)
     if regist_form.is_valid():
         try:
             regist_form.save()
