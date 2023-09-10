@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . import forms
 from django.core.exceptions import ValidationError
+from .models import UserActivateTokens
 
 # Create your views here.
 def home(request):
@@ -21,4 +22,4 @@ def regist(request):
                   })
 
 def activate_user(request, token):
-    pass
+    user_activate_tokne = UserActivateTokens.objects
