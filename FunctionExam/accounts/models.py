@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from uuid import uuid4
+from datetime import datetime, timedelta
 
 # Create your models here.
 class Users(AbstractBaseUser, PermissionsMixin):
@@ -31,5 +33,5 @@ class UserActivateTokens(models.Model):
 @receiver(post_save, sender=Users)
 def publish_token(sender, instance, **kwargs):
     user_activate_token = UserActivateTokens.objects.create(
-        user = instance
+        user = instance, token = str(uuid4()), expired_at =
     )
