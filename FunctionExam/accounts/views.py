@@ -31,6 +31,8 @@ def user_login(request):
     if login_form.is_valid():
         email = login_form.cleaned_data.get("email")
         password = login_form.cleaned_data.get("password")
+        user = authenticate(email=email, password=password)
+        if user.is_active:
     pass
 
 def user_logout(request):
