@@ -33,6 +33,8 @@ def user_login(request):
         password = login_form.cleaned_data.get("password")
         user = authenticate(email=email, password=password)
         if user.is_active:
+            login(request, user)
+            return redirect("accounts:home")
     pass
 
 def user_logout(request):
