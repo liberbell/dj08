@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from . import forms
 from django.core.exceptions import ValidationError
 from .models import UserActivateTokens
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
@@ -27,6 +28,9 @@ def activate_user(request, token):
 
 def user_login(request):
     login_form = forms.LoginForm(request.POST or None)
+    if login_form.is_valid():
+        email = login_form.cleaned_data.get("email")
+        password = login_form.cleaned_data.get("password")
     pass
 
 def user_logout(request):
