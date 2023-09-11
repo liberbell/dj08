@@ -37,6 +37,7 @@ class UserActivateTokens(models.Model):
     user = models.ForeignKey(
         'Users', on_delete=models.CASCADE
     )
+    objects = UserActivateTokensManager()
 
     class Meta:
         db_table= 'user_activate_tokens'
