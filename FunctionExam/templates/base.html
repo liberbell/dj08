@@ -11,7 +11,7 @@
         {% if user.is_authenticated %}
         <a href="{% url 'accounts:user_logout' %}" navbar-brand>Logout</a>
         {% else %}
-            <a href="{% url 'accounts:user_login' %}" navbar-brand>Login</a>
+            <a href="{% url 'accounts:user_login' %}" navbar-brand>Login </a>
             <a href="{% url 'accounts:regist' %}" navbar-brand>User Registration</a>
         {% endif %}
     </nav>
