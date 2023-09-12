@@ -3,6 +3,7 @@ from . import forms
 from django.core.exceptions import ValidationError
 from .models import UserActivateTokens
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -34,10 +35,12 @@ def user_login(request):
         user = authenticate(email=email, password=password)
         if user.is_active:
             login(request, user)
+            messages.success(request, "Login successful")
             return redirect("accounts:home")
         else:
-            pass
-    pass
+            messages.warning(request, "User is not active")
+    else:
+        messages.warning(request, "User or password incorrect")
 
 def user_logout(request):
     pass
