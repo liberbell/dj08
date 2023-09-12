@@ -35,6 +35,8 @@ def user_login(request):
         if user.is_active:
             login(request, user)
             return redirect("accounts:home")
+        else:
+            pass
     pass
 
 def user_logout(request):
