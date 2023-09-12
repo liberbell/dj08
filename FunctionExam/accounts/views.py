@@ -57,3 +57,5 @@ def user_logout(request):
 @login_required
 def user_edit(request):
     user_edit_form = forms.UserEditForm(request.POST or None, request.FILES or None, isinstance=request.user)
+    if user_edit_form.is_valid():
+        user_edit_form.save()
