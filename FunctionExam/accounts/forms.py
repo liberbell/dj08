@@ -31,3 +31,13 @@ class RegistForm(forms.ModelForm):
 class LoginForm(forms.Form):
     email = forms.CharField(label="Email:")
     password = forms.CharField(label="Password:", widget=forms.PasswordInput())
+
+class UserEditForm(forms.ModelForm):
+    username = forms.CharField(label="Username:")
+    age = forms.IntegerField(label="Age:", min_value=0)
+    email = forms.EmailField(label="Emil:")
+    picture = forms.FileField(label="Picture:", required=False)
+
+    class Meta():
+        model = Users
+        fields = ("username", "age", "email", "picture")
