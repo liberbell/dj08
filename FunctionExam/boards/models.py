@@ -5,7 +5,7 @@ class Themes(models.Model):
 
     title = models.CharField(max_length=255)
     user = models.ForeignKey(
-        "accounts.User",
+        "accounts.Users",
         on_delete=models.CASCADE
     )
 
