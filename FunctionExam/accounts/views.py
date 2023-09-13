@@ -59,3 +59,7 @@ def user_edit(request):
     user_edit_form = forms.UserEditForm(request.POST or None, request.FILES or None, isinstance=request.user)
     if user_edit_form.is_valid():
         user_edit_form.save()
+    return render(request, "accounts/user_edit.html",
+                  context={
+                      "user_edit_form": user_edit_form,
+                  })
