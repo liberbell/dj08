@@ -19,3 +19,10 @@ class Comments(models.Model):
         "accounts.Users",
         on_delete=models.CASCADE
     )
+    theme = models.ForeignKey(
+        "Themes",
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        db_table = 'comments'
