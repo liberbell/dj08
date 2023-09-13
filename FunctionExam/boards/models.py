@@ -1,10 +1,21 @@
 from django.db import models
 
 # Create your models here.
-class Theme(models.Model):
+class Themes(models.Model):
 
     title = models.CharField(max_length=255)
     user = models.ForeignKey(
         "accounts.User",
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        db_table = 'thems'
+
+class Comments(models.Model):
+
+    comment = models.CharField(max_length=1000)
+    user = models.ForeignKey(
+        "accounts.Users",
         on_delete=models.CASCADE
     )
