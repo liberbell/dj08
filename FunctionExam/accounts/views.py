@@ -56,7 +56,7 @@ def user_logout(request):
 
 @login_required
 def user_edit(request):
-    user_edit_form = forms.UserEditForm(request.POST or None, request.FILES or None, isinstance=request.user)
+    user_edit_form = forms.UserEditForm(request.POST or None, request.FILES or None, instance=request.user)
     if user_edit_form.is_valid():
         messages.success(request, "Updated user")
         user_edit_form.save()
@@ -64,3 +64,6 @@ def user_edit(request):
                   context={
                       "user_edit_form": user_edit_form,
                   })
+@login_required
+def change_password(request):
+    password_change_form = forms.PasswordChangeForm(request.POST or None, instance=request.user)
