@@ -5,6 +5,7 @@ from .models import UserActivateTokens
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
 
 # Create your views here.
 def home(request):
@@ -71,3 +72,10 @@ def change_password(request):
         try:
             password_change_form.save()
             messages.success(request, "Password changed")
+            update_session_auth_hash(request, request.user)
+        except ValidationError as e:
+            password_change_form.add_error("password", e)
+    return render(request, "accounts/change_password.html",
+                  context={
+                      "password_change_form": password_change_form
+                  })
