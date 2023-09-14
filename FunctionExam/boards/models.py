@@ -1,6 +1,11 @@
 from django.db import models
 
 # Create your models here.
+class ThemesManager(models.Manager):
+
+    def fetch_all_theme(self):
+        return self.order_by("id").all()
+
 class Themes(models.Model):
 
     title = models.CharField(max_length=255)
