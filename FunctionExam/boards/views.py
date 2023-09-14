@@ -16,3 +16,5 @@ def create_theme(request):
                   context={
                       "create_theme_form": create_theme_form
                   })
+def list_themes(request):
+    themes = 
