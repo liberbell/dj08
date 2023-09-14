@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Board create</h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ create_theme_form.as_p }}
+    <input type="submit" value="Create board">
+</form>
+{% endblock  %}
