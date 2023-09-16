@@ -3,13 +3,26 @@
 {% block content %}
 {% if messages %}
     {% for message in messages %}
-    <div>{{ messages.message }}</div>
+    <div>{{ message.message }}</div>
     {% endfor %}
 {% endif %}
 <h3>Theme list</h3>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ themes.as_p }}
-    <input type="submit" value="Create board">
-</form>
+<table class="table table-stripe table-hovor">
+<thead>
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+    </tr>
+</thead>
+<tbody>
+    {% for theme in themes %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ theme.title }}</td>
+        <td>{{ theme.user }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
 {% endblock  %}
