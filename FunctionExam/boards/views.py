@@ -18,8 +18,8 @@ def create_theme(request):
                       "create_theme_form": create_theme_form
                   })
 def list_themes(request):
-    themes = Themes.objects.fetch_all_theme()
+    themes = Themes.objects.fetch_all_themes()
     return render(request, "boards/list_themes.html",
                   context={
-                      "themss": themes
+                      "themes": themes
                   })
