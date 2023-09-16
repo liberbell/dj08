@@ -8,21 +8,21 @@
 {% endif %}
 <h3>Theme list</h3>
 <table class="table table-stripe table-hovor">
-<thead>
-    <tr>
-        <th>#</th>
-        <th>Title</th>
-        <th>Author</th>
-    </tr>
-</thead>
-<tbody>
-    {% for theme in themes %}
-    <tr>
-        <td>{{ forloop.counter }}</td>
-        <td>{{ theme.title }}</td>
-        <td>{{ theme.user }}</td>
-    </tr>
-    {% endfor %}
-</tbody>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for theme in themes %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ theme.title }}</td>
+            <td>{{ theme.user }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
 {% endblock  %}
