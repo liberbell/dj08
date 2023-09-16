@@ -11,7 +11,7 @@ def create_theme(request):
         create_theme_form.instance.user = request.user
         create_theme_form.save()
         messages.success(request, "Theme created successfully")
-        return redirect("accounts:home")
+        return redirect("boards:list_themes")
     
     return render(request, "boards/create_theme.html",
                   context={
