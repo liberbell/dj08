@@ -21,5 +21,5 @@ def list_themes(request):
     themes = Themes.objects.fetch_all_theme()
     return render(request, "boards/list_themes.html",
                   context={
-                      "thems": themes
+                      "themss": themes
                   })
