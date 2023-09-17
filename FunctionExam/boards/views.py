@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . import forms
 from django.contrib import messages
 from .models import Themes
+from django.http import Http404
 
 # Create your views here.
 def create_theme(request):
@@ -25,4 +26,7 @@ def list_themes(request):
                   })
 
 def edit_theme(request, id):
-    pass
+    theme = get_object_or_404(Themes, id=id)
+    if theme.user.id != request.user.id:
+        raise Http404
+    edit_theme_form = forms.CreateThemeForm(request.POST or None, instance=theme)
