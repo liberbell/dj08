@@ -23,3 +23,6 @@ def list_themes(request):
                   context={
                       "themes": themes
                   })
+
+def edit_theme(request, id):
+    pass
