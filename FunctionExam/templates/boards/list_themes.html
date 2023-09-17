@@ -21,6 +21,9 @@
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ theme.title }}</td>
+            {% if theme.user.id == user.id %}
+            <a href="{% url 'boards:edit_theme' id=theme.id %}">{{ theme.user }}</a>
+            {% endif %}
             <td>{{ theme.user }}</td>
         </tr>
         {% endfor %}
