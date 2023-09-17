@@ -30,3 +30,7 @@ def edit_theme(request, id):
     if theme.user.id != request.user.id:
         raise Http404
     edit_theme_form = forms.CreateThemeForm(request.POST or None, instance=theme)
+    if edit_theme_form.is_valid():
+        edit_theme_form.save()
+        messages.success(request, "Theme updated successfully")
+        return redirect("boards:theme_list")
