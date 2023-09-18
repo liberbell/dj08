@@ -61,3 +61,4 @@ def post_comment(request, theme_id):
         post_comment_form.instance.theme = theme
         post_comment_form.instance.user = request.user
         post_comment_form.save()
+        return redirect("boards:post_comment", theme_id=theme_id)
