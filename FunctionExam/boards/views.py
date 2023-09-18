@@ -62,3 +62,8 @@ def post_comment(request, theme_id):
         post_comment_form.instance.user = request.user
         post_comment_form.save()
         return redirect("boards:post_comment", theme_id=theme_id)
+    return render(request, "boards/post_comment.html",
+                  context={
+                      "post_comment_form": post_comment_form,
+                      "theme": theme,
+                  })
