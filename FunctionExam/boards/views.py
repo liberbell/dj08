@@ -45,3 +45,8 @@ def delete_theme(request, id):
     if theme.user.id != request.user.id:
         raise Http404
     delete_theme_form = forms.DeleteThemeForm(request.POST or None)
+    if delete_theme_form.is_valid():
+        theme.delete()
+        messages.success(request, "Detele theme successfully")
+        return redirect("boards:list_themes")
+    return ridirect()
