@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Delete Board</h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ delete_theme_form.as_p }}
+    <input type="submit" value="Delete board">
+</form>
+{% endblock  %}
