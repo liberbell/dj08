@@ -20,6 +20,7 @@
         {% for theme in themes %}
         <tr>
             <td>{{ forloop.counter }}</td>
+            <td><a href="{% url 'boards:post_comment' theme_id=theme.id %}">{{ theme.title }}</a></td>
             <td>{{ theme.title }}</td>
             {% if theme.user.id == user.id %}
             <td><a href="{% url 'boards:edit_theme' id=theme.id %}">{{ theme.user }}</a></td>
