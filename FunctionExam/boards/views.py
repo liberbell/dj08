@@ -56,4 +56,5 @@ def delete_theme(request, id):
 
 def post_comment(request, theme_id):
     post_comment_form = forms.PostCommentForm(request.POST or None):
-    
+    if post_comment_form.is_valid():
+        post_comment_form.save()
