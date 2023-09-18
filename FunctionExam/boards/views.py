@@ -53,3 +53,7 @@ def delete_theme(request, id):
                   context={
                       "delete_theme_form": delete_theme_form
                   })
+
+def post_comment(request, theme_id):
+    post_comment_form = forms.PostCommentForm(request.POST or None):
+    
