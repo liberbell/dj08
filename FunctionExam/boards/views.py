@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from . import forms
 from django.contrib import messages
-from .models import Themes
+from .models import Themes, Comments
 from django.http import Http404
 
 # Create your views here.
@@ -57,6 +57,7 @@ def delete_theme(request, id):
 def post_comment(request, theme_id):
     post_comment_form = forms.PostCommentForm(request.POST or None)
     theme = get_object_or_404(Themes, id=theme_id)
+    comments = Comments.fetch_by_theme_id(theme.id)
     if post_comment_form.is_valid():
         post_comment_form.instance.theme = theme
         post_comment_form.instance.user = request.user
