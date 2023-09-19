@@ -2,6 +2,11 @@
 
 {% block content %}
 <h3>{{ theme.title }}</h3>
+{% for comment in comments %}
+{% if comment.user.picture %}
+
+{% endif %}
+{% endfor %}
 <form action="" method="POST">
     {% csrf_token %}
     {{ post_comment_form.as_p }}
