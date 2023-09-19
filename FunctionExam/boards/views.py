@@ -67,4 +67,5 @@ def post_comment(request, theme_id):
                   context={
                       "post_comment_form": post_comment_form,
                       "theme": theme,
+                      "comments": comments,
                   })
