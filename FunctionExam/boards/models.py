@@ -34,6 +34,7 @@ class Comments(models.Model):
         "Themes",
         on_delete=models.CASCADE
     )
+    objects = CommentsManager()
 
     class Meta:
         db_table = 'comments'
