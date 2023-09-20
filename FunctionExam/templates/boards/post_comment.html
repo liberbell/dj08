@@ -21,6 +21,7 @@
     <form action="" method="POST">
         {% csrf_token %}
         {{ post_comment_form.as_p }}
+        <input type="button" value="Tempolary save" id="save_comment">
         <input type="submit" value="Post comment">
     </form>
 </div>
