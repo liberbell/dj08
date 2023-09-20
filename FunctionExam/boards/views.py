@@ -59,6 +59,8 @@ def post_comment(request, theme_id):
     theme = get_object_or_404(Themes, id=theme_id)
     comments = Comments.objects.fetch_by_theme_id(theme.id)
     if post_comment_form.is_valid():
+        if not request.user.is_authenticated():
+            raise Http404
         post_comment_form.instance.theme = theme
         post_comment_form.instance.user = request.user
         post_comment_form.save()
