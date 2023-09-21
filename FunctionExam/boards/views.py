@@ -67,6 +67,7 @@ def post_comment(request, theme_id):
         post_comment_form.instance.theme = theme
         post_comment_form.instance.user = request.user
         post_comment_form.save()
+        cache.delete(f'saved_comment-theme_id={theme_id}-user_id={request.user.id}')
         return redirect("boards:post_comment", theme_id=theme_id)
     return render(request, "boards/post_comment.html",
                   context={
