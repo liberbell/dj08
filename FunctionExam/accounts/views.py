@@ -79,3 +79,6 @@ def change_password(request):
                   context={
                       "password_change_form": password_change_form
                   })
+
+def show_error_page(request, exception):
+    return render(request, "404.html")
