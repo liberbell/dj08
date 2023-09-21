@@ -85,5 +85,3 @@ def save_comment(request):
             cache.set(f'saved_comment-theme_id={theme_id}-user_id={request.user.id}', comment)
             return JsonResponse({'message': 'Tempolary saved'})
         
-def show_error_page(request, exception):
-    return render(request, "404.html")
