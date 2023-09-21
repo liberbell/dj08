@@ -76,8 +76,8 @@ def post_comment(request, theme_id):
 
 def save_comment(request):
     if request.is_ajax:
-        comment = request.GET.get("comment")
-        theme_id = request.GET.get("theme_id")
+        comment = request.GET.get('comment')
+        theme_id = request.GET.get('theme_id')
         if comment and theme_id:
             cache.set(f'saved_comment-theme_id={theme_id}-user_id={request.user.id}', comment)
-            return JsonResponse({"message": "Tempolary saved"})
+            return JsonResponse({'message': 'Tempolary saved'})
