@@ -75,7 +75,7 @@ def post_comment(request, theme_id):
                   })
 
 def save_comment(request):
-    if request.is_ajax:
+    if request.headers.get("x-requested-with") == "XMLHttpRequest":
         comment = request.GET.get('comment')
         theme_id = request.GET.get('theme_id')
         if comment and theme_id:
