@@ -11,3 +11,11 @@ class IndexView(View):
             "book_form": book_form,
         })
     
+    def post(self, request, *args, **kwargs):
+        book_form = forms.BookForm(request.POST or None)
+        if book_form.is_valid():
+            book_form.save()
+        return render(request, "index.html", context={
+            "book_form": book_form
+        })
+    
