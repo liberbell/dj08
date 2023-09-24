@@ -16,6 +16,6 @@ class IndexView(View):
         if book_form.is_valid():
             book_form.save()
         return render(request, "index.html", context={
-            "book_form": book_form
+            "book_form": book_form,
         })
     
