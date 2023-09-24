@@ -11,3 +11,6 @@ class BookForm(forms.ModelForm):
     def save(self, *args, **kwargs):
         obj = super(BookForm, self).save(commit=False)
         obj.created_at = datetime.now()
+        obj.updated_at = datetime.now()
+        obj.save()
+        return obj
