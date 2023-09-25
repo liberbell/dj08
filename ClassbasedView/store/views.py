@@ -55,4 +55,6 @@ class BookListView(ListView):
 
     def get_queryset(self):
         qs = super(BookListView, self).get_queryset()
+        qs = qs.order_by("-id")
+        print(qs)
         return qs
