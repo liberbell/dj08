@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.base import (View, )
+from django.views.generic.base import (View, TemplateView)
 from . import forms
 
 # Create your views here.
@@ -19,3 +19,7 @@ class IndexView(View):
             "book_form": book_form,
         })
     
+
+class HomeView(TemplateView):
+
+    template_name = "home.html"
