@@ -1,4 +1,5 @@
 from typing import Any, Dict
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic.base import (View, TemplateView)
 from django.views.generic.detail import DetailView
@@ -51,3 +52,7 @@ class BookListView(ListView):
 
     model = Books
     template_name = "book_list.html"
+
+    def get_queryset(self):
+        qs = super(BookListView, self).get_queryset()
+        return qs
