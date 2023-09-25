@@ -1,7 +1,6 @@
 from django.urls import path
 from .views import IndexView, HomeView
 # from django.views.generic.base import TemplateView
-from 
 
 app_name = "store"
 
