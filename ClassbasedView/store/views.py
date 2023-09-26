@@ -55,7 +55,7 @@ class BookListView(ListView):
 
     def get_queryset(self):
         qs = super(BookListView, self).get_queryset()
-        qs = qs.filter(name__startwith="sea")
+        qs = qs.filter(name__startswith="sea")
         qs = qs.order_by("description")
         print(qs)
         return qs
