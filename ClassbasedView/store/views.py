@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views.generic.base import (View, TemplateView)
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
+from django.views.generic.edit import (CreateView)
 from . import forms
 from datetime import datetime
 from .models import Books
@@ -58,5 +59,10 @@ class BookListView(ListView):
         if "name" in self.kwargs:
             qs = qs.filter(name__startswith=self.kwargs["name"])
         qs = qs.order_by("description")
-        print(qs)
         return qs
+    
+class BookCreateView(CreateView):
+
+    model = Books
+    fields = ["name", "description", "price"]
+    template_name = "add_book.html"
