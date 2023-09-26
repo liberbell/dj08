@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import IndexView, HomeView, BookDetailView, BookListView, BookCreateView
+from .views import (
+    IndexView, HomeView, BookDetailView, BookListView,
+    BookCreateView
+    )
 # from django.views.generic.base import TemplateView
 
 app_name = "store"
