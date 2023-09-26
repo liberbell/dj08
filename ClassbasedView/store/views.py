@@ -66,3 +66,8 @@ class BookCreateView(CreateView):
     model = Books
     fields = ["name", "description", "price"]
     template_name = "add_book.html"
+
+    def form_valid(self, form):
+        form.instance.create_at = datetime.now()
+        form.instance.update_at = datetime.now()
+        return super(BookCreateView, self).form_valid(form)
