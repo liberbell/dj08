@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views.generic.base import (View, TemplateView)
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from django.views.generic.edit import (CreateView)
+from django.views.generic.edit import (CreateView, UpdateView, DeleteView)
 from . import forms
 from datetime import datetime
 from .models import Books
@@ -78,3 +78,7 @@ class BookCreateView(CreateView):
         initial = super(BookCreateView, self).get_initial(**kwargs)
         initial["name"] = "sample"
         return initial
+    
+class BookUpdateView(UpdateView):
+
+    template_name = "update_book.html"
