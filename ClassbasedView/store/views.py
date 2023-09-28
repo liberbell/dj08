@@ -85,3 +85,6 @@ class BookUpdateView(UpdateView):
     form_class = forms.BookUpdateForm
 
     model = Books
+
+    def get_success_url(self):
+        return reverse_lazy("store:edit_book", kwargs={"pk": self.pk.object.id})
