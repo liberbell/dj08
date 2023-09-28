@@ -83,3 +83,5 @@ class BookUpdateView(UpdateView):
 
     template_name = "update_book.html"
     form_class = forms.BookUpdateForm
+
+    model = Books
