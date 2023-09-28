@@ -87,4 +87,5 @@ class BookUpdateView(UpdateView):
     model = Books
 
     def get_success_url(self):
+        print(self.object)
         return reverse_lazy("store:edit_book", kwargs={"pk": self.pk.object.id})
