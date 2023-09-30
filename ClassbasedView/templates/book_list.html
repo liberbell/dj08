@@ -5,6 +5,7 @@
             <td>Name: <a href="{{ object.get_absolute_url }}">{{ object.name }}</a></td>
             <td>Description: {{ object.description }}</td>
             <td><a href="{% url "store:edit_book" object.id %}">Edit</a></td>
+            <td><a href="{% url "store:delete_book" object.id %}">Delete</a></td>
         </tr>
         {% endfor %}
     </tbody>
