@@ -102,6 +102,11 @@ class BookFormView(FormView):
     form_class = forms.BookForm
     success_url = reverse_lazy("store:list_books")
 
+    def get_initial(self):
+        initial = super(BookFormView, self).get_initial()
+        initial["name"] = "form.sample"
+        return super().get_initial()
+
     def form_valid(self, form):
         if form.is_valid():
             form.save()
