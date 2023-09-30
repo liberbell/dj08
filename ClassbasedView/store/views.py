@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views.generic.base import (View, TemplateView)
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from django.views.generic.edit import (CreateView, UpdateView, DeleteView)
+from django.views.generic.edit import (CreateView, UpdateView, DeleteView, FormView)
 from . import forms
 from datetime import datetime
 from .models import Books
@@ -94,4 +94,10 @@ class BookDeleteView(DeleteView):
 
     template_name = "delete_book.html"
     model = Books
+    success_url = reverse_lazy("store:list_books")
+
+class BookFormView(FormView):
+    
+    template_name = "form_book.html"
+    form_class = forms.BookForm
     success_url = reverse_lazy("store:list_books")
