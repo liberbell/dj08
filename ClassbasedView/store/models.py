@@ -19,3 +19,7 @@ class Books(BaseModel):
 
     def get_absolute_url(self):
         return reverse_lazy("store:book_detail", kwargs={"pk": self.pk})
+    
+class Pictures(BaseModel):
+
+    picture = models.FileField(upload_to="picture/")
