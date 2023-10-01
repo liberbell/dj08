@@ -119,6 +119,6 @@ class BookRedirectView(RedirectView):
         book = Books.objects.first()
         print(book)
         if "pk" in kwargs:
-            return reverse_lazy("store:detail_book", kwargs={"pk": kwargs["pk"]})
+            return reverse_lazy("store:book_detail", kwargs={"pk": kwargs["pk"]})
         
         return reverse_lazy("store:edit_book", kwargs={"pk": book.pk})
