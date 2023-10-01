@@ -94,7 +94,7 @@ class BookUpdateView(SuccessMessageMixin, UpdateView):
     
     def get_success_message(self, cleaned_data):
         print(cleaned_data)
-        return cleaned_data.get("name") + "updated successfully"
+        return cleaned_data.get("name") + " updated successfully"
     
 class BookDeleteView(DeleteView):
 
