@@ -1,5 +1,6 @@
 from typing import Any, Dict
 from django.db.models.query import QuerySet
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views.generic.base import (View, TemplateView, RedirectView)
 from django.views.generic.detail import DetailView
@@ -101,6 +102,10 @@ class BookUpdateView(SuccessMessageMixin, UpdateView):
         picture_form = forms.PictureUploadForm()
         context["picture_form"] = picture_form
         return context
+    
+    def post(self, request: HttpRequest, *args, **kwargs):
+
+        return super(BookUpdateView, self).post(request, *args, **kwargs)
     
 class BookDeleteView(DeleteView):
 
