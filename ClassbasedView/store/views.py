@@ -92,6 +92,10 @@ class BookUpdateView(SuccessMessageMixin, UpdateView):
         print(self.object)
         return reverse_lazy("store:edit_book", kwargs={"pk": self.object.id})
     
+    def get_success_message(self, cleaned_data):
+        print(cleaned_data)
+        return cleaned_data.get("name") + "updated successfully"
+    
 class BookDeleteView(DeleteView):
 
     template_name = "delete_book.html"
