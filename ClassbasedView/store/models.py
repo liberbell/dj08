@@ -23,3 +23,4 @@ class Books(BaseModel):
 class Pictures(BaseModel):
 
     picture = models.FileField(upload_to="picture/")
+    book = models.ForeignKey(Books, on_delete=models.CASCADE)
