@@ -21,5 +21,5 @@ urlpatterns = [
     path("delete_book/<int:pk>", BookDeleteView.as_view(), name="delete_book"),
     path("book_form/", BookFormView.as_view(), name="book_form"),
     path("google/", RedirectView.as_view(url="https://google.com")),
-    path("book_redirect_view/", BookRedirectView.as_view()),
+    path("book_redirect_view/", BookRedirectView.as_view(), name="book_redirect_view"),
 ]
