@@ -104,6 +104,9 @@ class BookUpdateView(SuccessMessageMixin, UpdateView):
         return context
     
     def post(self, request: HttpRequest, *args, **kwargs):
+        picture_form = forms.PictureUploadForm(request.POST or None, request.FILES or None)
+        if picture_form.is_valid() and request.FILES:
+            picture_form.save()
 
         return super(BookUpdateView, self).post(request, *args, **kwargs)
     
