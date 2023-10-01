@@ -9,6 +9,7 @@ from . import forms
 from datetime import datetime
 from .models import Books
 from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 
 # Create your views here.
 class IndexView(View):
@@ -79,10 +80,11 @@ class BookCreateView(CreateView):
         initial["name"] = "sample"
         return initial
     
-class BookUpdateView(UpdateView):
+class BookUpdateView(SuccessMessageMixin, UpdateView):
 
     template_name = "update_book.html"
     form_class = forms.BookUpdateForm
+    success_message = "Update successfully"
 
     model = Books
 
