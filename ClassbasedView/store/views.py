@@ -112,6 +112,5 @@ class BookFormView(FormView):
             form.save()
         return super(BookFormView, self).form_valid(form)
     
-class RedirectView(RedirectView):
+class BookRedirectView(RedirectView):
     url = "https://www.google.com"
-    
