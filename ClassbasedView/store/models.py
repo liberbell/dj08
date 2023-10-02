@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 from django.urls import reverse_lazy
 
@@ -19,6 +20,10 @@ class Books(BaseModel):
 
     def get_absolute_url(self):
         return reverse_lazy("store:book_detail", kwargs={"pk": self.pk})
+
+class PicturesManager(models.Manager):
+    def filter_by_book(self, book):
+        return self.filter(book=book).all()
     
 class Pictures(BaseModel):
 
