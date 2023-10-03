@@ -33,3 +33,9 @@ class Pictures(BaseModel):
     book = models.ForeignKey(Books, on_delete=models.CASCADE)
 
     objects = PicturesManager()
+
+@receiver(models.signals.post_delete, sender=Pictures)
+def delete_picture(sender, instance, **kwargs):
+    if instance.picture:
+        if os.path.isfile(instance.picture.path):
+            os.rename(instance.picture.path)
