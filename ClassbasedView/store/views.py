@@ -148,7 +148,7 @@ class BookRedirectView(RedirectView):
         return reverse_lazy("store:edit_book", kwargs={"pk": book.pk})
 
 def delete_picture(request, pk):
-    picture = get_object_or_404(Pictures, pk)
+    picture = get_object_or_404(Pictures, pk=pk)
     picture.delete()
 
     messages.success(request, "delete picture")
