@@ -1,7 +1,7 @@
 from typing import Any, Dict
 from django.db.models.query import QuerySet
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.base import (View, TemplateView, RedirectView)
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
@@ -11,6 +11,7 @@ from datetime import datetime
 from .models import Books, Pictures
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 
 # Create your views here.
 class IndexView(View):
@@ -145,3 +146,9 @@ class BookRedirectView(RedirectView):
             return reverse_lazy("store:book_detail", kwargs={"pk": kwargs["pk"]})
         
         return reverse_lazy("store:edit_book", kwargs={"pk": book.pk})
+
+def delete_picture(request, pk):
+    picture = get_object_or_404(Pictures, pk)
+    picture.delete()
+
+    messages.success(request, "delete picture")
