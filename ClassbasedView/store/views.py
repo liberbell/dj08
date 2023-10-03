@@ -152,3 +152,4 @@ def delete_picture(request, pk):
     picture.delete()
 
     messages.success(request, "delete picture")
+    return redirect("store:edit_book", pk=picture.book.id)
