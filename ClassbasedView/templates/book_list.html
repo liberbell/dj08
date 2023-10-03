@@ -7,6 +7,11 @@
             <td>Description: {{ object.description }}</td>
             <td><a href="{% url "store:edit_book" object.id %}">Edit</a></td>
             <td><a href="{% url "store:delete_book" object.id %}">Delete</a></td>
+            <td>
+                {% for picture in object.pictures_set.all %}
+                    <img width="20px" height="20px" src="{{ picture.picture.url }}" alt="">
+                {% endfor %}
+            </td>
         </tr>
         {% endfor %}
     </tbody>
