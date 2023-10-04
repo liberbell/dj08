@@ -1,4 +1,3 @@
-from typing import Any
 from django.db import models
 from django.urls import reverse_lazy
 from django.dispatch import receiver
@@ -30,7 +29,7 @@ class PicturesManager(models.Manager):
 class Pictures(BaseModel):
 
     picture = models.FileField(upload_to="picture/")
-    book = models.ForeignKey(Books, on_delete=models.CASCADE)
+    book = models.ForeignKey("books", on_delete=models.CASCADE)
 
     objects = PicturesManager()
 
@@ -38,4 +37,4 @@ class Pictures(BaseModel):
 def delete_picture(sender, instance, **kwargs):
     if instance.picture:
         if os.path.isfile(instance.picture.path):
-            os.rename(instance.picture.path)
+            os.remove(instance.picture.path)
