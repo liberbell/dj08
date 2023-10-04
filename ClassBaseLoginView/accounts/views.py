@@ -6,5 +6,6 @@ from django.views.generic.base import TemplateView
 class HomeView(TemplateView):
     template_name = "home.html"
 
-class RegisterView(CreateView):
-    template_name = "register.html"
+class RegistUserView(CreateView):
+    template_name = "regist.html"
+    form_class = RegistForm
