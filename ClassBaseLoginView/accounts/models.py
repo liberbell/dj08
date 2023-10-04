@@ -25,3 +25,8 @@ class Users(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]
+
+    objects = UserManager()
+    def get_absolute_url(self):
+        return reverse_lazy("accounts:home")
+    
