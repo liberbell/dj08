@@ -7,3 +7,7 @@ class RegistForm(forms.ModelForm):
     age = forms.IntegerField(label="Age:", min_value=0)
     email = forms.EmailField(label="Email:")
     password = forms.CharField(label="Password:", widget=forms.PasswordInput())
+
+    class Meta:
+        model = Users
+        fields = ["username", "age", "email", "password"]
