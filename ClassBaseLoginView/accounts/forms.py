@@ -11,3 +11,10 @@ class RegistForm(forms.ModelForm):
     class Meta:
         model = Users
         fields = ["username", "age", "email", "password"]
+
+    def save(self, commit=False):
+        user = super().save(commit=False)
+        validate_password(self.cleaned_data["password"], user)
+        user.set_password(self.cleaned_data["password"])
+        user.save()
+        return user
