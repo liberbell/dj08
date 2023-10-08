@@ -35,7 +35,7 @@ class UserLogoutView(View):
 
 
 @method_decorator(login_required, name="dispatch")
-class UserView(TemplateView):
+class UserView(LoginRequiredMixin, TemplateView):
 
     template_name = "user.html"
 
