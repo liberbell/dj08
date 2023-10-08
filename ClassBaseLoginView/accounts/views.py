@@ -32,11 +32,13 @@ class UserLogoutView(View):
     def get(self, request, *args, **kwargs):
         logout(request)
         return redirect("accounts:user_login")
-    
+
+
+@method_decorator(login_required, name="dispatch")
 class UserView(TemplateView):
 
     template_name = "user.html"
 
-    @method_decorator(login_required)
+    # @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
