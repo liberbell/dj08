@@ -22,7 +22,7 @@ class UserLoginView(FormView):
         user = authenticate(email=email, password=password)
         if user is not None and user.is_active:
             login(request, user)
-        return redirect("")
+        return redirect("accounts:home")
 
 class UserLogoutView(View):
     pass
