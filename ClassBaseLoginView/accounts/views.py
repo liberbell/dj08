@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, FormView
 from django.views.generic.base import TemplateView, View
 from .forms import RegistForm, UserLoginForm
@@ -20,6 +20,9 @@ class UserLoginView(FormView):
         email = request.POST["email"]
         password = request.POST["password"]
         user = authenticate(email=email, password=password)
+        if user is not None and user.is_active:
+            login(request, user)
+        return redirect("")
 
 class UserLogoutView(View):
     pass
