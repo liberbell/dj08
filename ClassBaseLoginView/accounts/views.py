@@ -37,7 +37,7 @@ class UserLoginView(LoginView):
     authentication_form = UserLoginForm
 
     def form_valid(self, form):
-        remember = form.cleaned_data("remember")
+        remember = form.cleaned_data["remember"]
         if remember:
             self.request.session.set_expiry(1200)
 
