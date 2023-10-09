@@ -1,7 +1,7 @@
 import logging
 
 logging.basicConfig(
-    level=logging.ERROR, filename="sample.log",
+    level=logging.WARNING, filename="sample.log",
     filemode="w", format="%(asctime)s-%(process)d-%(levelname)s-%(message)s"
 )
 
