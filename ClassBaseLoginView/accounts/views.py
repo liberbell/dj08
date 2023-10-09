@@ -31,16 +31,16 @@ class RegistUserView(CreateView):
 #             return redirect(next_url)
 #         return redirect("accounts:home")
 
-# class UserLogoutView(View):
-    
-#     def get(self, request, *args, **kwargs):
-#         logout(request)
-#         return redirect("accounts:user_login")
-
 class UserLoginView(LoginView):
 
     template_name = "user_login.html"
     authentication_form = UserLoginForm
+
+class UserLogoutView(View):
+    
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return redirect("accounts:user_login")
 
 
 @method_decorator(login_required, name="dispatch")
