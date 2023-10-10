@@ -1,5 +1,9 @@
-2023-10-10 08:40:17,315-6960-WARNING-warning.log
-2023-10-10 08:40:17,315-6960-ERROR-error.log
-2023-10-10 08:40:17,315-6960-CRITICAL-critical.log
-2023-10-10 08:40:17,315-6960-ERROR-user = Bob raised error
-2023-10-10 08:40:17,315-6960-ERROR-division by zero
+2023-10-11 08:12:01,539-20921-WARNING-warning.log
+2023-10-11 08:12:01,539-20921-ERROR-error.log
+2023-10-11 08:12:01,539-20921-CRITICAL-critical.log
+2023-10-11 08:12:01,539-20921-ERROR-user = Bob raised error
+2023-10-11 08:12:01,539-20921-ERROR-division by zero
+Traceback (most recent call last):
+  File "/Users/hideakiehara/virtualenv/dj08/Logging/01_logging_sample.py", line 20, in <module>
+    c = a / b
+ZeroDivisionError: division by zero
