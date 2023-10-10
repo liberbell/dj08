@@ -13,6 +13,9 @@ f_handler.setLevel(logging.ERROR)
 s_formatter = logging.Formatter("%(name)s-%(levelname)s-%(message)s")
 f_formatter = logging.Formatter("%(asctime)s-%(name)s-%(levelname)s-%(message)s")
 
+s_handler.setFormatter(s_formatter)
+f_handler.setFormatter(f_formatter)
+
 logging.debug("debug")
 logging.info("info")
 logging.warning("warning")
