@@ -3,8 +3,12 @@ import logging
 logger = logging.getLogger(__name__)
 
 logger.setLevel(logging.DEBUG)
-logging.debug("debug2.log")
-logging.info("info2.log")
-logging.warning("warning2.log")
-logging.error("error2.log")
-logging.critical("critical2.log")
+
+s_handler = logging.StreamHandler()
+f_handler = logging.FileHandler("logging2.log", encoding="utf-8")
+
+logging.debug("debug")
+logging.info("info")
+logging.warning("warning")
+logging.error("error")
+logging.critical("critical")
