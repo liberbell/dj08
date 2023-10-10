@@ -24,3 +24,10 @@ logger.info("info")
 logger.warning("warning")
 logger.error("error")
 logger.critical("critical")
+
+a = 10
+b = 0
+try:
+    c = a / b
+except Exception as e:
+    logger.error(e, exc_info=True)
