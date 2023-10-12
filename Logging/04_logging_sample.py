@@ -1,5 +1,6 @@
 import logging
 import logging.handlers
+import time
 
 logger = logging.getLogger(__name__)
 
@@ -19,3 +20,16 @@ t_handler = logging.handlers.TimedRotatingFileHandler(
 
 logger.setLevel(logging.DEBUG)
 sample_formatter = logging.Formatter("%(name)s-%(asctime)s-%(levelname)s-%(message)s")
+
+r_handler.setFormatter(sample_formatter)
+t_handler.setFormatter(sample_formatter)
+
+logger.addHandler(r_handler)
+logger.addHandler(t_handler)
+
+for _ in range(1000):
+    logger.debug("Debug log")
+    logger.info("Info log")
+    logger.warning("Warning log")
+    logger.error("Error log")
+    logger.critical("Critical log")
