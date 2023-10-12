@@ -33,3 +33,4 @@ for _ in range(1000):
     logger.warning("Warning log")
     logger.error("Error log")
     logger.critical("Critical log")
+    time.sleep(1)
