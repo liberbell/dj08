@@ -9,3 +9,8 @@ r_handler = logging.handlers.RotatingFileHandler(
     backupCount=5,
     encoding="utf-8"
 )
+t_handler = logging.handlers.TimedRotatingFileHandler(
+    "logs/rotating_time_file.log",
+    when="S",
+    interval=10,
+)
