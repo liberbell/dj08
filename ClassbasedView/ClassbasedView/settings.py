@@ -146,7 +146,7 @@ LOGGING = {
     'loggers': {
         'application-logger': {
             'handlers': ['console_handler',],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagae': False,
         }
     }
