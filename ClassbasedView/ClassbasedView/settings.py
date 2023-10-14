@@ -138,7 +138,7 @@ LOGGING = {
     },
     'handlers': {
         'console_handler': {
-            'level': DEBUG,
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         }
@@ -146,7 +146,7 @@ LOGGING = {
     'loggers': {
         'application-logger': {
             'handlers': ['console_handler',],
-            'level': DEBUG,
+            'level': 'DEBUG',
             'propagae': False,
         }
     }
