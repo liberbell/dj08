@@ -15,7 +15,7 @@ from django.contrib import messages
 import os
 import logging
 
-application_logger = logging.getLogger("application_logger")
+application_logger = logging.getLogger("application-logger")
 
 # Create your views here.
 class IndexView(View):
@@ -41,7 +41,8 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        print(kwargs)
+        # print(kwargs)
+        application_logger("Print home page.")
         context["name"] = kwargs.get("name")
         context["time"] = datetime.now()
         return context
