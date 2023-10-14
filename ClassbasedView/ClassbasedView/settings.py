@@ -135,5 +135,17 @@ LOGGING = {
         'simple': {
             'format':'%(asctime)s %(levelname)s [%(pathname)s:%(lineno)s] %(message)s'
         }
+    },
+    'handlers': {
+        'console_handler': {
+            'level': DEBUG,
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        }
+    },
+    'loggers': {
+        'application-logger': {
+            'handlers': ['console_handler',]
+        }
     }
 }
