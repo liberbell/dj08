@@ -133,7 +133,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'simple': {
-            'format':'%(asctime)s %(levelname)s [%(pathname)s:%(lineno)s] %(message)s'
+            'format': '%(asctime)s %(levelname)s [%(pathname)s:%(lineno)s] %(message)s',
         }
     },
     'handlers': {
@@ -145,7 +145,9 @@ LOGGING = {
     },
     'loggers': {
         'application-logger': {
-            'handlers': ['console_handler',]
+            'handlers': ['console_handler',],
+            'level': DEBUG,
+            'propagae': False,
         }
     }
 }
