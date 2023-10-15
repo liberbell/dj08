@@ -146,7 +146,10 @@ LOGGING = {
             'level': 'INFO',
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': os.path.join('logs', 'application.log'),
-            'formatter': ''
+            'when': 'S',
+            'interval': 10,
+            'backupCount': 10,
+            'formatter': 'simple'
         }
     },
     'loggers': {
