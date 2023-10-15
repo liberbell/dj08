@@ -150,7 +150,7 @@ LOGGING = {
             'interval': 10,
             'backupCount': 10,
             'formatter': 'simple',
-            'encording': 'utf-8',
+            'encoding': 'utf-8',
             'delay': True,
         }
     },
