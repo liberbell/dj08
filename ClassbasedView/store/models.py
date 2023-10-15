@@ -2,6 +2,9 @@ from django.db import models
 from django.urls import reverse_lazy
 from django.dispatch import receiver
 import os
+import logging
+
+application_logger = logging.getLogger("application-logger")
 
 # Create your models here.
 class BaseModel(models.Model):
@@ -38,3 +41,5 @@ def delete_picture(sender, instance, **kwargs):
     if instance.picture:
         if os.path.isfile(instance.picture.path):
             os.remove(instance.picture.path)
+            application_logger.info(f"Delete file: {instance.picture.path}")
+
