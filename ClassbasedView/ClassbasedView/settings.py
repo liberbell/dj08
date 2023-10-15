@@ -141,6 +141,12 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
+        },
+        'timed_file_handler': {
+            'level': 'INFO',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join('logs', 'application.log'),
+            'formatter': ''
         }
     },
     'loggers': {
