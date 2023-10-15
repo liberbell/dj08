@@ -14,6 +14,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 import os
 import logging
+from django.http import Http404
 
 application_logger = logging.getLogger("application-logger")
 
@@ -43,6 +44,8 @@ class HomeView(TemplateView):
         context = super().get_context_data(**kwargs)
         # print(kwargs)
         application_logger.debug("Print home page.")
+        if kwargs.get("name") == "Stations":
+            raise Http404("This name is invalid.")
         context["name"] = kwargs.get("name")
         context["time"] = datetime.now()
         return context
