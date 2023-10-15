@@ -149,7 +149,9 @@ LOGGING = {
             'when': 'S',
             'interval': 10,
             'backupCount': 10,
-            'formatter': 'simple'
+            'formatter': 'simple',
+            'encording': 'utf-8',
+            'delay': True,
         }
     },
     'loggers': {
