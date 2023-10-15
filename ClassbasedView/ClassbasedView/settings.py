@@ -170,6 +170,11 @@ LOGGING = {
             'handlers': ['console_handler', 'timed_file_handler',],
             'level': 'DEBUG',
             'propagae': False,
+        },
+        'error-logger': {
+            'handlers': ['timed_error_handler', ],
+            'level': "ERROR",
+            'propagate': False,
         }
     }
 }
