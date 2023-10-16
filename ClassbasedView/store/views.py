@@ -46,7 +46,7 @@ class HomeView(TemplateView):
         # print(kwargs)
         application_logger.debug("Print home page.")
         if kwargs.get("name") == "Stations":
-            error_logger.error("This name is invalid.")
+            # error_logger.error("This name is invalid.")
             raise Http404("This name is invalid.")
         context["name"] = kwargs.get("name")
         context["time"] = datetime.now()
