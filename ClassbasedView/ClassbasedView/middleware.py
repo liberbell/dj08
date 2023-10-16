@@ -4,6 +4,7 @@ import time
 
 application_logger = logging.getLogger("application-logger")
 error_logger = logging.getLogger("error-loger")
+perfomance_logger = logging.getLogger("performance-logger")
 
 class MyMiddleware(MiddlewareMixin):
 
@@ -22,3 +23,6 @@ class PerformanceMiddleware(MiddlewareMixin):
 
     def process_template_response(self, request, response):
         response_time = time.time() - response.start_time
+        perfomance_logger.info(f"{request.get_full_path}:{response_time}ms")
+
+        return response
