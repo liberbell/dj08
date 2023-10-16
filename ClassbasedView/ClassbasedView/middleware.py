@@ -10,4 +10,5 @@ class MyMiddleware(MiddlewareMixin):
         application_logger.info(request.get_full_path())
 
     def process_exception(self, request, exception):
-        error_logger, 
+        error_logger.error(exception, exc_info=True)
+        
