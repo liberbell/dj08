@@ -190,7 +190,7 @@ LOGGING = {
         },
         'performance-logger': {
             'handlers': ['timed_performance_handler'],
-            'level': "ERROR",
+            'level': "INFO",
             'propagate': False,
         }
     }
