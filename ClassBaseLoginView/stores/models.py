@@ -15,3 +15,6 @@ class Manufacturers(models.Model):
 
     class Meta:
         db_table = 'manufacturers'
+
+        def __str__(self):
+            return self.name
