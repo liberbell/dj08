@@ -1,0 +1,1 @@
+2023-10-17 12:37:10,650 INFO [/Users/hideakiehara/virtualenv/dj08/ClassbasedView/ClassbasedView/middleware.py:26] <bound method HttpRequest.get_full_path of <WSGIRequest: GET '/store/list_books/'>>:0.0018219947814941406ms
