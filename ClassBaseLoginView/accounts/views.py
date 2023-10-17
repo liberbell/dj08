@@ -16,21 +16,6 @@ class RegistUserView(CreateView):
     template_name = "regist.html"
     form_class = RegistForm
 
-# class UserLoginView(FormView):
-#     template_name = "user_login.html"
-#     form_class = UserLoginForm
-
-#     def post(self, request, *args, **kwargs):
-#         email = request.POST["email"]
-#         password = request.POST["password"]
-#         user = authenticate(email=email, password=password)
-#         next_url = request.POST["next"]
-#         if user is not None and user.is_active:
-#             login(request, user)
-#         if next_url:
-#             return redirect(next_url)
-#         return redirect("accounts:home")
-
 class UserLoginView(LoginView):
 
     template_name = "user_login.html"
@@ -42,13 +27,6 @@ class UserLoginView(LoginView):
             self.request.session.set_expiry(1200)
 
         return super().form_valid(form)
-
-
-# class UserLogoutView(View):
-    
-#     def get(self, request, *args, **kwargs):
-#         logout(request)
-#         return redirect("accounts:user_login")
 
 class UserLogoutView(LogoutView):
     pass
