@@ -46,3 +46,6 @@ class ProductPictures(models.Model):
     class Meta:
         db_table = 'product_pictures'
         ordering = ["order"]
+
+    def __str__(self):
+        return self.product.name + ": " + str(self.order)
