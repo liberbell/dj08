@@ -29,3 +29,9 @@ class Products(models.Model):
     manufacture = models.ForeignKey(
         Manufacturers, on_delete=models.CASCADE
     )
+
+    class Meta:
+        db_table = 'products'
+
+        def __str__(self):
+            return self.name
