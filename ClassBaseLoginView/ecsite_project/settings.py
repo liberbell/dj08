@@ -131,4 +131,7 @@ LOGIN_URL = '/accounts/user_login'
 LOGIN_REDIRECT_URL = '/accounts/home'
 LOGOUT_REDIRECT_URL = '/accounts/user_login'
 
-SESSION_COOKIE_AGE = 3
+# SESSION_COOKIE_AGE = 3
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
