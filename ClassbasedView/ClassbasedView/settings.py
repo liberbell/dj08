@@ -167,7 +167,7 @@ LOGGING = {
             'delay': True,
         },
         'timed_performance_handler': {
-            'level': 'ERROR',
+            'level': 'INFO',
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': os.path.join('logs', 'application_performance.log'),
             'when': 'S',
