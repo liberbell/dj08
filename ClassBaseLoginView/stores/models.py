@@ -41,3 +41,8 @@ class ProductPictures(models.Model):
     product = models.ForeignKey(
         Products, on_delete=models.CASCADE
     )
+    order = models.IntegerField()
+
+    class Meta:
+        db_table = 'product_pictures'
+        ordering = ["order"]
