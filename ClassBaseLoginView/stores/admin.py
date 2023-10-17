@@ -4,3 +4,6 @@ from .models import (
 )
 
 # Register your models here.
+admin.site.register(
+    [ProductTypes, Products, Manufacturers, ProductPictures]
+)
