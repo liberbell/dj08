@@ -14,7 +14,7 @@ class UserManager(BaseUserManager):
             email=email,
         )
         user.set_password(password)
-        user.save(useing=self._db)
+        user.save(using=self._db)
         return user
     
     def create_superuser(self, username, email, password=None):
