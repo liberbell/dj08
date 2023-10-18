@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
     def create_superuser(self, username, email, password=None):
         user = self.model(
             username = username,
-            email = email,
+            email = email
         )
         user.set_password(password)
         user.is_staff = True
