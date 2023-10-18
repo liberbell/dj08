@@ -26,7 +26,7 @@ class Products(models.Model):
     product_type = models.ForeignKey(
         ProductTypes, on_delete=models.CASCADE
     )
-    manufacture = models.ForeignKey(
+    manufacturer = models.ForeignKey(
         Manufacturers, on_delete=models.CASCADE
     )
 
