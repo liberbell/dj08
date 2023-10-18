@@ -13,6 +13,15 @@
                 <td>Manufacture:</td>
             </tr>
         </thead>
+        <tbody>
+            {% for product in object_list %}
+                <tr>
+                    <td>{{ product.product_type.name }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
     </table>
 </div>
 {% endblock contennt %}
