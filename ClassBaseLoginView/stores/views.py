@@ -23,5 +23,5 @@ class ProductListView(LoginRequiredMixin, ListView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["product_type_name"] = self.request.GET.get("product_type_name", None)
-        return super().get_context_data(**kwargs)
+        context["product_type_name"] = self.request.GET.get("product_type_name", "None")
+        return context
