@@ -17,8 +17,11 @@ class ProductListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         query = super().get_queryset()
         product_type_name = self.request.GET.get("product_type_name", None)
+        product_name = self.request.GET.get("product_name", None)
         if product_type_name:
             query = query.filter(product_type__name=product_type_name)
+        if product_name:
+            query = query.filter(product__name=product_name)
         return query
     
     def get_context_data(self, **kwargs):
