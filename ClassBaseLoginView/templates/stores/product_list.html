@@ -18,7 +18,9 @@
                 <tr>
                     <td>{{ product.product_type.name }}</td>
                     <td>{{ product.name }}</td>
-                    <td>{{ product.price }}</td>
+                    <td>$ {{ product.price }}</td>
+                    <td>{{ product.stock }}</td>
+                    <td>{{ product.manufacturer.name }}</td>
                 </tr>
             {% endfor %}
         </tbody>
