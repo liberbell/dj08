@@ -7,8 +7,8 @@
         <p>Product type: <input type="text" name="product_type_name" value={{ product_type_name }}></p>
         <p>Product name: <input type="text" name="product_name" value={{ product_name }}></p>
         <p>Price sort:
-            ascending <input type="radio" name="order_by_price" value="1">
-            descending <input type="radio" name="order_by_price" value="2">
+            ascending <input type="radio" name="order_by_price" value="1" {% if ascending %}checked{% endif %}>
+            descending <input type="radio" name="order_by_price" value="2" {% if descending %}checked{% endif %}>
         </p>
         <p><input type="submit" value="Search"></p>
     </form>
