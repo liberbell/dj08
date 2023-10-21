@@ -43,4 +43,4 @@ class ProductListView(LoginRequiredMixin, ListView):
 
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Products
-    template_name = "stores/product_detail.html"
+    template_name = os.path.join("sores", "product_detail.html")
