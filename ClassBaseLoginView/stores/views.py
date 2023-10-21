@@ -2,6 +2,7 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import (
     Products,
@@ -39,3 +40,7 @@ class ProductListView(LoginRequiredMixin, ListView):
         elif order_by_price == "2":
             context["descending"] = True
         return context
+
+class ProductDetailView(LoginRequiredMixin, DetailView):
+    model = Products
+    template_name = "stores/product_detail.html"
