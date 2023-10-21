@@ -26,7 +26,7 @@ class ProductListView(LoginRequiredMixin, ListView):
         if order_by_price == 1:
             query = query.order_by("price")
         elif order_by_price == 2:
-            query = query.order_by("price")
+            query = query.order_by("-price")
         return query
     
     def get_context_data(self, **kwargs):
