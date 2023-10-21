@@ -22,6 +22,11 @@ class ProductListView(LoginRequiredMixin, ListView):
             query = query.filter(product_type__name=product_type_name)
         if product_name:
             query = query.filter(name=product_name)
+        order_by_price = self.request.GET.get("order_by_price", 0)
+        if order_by_price == 1:
+            query = query.order_by("price")
+        elif order_by_price == 2:
+            query = query.order_by("price")
         return query
     
     def get_context_data(self, **kwargs):
