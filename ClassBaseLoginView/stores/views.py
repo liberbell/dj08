@@ -23,9 +23,9 @@ class ProductListView(LoginRequiredMixin, ListView):
         if product_name:
             query = query.filter(name=product_name)
         order_by_price = self.request.GET.get("order_by_price", 0)
-        if order_by_price == 1:
+        if order_by_price == "1":
             query = query.order_by("price")
-        elif order_by_price == 2:
+        elif order_by_price == "2":
             query = query.order_by("-price")
         return query
     
