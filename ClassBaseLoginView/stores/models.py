@@ -61,3 +61,7 @@ class CartItems(models.Model):
     quantity = models.PositiveBigIntegerField()
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     cart = models.ForeignKey(Carts, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "cart_items"
+        unique_together = [["product", "cart"]]
