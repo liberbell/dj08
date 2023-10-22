@@ -56,3 +56,8 @@ class Carts(models.Model):
 
     class Meta:
         db_table = "carts"
+
+class CartItems(models.Model):
+    quantity = models.PositiveBigIntegerField()
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Carts, on_delete=models.CASCADE)
