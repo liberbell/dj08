@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from .models import (
     Products,
 )
@@ -44,3 +45,9 @@ class ProductListView(LoginRequiredMixin, ListView):
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Products
     template_name = os.path.join("stores", "product_detail.html")
+
+@login_required
+def add_product(request):
+    if request.is_ajax:
+        product_id = request.POST.get("product_id")
+        quantity = request.POST.get("quantity")
