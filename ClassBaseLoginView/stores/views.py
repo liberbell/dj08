@@ -1,10 +1,10 @@
-from typing import Any
-from django.db.models.query import QuerySet
-from django.shortcuts import render
+# from django.db.models.query import QuerySet
+from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse, Http404
 from .models import (
     Products,
 )
@@ -51,3 +51,6 @@ def add_product(request):
     if request.is_ajax:
         product_id = request.POST.get("product_id")
         quantity = request.POST.get("quantity")
+        product = get_object_or_404(Products, id=product_id)
+        if int(quantity) > product.stock:
+            response = JsonResponse({"message": "Over stock quantity"})
