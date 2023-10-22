@@ -28,6 +28,12 @@
             url: "{% url "stores:add_product" %}",
             type: "POST",
             data: {product_id: "{{ object.id }}", quantity: quantity},
+            dataType: "json",
+            success: function(json){
+                if(json.message){
+                    alert(json.message)
+                }
+            },
         });
     });
 </script>
