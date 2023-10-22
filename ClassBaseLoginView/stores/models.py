@@ -52,4 +52,7 @@ class ProductPictures(models.Model):
         return self.product.name + ": " + str(self.order)
     
 class Carts(models.Model):
-    user = models.OneToOneField(Users, on_delete=models.CASCADE)
+    user = models.OneToOneField(Users, on_delete=models.CASCADE, primary_key=True)
+
+    class Meta:
+        db_table = "carts"
