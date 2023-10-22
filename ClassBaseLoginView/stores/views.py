@@ -54,3 +54,9 @@ def add_product(request):
         product = get_object_or_404(Products, id=product_id)
         if int(quantity) > product.stock:
             response = JsonResponse({"message": "Over stock quantity"})
+            response.status_code = 403
+            return response
+        if int(quantity) <= 0:
+            response = JsonResponse({"message": "Input greater than zero."})
+            response.status_code = 403
+            return response
