@@ -60,3 +60,6 @@ def add_product(request):
             response = JsonResponse({"message": "Input greater than zero."})
             response.status_code = 403
             return response
+        cart = Carts.objects.get_or_create(
+            user = request.user
+        )
