@@ -24,6 +24,11 @@
 <script>
     $('#add_product').click(function(){
         var quantity = $("#quantity").val();
-    })
+        $.ajax({
+            url: "{% url "stores:add_product %}",
+            type: "POST",
+            data: {product_id: "{{ object.id}}", quantity: quantity},
+        });
+    });
 </script>
 {% endblock content %}
