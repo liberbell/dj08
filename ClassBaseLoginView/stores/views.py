@@ -67,3 +67,4 @@ def add_product(request):
             CartItems.objects.save_item(
                 quantity=quantity, product_id=product_id, cart=cart[0]
             )
+            return JsonResponse({"message": "Add product to cart"})
