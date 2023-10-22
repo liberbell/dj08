@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
 from .models import (
-    Products,
+    Products, Carts, CartItems
 )
 import os
 
@@ -61,5 +61,9 @@ def add_product(request):
             response.status_code = 403
             return response
         cart = Carts.objects.get_or_create(
-            user = request.user
+            user=request.user
         )
+        if all([product_id, cart, quantity]):
+            CartItems.objects.save_item(
+                quantity=quantity, product_id=product_id, cart=cart[0]
+            )
