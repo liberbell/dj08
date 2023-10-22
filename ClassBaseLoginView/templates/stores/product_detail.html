@@ -31,9 +31,12 @@
             dataType: "json",
             success: function(json){
                 if(json.message){
-                    alert(json.message)
+                    alert(json.message);
                 }
             },
+            error: function(json){
+                alert(error.responseJSON.message);
+            }
         });
     });
 </script>
