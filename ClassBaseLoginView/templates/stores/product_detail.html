@@ -42,6 +42,9 @@
             dataType: "json",
             success: function(json){
                 if(json.message){
+                    $("#add_product").attr("class", "btn btn-danger");
+                    $("#add_product").html("Already added")
+                    $("#add_product").prop("disabled", true)
                     alert(json.message);
                 }
             },
