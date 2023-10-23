@@ -25,14 +25,14 @@
 <script>
     $('#add_product').click(function(){
         var quantity = $("#quantity").val();
-        var token = $("input[name="csrfToken"]").attr("value");
+        var token = $('input[name="csrfToken"]').attr('value');
         $.ajaxSetup({
             beforeSend: function(xhr){
-                xhr.setRequestHeader("X-CSRFToken", token);
+                xhr.setRequestHeader('X-CSRFToken', token);
             }
         })
         $.ajax({
-            url: "{% url "stores:add_product" %}",
+            url: "{% url 'stores:add_product' %}",
             type: "POST",
             data: {product_id: "{{ object.id }}", quantity: quantity},
             dataType: "json",
@@ -47,4 +47,4 @@
         });
     });
 </script>
-{% endblock content %}
+{% endblock %}
