@@ -47,7 +47,7 @@ class ProductDetailView(LoginRequiredMixin, DetailView):
 
 @login_required
 def add_product(request):
-    if request.is_ajax:
+    if request.headers.get("x-requested-with") == "XMLHttpRequest":
         product_id = request.POST.get("product_id")
         quantity = request.POST.get("quantity")
         product = get_object_or_404(Products, id=product_id)
