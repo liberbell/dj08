@@ -1,3 +1,4 @@
+from typing import Any
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -44,6 +45,14 @@ class ProductListView(LoginRequiredMixin, ListView):
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Products
     template_name = os.path.join("stores", "product_detail.html")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["is_added"] = CartItems.objects.filter(
+            cart_id=self.request.user.id,
+            product_id=kwargs.get("object").id
+        ).first()
+        return context
 
 @login_required
 def add_product(request):
