@@ -2,6 +2,7 @@ from typing import Any
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.base import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
@@ -76,3 +77,6 @@ def add_product(request):
                 quantity=quantity, product_id=product_id, cart=cart[0]
             )
             return JsonResponse({"message": "Add product to cart"})
+        
+class CartItemsView(LoginRequiredMixin, TemplateView):
+    template_name = os.path.join("stores", "cart_items.html")
