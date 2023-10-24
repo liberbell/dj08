@@ -100,6 +100,7 @@ class CartItemsView(LoginRequiredMixin, TemplateView):
                 "price": item.product.price,
                 "in_stock": in_stock,
             }
-        context[""] = 
+            items.append(tmp_item)
+        context["total_price"] = total_price
         return context
     
