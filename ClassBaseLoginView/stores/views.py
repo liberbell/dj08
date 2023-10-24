@@ -87,6 +87,8 @@ class CartItemsView(LoginRequiredMixin, TemplateView):
         query = CartItems.objects.filter(cart_id=user_id)
         total_price = 0
         items = []
+        for item in query.all():
+            total_price += item.quantity * item.product.price
         context[""] = 
         return context
     
