@@ -89,6 +89,9 @@ class CartItemsView(LoginRequiredMixin, TemplateView):
         items = []
         for item in query.all():
             total_price += item.quantity * item.product.price
+            picture = item.product.productpictures_set.first()
+            picture = picture.picture if picture else None
+            in_stock = Ture if item.product.stock > item.quantity else False
         context[""] = 
         return context
     
