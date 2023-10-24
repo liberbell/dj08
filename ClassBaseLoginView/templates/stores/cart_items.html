@@ -16,7 +16,10 @@
                         {{ item.name }} <br>${{ item.price }}
                     </td>
                     <td>
-
+                        {{ item.quantity}} <br>
+                        {% if not item.in_stock %}
+                            Not enough stock. Please reinput quantity.
+                        {% endif %}
                     </td>
                 </tr>
             {% endfor %}
