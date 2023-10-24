@@ -92,6 +92,14 @@ class CartItemsView(LoginRequiredMixin, TemplateView):
             picture = item.product.productpictures_set.first()
             picture = picture.picture if picture else None
             in_stock = Ture if item.product.stock > item.quantity else False
+            tmp_item = {
+                "quantity": item.quantity,
+                "picture": picture,
+                "name": item.product.name,
+                "id": item.id,
+                "price": item.product.price,
+                "in_stock": in_stock,
+            }
         context[""] = 
         return context
     
