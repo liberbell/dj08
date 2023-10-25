@@ -5,6 +5,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import (
     UpdateView, DeleteView, CreateView
 )
+from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
@@ -111,5 +112,11 @@ class CartUpdateView(LoginRequiredMixin, UpdateView):
     template_name = os.path.join("sotres", "update_cart.html")
     form_class = CartUpdateForm
 
+    model = CartItems
+    success_url = reverse_lazy("stores:cart_items")
+
+class CartDeleteView(LoginRequiredMixin, DeleteView):
+    template_name = os.path.join("stores", "delete_cart.html")
+    
     model = CartItems
     success_url = reverse_lazy("stores:cart_items")
