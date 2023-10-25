@@ -12,6 +12,7 @@ from django.http import JsonResponse, Http404
 from .models import (
     Products, Carts, CartItems
 )
+from .forms import CartUpdateForm
 import os
 
 
