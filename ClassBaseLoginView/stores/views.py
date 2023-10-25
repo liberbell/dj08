@@ -1,8 +1,10 @@
-from typing import Any
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.base import TemplateView
+from django.views.generic.edit import (
+    UpdateView, DeleteView, CreateView
+)
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
@@ -105,3 +107,9 @@ class CartItemsView(LoginRequiredMixin, TemplateView):
         context["items"] = items
         return context
     
+class CartUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = os.path.join("sotres", "update_cart.html")
+    form_class = CartUpdateForm
+
+    model = CartItems
+    success_url = reverse_lazy("stores:cart_items")
