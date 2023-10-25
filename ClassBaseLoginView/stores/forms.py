@@ -1,6 +1,7 @@
 from django import forms
 from .models import CartItems
 from django.shortcuts import get_object_or_404
+from django.core.exceptions import ValidationError
 
 class CartUpdateForm(forms.ModelForm):
     quantity = forms.IntegerField(label="stock", min_value=1)
@@ -15,6 +16,6 @@ class CartUpdateForm(forms.ModelForm):
         quantity = cleaned_data.get("quantity")
         id = cleaned_data.get("id")
         cart_item = get_object_or_404(CartItems, pk=id)
-            
-        return data
+        if quantity > cart_item.product.stock:
+            raise ValidationError(f"Over the stock. Input under {cart_item.product.stock}.")
         
