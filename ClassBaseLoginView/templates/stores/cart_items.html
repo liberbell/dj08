@@ -21,6 +21,10 @@
                             Not enough stock. Please reinput quantity.
                         {% endif %}
                     </td>
+                    <td align="right">
+                        <a href="{% url "stores:update_cart" pk=item.id %}" class="btn btn-primary">Update</a>
+                        <a href="{% url "stores:delete_cart" pk=item.id %}" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
