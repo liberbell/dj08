@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<p>{{ object.product.name }} stock: {{ object.product.stock }}</p>
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
