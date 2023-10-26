@@ -110,7 +110,7 @@ class CartItemsView(LoginRequiredMixin, TemplateView):
         return context
     
 class CartUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = os.path.join("sotres", "update_cart.html")
+    template_name = os.path.join("stores", "update_cart.html")
     form_class = CartUpdateForm
 
     model = CartItems
