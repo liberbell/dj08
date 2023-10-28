@@ -29,3 +29,9 @@ class AddressInputForm(forms.ModelForm):
             "zip_code": "Zip Code",
             "prefecture": "Prefecture",
         }
+
+    def save(self):
+        address = super().save(commit=False)
+        address.user = self.user
+        address.save()
+        return address 
