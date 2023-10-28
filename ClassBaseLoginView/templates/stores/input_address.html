@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="col-10 offset11">
+<div class="col-10 offset-1">
 <h2>Input your address</h2>
 <hr>
-    <form action="POST">
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Input address">
