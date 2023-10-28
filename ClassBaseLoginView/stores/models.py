@@ -64,7 +64,7 @@ class CartItemsManager(models.Manager):
         c.save()
 
 class CartItems(models.Model):
-    quantity = models.PositiveBigIntegerField()
+    quantity = models.PositiveIntegerField()
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     cart = models.ForeignKey(Carts, on_delete=models.CASCADE)
 
