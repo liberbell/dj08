@@ -1,5 +1,5 @@
 from django import forms
-from .models import CartItems
+from .models import CartItems, Addresses
 from django.shortcuts import get_object_or_404
 from django.core.exceptions import ValidationError
 
@@ -21,3 +21,6 @@ class CartUpdateForm(forms.ModelForm):
         
 class AddressInputForm(forms.ModelForm):
     address = forms.CharField(label="Address", widget=forms.TextInput(attrs={"size":"80"}))
+
+    class Meta:
+        model = Addresses
