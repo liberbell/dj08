@@ -123,5 +123,5 @@ class OrderItems(models.Model):
     )
 
     class Meta:
-        db_table = "orders"
+        db_table = "order_items"
         unique_together = [["product", "order"]]
