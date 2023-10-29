@@ -2,6 +2,7 @@ from django import forms
 from .models import CartItems, Addresses
 from django.shortcuts import get_object_or_404
 from django.core.exceptions import ValidationError
+from django.core.cache import cache
 
 class CartUpdateForm(forms.ModelForm):
     quantity = forms.IntegerField(label="stock", min_value=1)
@@ -34,4 +35,5 @@ class AddressInputForm(forms.ModelForm):
         address = super().save(commit=False)
         address.user = self.user
         address.save()
-        return address 
+        cache.set(f"address_user_{self.user.id}", address)
+        return address
