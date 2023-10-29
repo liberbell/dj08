@@ -1,3 +1,4 @@
+from typing import Any
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -13,6 +14,7 @@ from .models import (
     Products, Carts, CartItems
 )
 from .forms import CartUpdateForm, AddressInputForm
+from django.core.cache import cache
 import os
 
 
@@ -132,6 +134,15 @@ class InputAddressView(LoginRequiredMixin, CreateView):
         if not cart.cartitems_set.all():
             raise Http404("no items in the cart.")
         return super().get(request)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        address = cache.get(f"address_user_{self.request.user.id}")
+        if address:
+            context["form"].fields["zip_code"] = address.zip_code
+            context["form"].fields["prefecture"] = address.prefecture
+            context["form"].fields["address"] = address.address
+        return super().get_context_data(**kwargs)
     
     def form_valid(self, form):
         form.user = self.request.user
