@@ -129,15 +129,16 @@ class InputAddressView(LoginRequiredMixin, CreateView):
     form_class = AddressInputForm
     success_url = reverse_lazy("stores:cart_items")
 
-    def get(self, request):
+    def get(self, request, pk=None):
         cart = get_object_or_404(Carts, user_id=request.user.id)
         if not cart.cartitems_set.all():
             raise Http404("no items in the cart.")
-        return super().get(request)
+        return super().get(request, pk)
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         address = cache.get(f"address_user_{self.request.user.id}")
+        pk = self.kwargs.get("pk")
         if address:
             context["form"].fields["zip_code"].initial = address.zip_code
             context["form"].fields["prefecture"].initial = address.prefecture
