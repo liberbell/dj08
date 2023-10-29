@@ -121,3 +121,7 @@ class OrderItems(models.Model):
         blank=True,
         null=True,
     )
+
+    class Meta:
+        db_table = "orders"
+        unique_together = [["product", "order"]]
