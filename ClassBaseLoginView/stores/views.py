@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
 from .models import (
-    Products, Carts, CartItems
+    Products, Carts, CartItems, Addresses
 )
 from .forms import CartUpdateForm, AddressInputForm
 from django.core.cache import cache
@@ -142,6 +142,7 @@ class InputAddressView(LoginRequiredMixin, CreateView):
             context["form"].fields["zip_code"].initial = address.zip_code
             context["form"].fields["prefecture"].initial = address.prefecture
             context["form"].fields["address"].initial = address.address
+        context["addresses"] = Addresses.objects.filter(user=self.request.user)
         return context
     
     def form_valid(self, form):
