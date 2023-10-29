@@ -135,5 +135,5 @@ class InputAddressView(LoginRequiredMixin, CreateView):
     
     def form_valid(self, form):
         form.user = self.request.user
-        return super().form_invalid(form)
+        return super().form_valid(form)
         
