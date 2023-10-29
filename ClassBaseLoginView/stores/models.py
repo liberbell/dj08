@@ -88,3 +88,19 @@ class Addresses(models.Model):
 
     def __str__(self):
         return f"{self.zip_code} {self.prefecture} {self.address}"
+    
+class Orders(models.Model):
+    total_price = models.PositiveIntegerField()
+    address = models.ForeignKey(
+        Addresses,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True)
+    user = models.ForeignKey(
+        Users,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
+
+    class Meta:
