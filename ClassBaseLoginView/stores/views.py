@@ -142,7 +142,7 @@ class InputAddressView(LoginRequiredMixin, CreateView):
             context["form"].fields["zip_code"] = address.zip_code
             context["form"].fields["prefecture"] = address.prefecture
             context["form"].fields["address"] = address.address
-        return super().get_context_data(**kwargs)
+        return context
     
     def form_valid(self, form):
         form.user = self.request.user
