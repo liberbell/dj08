@@ -95,7 +95,8 @@ class Orders(models.Model):
         Addresses,
         on_delete=models.SET_NULL,
         blank=True,
-        null=True)
+        null=True,
+    )
     user = models.ForeignKey(
         Users,
         on_delete=models.SET_NULL,
@@ -108,3 +109,9 @@ class Orders(models.Model):
 
 class OrderItems(models.Model):
     quantity = models.PositiveIntegerField()
+    product = models.ForeignKey(
+        Products,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True
+    )
