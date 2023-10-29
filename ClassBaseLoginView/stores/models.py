@@ -115,3 +115,9 @@ class OrderItems(models.Model):
         blank=True,
         null=True
     )
+    order = models.ForeignKey(
+        Orders,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+    )
