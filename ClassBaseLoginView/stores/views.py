@@ -139,6 +139,7 @@ class InputAddressView(LoginRequiredMixin, CreateView):
         context = super().get_context_data(**kwargs)
         address = cache.get(f"address_user_{self.request.user.id}")
         pk = self.kwargs.get("pk")
+        address = get_object_or_404(Addresses, user_id=self.request.user.id, pk=pk) if pk else address
         if address:
             context["form"].fields["zip_code"].initial = address.zip_code
             context["form"].fields["prefecture"].initial = address.prefecture
