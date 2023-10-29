@@ -37,6 +37,7 @@ class AddressInputForm(forms.ModelForm):
         try:
             address.validate_unique()
             address.save()
-        except:
-            cache.set(f"address_user_{self.user.id}", address)
+        except ValidationError as e:
+            pass
+        cache.set(f"address_user_{self.user.id}", address)
         return address
