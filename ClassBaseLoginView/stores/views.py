@@ -150,4 +150,11 @@ class InputAddressView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.user = self.request.user
         return super().form_valid(form)
-        
+
+class ConfirmOrderView(TemplateView, LoginRequiredMixin):
+    template_name = os.path.join("stores", "confirm_order.html")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        address = cache.get(f"address_user_{ self.request.user.id}")
+        return context
