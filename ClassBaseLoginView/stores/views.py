@@ -162,4 +162,6 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         context["cart"] = cart
         total_price = 0
         for item in cart.cartitems_set.all():
+            total_price += item.quantity * item.product.price
+            picture = item.product.productpictures_set.first()
         return context
