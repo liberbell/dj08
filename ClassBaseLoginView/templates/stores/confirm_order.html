@@ -15,8 +15,15 @@
                     <img width:"75px" height="75px" src="{{ item.picture.url }}" alt="">
                 {% endif %}
             </td>
+            <td style="width: 20%;">
+                {{ item.name}}<br>${{ item.price }}
+            </td>
+            <td align="right">
+                {{ item.quantity }}
+            </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+<hr>
 {% endblock content %}
