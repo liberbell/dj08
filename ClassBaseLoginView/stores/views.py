@@ -161,7 +161,18 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         cart = get_object_or_404(Carts, user_id=self.request.user.id)
         context["cart"] = cart
         total_price = 0
+        items = []
         for item in cart.cartitems_set.all():
             total_price += item.quantity * item.product.price
             picture = item.product.productpictures_set.first()
+            picture = picture.picture if picture else None
+            temp_item = {
+                "quantity": item.quantity,
+                "picture": picture,
+                "name": item.product.name,
+                "price": item.product.price,
+                "id": item.id
+            }
+            items.append(temp_item)
+        context["total_price"] = total_price
         return context
