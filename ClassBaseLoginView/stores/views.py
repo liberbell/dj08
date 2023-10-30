@@ -175,4 +175,5 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
             }
             items.append(temp_item)
         context["total_price"] = total_price
+        context["items"] = items
         return context
