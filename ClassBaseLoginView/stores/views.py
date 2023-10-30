@@ -157,4 +157,9 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         address = cache.get(f"address_user_{ self.request.user.id}")
+        context["address"] = address
+        cart = get_object_or_404(Carts, user_id=self.request.user.id)
+        context["cart"] = cart
+        total_price = 0
+        for item in cart.cartitems_set.all():
         return context
