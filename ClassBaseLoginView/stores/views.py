@@ -183,8 +183,8 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         address = context.get("address")
         cart = context.get("cart")
         total_price = context.get("total_price")
-        if (not address) or (not cart):
-            raise Http404("Not found your order")
+        if (not address) or (not cart) or (not total_price):
+            raise Http404("Error occured in your order")
         for item in cart.cartitems_set.all():
             if item.quantity > item.product.stock:
                 raise Http404("Over the stock")
