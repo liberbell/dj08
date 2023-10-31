@@ -190,3 +190,4 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
                 raise Http404("Over the stock")
         order = Orders.objects.insert_cart(cart, address, total_price)
         OrderItems.insert_cart_items(cart, order)
+        Products.objects.reduce_stock(cart)
