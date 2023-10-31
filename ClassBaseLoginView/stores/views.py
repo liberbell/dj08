@@ -177,3 +177,10 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         context["total_price"] = total_price
         context["items"] = items
         return context
+    
+    def post(self, request, *args, **kwargs):
+        context = self.get_context_data()
+        address = context.get(address)
+        cart = context.get(cart)
+        if (not address) or (not cart):
+            raise Http404("Not found")
