@@ -141,6 +141,7 @@ class OrderItems(models.Model):
         blank=True,
         null=True,
     )
+    objects = OrderItemsManager()
 
     class Meta:
         db_table = "order_items"
