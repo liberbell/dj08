@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
 from .models import (
-    Products, Carts, CartItems, Addresses
+    Products, Carts, CartItems, Addresses, Orders
 )
 from .forms import CartUpdateForm, AddressInputForm
 from django.core.cache import cache
@@ -180,10 +180,11 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
     
     def post(self, request, *args, **kwargs):
         context = self.get_context_data()
-        address = context.get(address)
-        cart = context.get(cart)
+        address = context.get("address")
+        cart = context["cart"]
         if (not address) or (not cart):
             raise Http404("Not found your order")
         for item in cart.cartitems_set.all():
             if item.quantity > item.product.stock:
                 raise Http404("Over the stock")
+        order = Orders.objects.insert_cart(cart, address, total_price)
