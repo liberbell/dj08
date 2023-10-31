@@ -89,6 +89,15 @@ class Addresses(models.Model):
     def __str__(self):
         return f"{self.zip_code} {self.prefecture} {self.address}"
     
+class OrdersManager(models.Manager):
+
+    def insert_cart(self, cart: Carts, address, total_price):
+        return self.create(
+            total_price = total_price,
+            address = address,
+            user = cart.user
+        )
+    
 class Orders(models.Model):
     total_price = models.PositiveIntegerField()
     address = models.ForeignKey(
