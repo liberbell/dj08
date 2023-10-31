@@ -117,6 +117,16 @@ class Orders(models.Model):
     class Meta:
         db_table = "orders"
 
+class OrderItemsManager(models.Manager):
+
+    def insert_cart_items(self, cart, order):
+        for item in cart.cartitems_set.all():
+            self.create(
+                quantity=item.quantity,
+                product=item.product,
+                order=order,
+            )
+
 class OrderItems(models.Model):
     quantity = models.PositiveIntegerField()
     product = models.ForeignKey(
