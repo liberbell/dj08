@@ -112,6 +112,7 @@ class Orders(models.Model):
         blank=True,
         null=True,
     )
+    objects = OrdersManager()
 
     class Meta:
         db_table = "orders"

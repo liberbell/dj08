@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
 from .models import (
-    Products, Carts, CartItems, Addresses, Orders
+    Products, Carts, CartItems, Addresses, Orders, OrderItems
 )
 from .forms import CartUpdateForm, AddressInputForm
 from django.core.cache import cache
@@ -189,3 +189,4 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
             if item.quantity > item.product.stock:
                 raise Http404("Over the stock")
         order = Orders.objects.insert_cart(cart, address, total_price)
+        OrderItems.insert_cart_items(cart, order)
