@@ -20,6 +20,12 @@ class Manufacturers(models.Model):
         def __str__(self):
             return self.name
         
+class ProductsManager(models.Manager):
+
+    def reduce_stock(self, cart):
+        for item in cart.cartitems_set.all():
+            update_stock = item.product.stock - item.quantity
+        
 class Products(models.Model):
     name = models.CharField(max_length=1000)
     price = models.IntegerField()
