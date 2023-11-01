@@ -191,4 +191,7 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         OrderItems.insert_cart_items(cart, order)
         Products.objects.reduce_stock(cart)
         cart.delete()
-        return redirect(reverse_lazy("stores:order_succses"))
+        return redirect(reverse_lazy("stores:order_success"))
+    
+class OrderSuccessView(LoginRequiredMixin, TemplateView):
+    template_name = os.path.join("stores", "order_success.html")
