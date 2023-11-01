@@ -1,5 +1,4 @@
-from typing import Any
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.base import TemplateView
@@ -192,3 +191,4 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         OrderItems.insert_cart_items(cart, order)
         Products.objects.reduce_stock(cart)
         cart.delete()
+        return redirect(reverse_lazy("stores:order_succses"))
