@@ -25,7 +25,7 @@ class ProductsManager(models.Manager):
     def reduce_stock(self, cart):
         for item in cart.cartitems_set.all():
             update_stock = item.product.stock - item.quantity
-            item.prodcut.stock = update_stock
+            item.product.stock = update_stock
             item.product.save()
         
 class Products(models.Model):
