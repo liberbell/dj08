@@ -191,3 +191,4 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         order = Orders.objects.insert_cart(cart, address, total_price)
         OrderItems.insert_cart_items(cart, order)
         Products.objects.reduce_stock(cart)
+        cart.delete()
