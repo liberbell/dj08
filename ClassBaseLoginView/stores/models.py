@@ -26,7 +26,7 @@ class ProductsManager(models.Manager):
         for item in cart.cartitems_set.all():
             update_stock = item.product.stock - item.quantity
             item.prodcut.stock = update_stock
-            item.save()
+            item.product.save()
         
 class Products(models.Model):
     name = models.CharField(max_length=1000)
@@ -38,6 +38,7 @@ class Products(models.Model):
     manufacturer = models.ForeignKey(
         Manufacturers, on_delete=models.CASCADE
     )
+    objects = ProductsManager()
 
     class Meta:
         db_table = 'products'
