@@ -14,6 +14,7 @@ from .models import (
 )
 from .forms import CartUpdateForm, AddressInputForm
 from django.core.cache import cache
+from django.db import transaction
 import os
 
 
@@ -177,6 +178,7 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
         context["items"] = items
         return context
     
+    @transaction.atomic
     def post(self, request, *args, **kwargs):
         context = self.get_context_data()
         address = context.get("address")
@@ -189,7 +191,7 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
                 raise Http404("Over the stock")
         order = Orders.objects.insert_cart(cart, address, total_price)
         OrderItems.objects.insert_cart_items(cart, order)
-        Products.objects.reduce_stock(cart)
+        Products.objects.reduce_stoc(cart)
         cart.delete()
         return redirect(reverse_lazy("stores:order_success"))
     
