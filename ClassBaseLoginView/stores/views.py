@@ -191,7 +191,7 @@ class ConfirmOrderView(TemplateView, LoginRequiredMixin):
                 raise Http404("Over the stock")
         order = Orders.objects.insert_cart(cart, address, total_price)
         OrderItems.objects.insert_cart_items(cart, order)
-        Products.objects.reduce_stoc(cart)
+        Products.objects.reduce_stock(cart)
         cart.delete()
         return redirect(reverse_lazy("stores:order_success"))
     
