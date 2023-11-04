@@ -13,4 +13,4 @@ class Command(BaseCommand):
         name = options["name"]
         age = options["age"]
         birthday = options["birthday"]
-        print(f"name = {name}, age = {age}", birthday = {birthday})
+        print(f"name = {name}, age = {age}, birthday = {birthday}")
