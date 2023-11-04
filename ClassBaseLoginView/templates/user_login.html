@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load socialaccounts %}
 {% block content %}
 <form action="" method="POST">
     {% csrf_token %}
@@ -7,4 +7,5 @@
     <input type="hidden" name="next" value="{{ request.GET.next }}">
     <input type="submit" value="Login">
 </form>
+<a href="{% provider_login_url "google" %}">Google login</a>
 {% endblock content %}
