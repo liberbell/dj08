@@ -11,3 +11,4 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         name = options["name"]
         age = options["age"]
+        print(f"name = {name} age = {age}")
