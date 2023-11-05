@@ -2,9 +2,10 @@ from django.core.management.base import BaseCommand, CommandParser
 
 
 class Command(BaseCommand):
+    HELP = "Print help information"
 
     def add_arguments(self, parser):
-        parser.add_argument("name", type=str)
+        parser.add_argument("name", type=str, help="Name")
         parser.add_argument("age", type=int)
         parser.add_argument("--birthday")
         return super().add_arguments(parser)
