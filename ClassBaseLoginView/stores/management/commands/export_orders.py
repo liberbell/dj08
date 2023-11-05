@@ -14,5 +14,12 @@ class Command(BaseCommand):
             field_name = ["id", "user", "address", "total_price"]
             writer = csv.DictWriter(csv_file, fieldnames=field_name)
             writer.writeheader()
+            for order in orders:
+                writer.writerow({
+                    "id": order.id,
+                    "user": order.user,
+                    "address": order.address,
+                    "total_price": order.total_price
+                })
 
         return super().handle(*args, **options)
