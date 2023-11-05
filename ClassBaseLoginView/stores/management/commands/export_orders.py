@@ -9,13 +9,14 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("--user_id", default="all")
-        return super().add_arguments(parser)
 
     def handle(self, *args, **options):
         orders = Orders.objects.all()
         user_id = options["user_id"]
         if user_id == "all":
             orders = orders.all()
+        else:
+            orders = orders.filter(user_id=user_id)
         file_path = os.path.join(BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime('%Y%m%d%H%M%S')}")
         with open(file_path, mode="w", newline="\n", encoding="utf-8") as csv_file:
             field_name = ["id", "user", "address", "total_price"]
