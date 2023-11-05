@@ -17,7 +17,8 @@ class Command(BaseCommand):
             orders = orders.all()
         else:
             orders = orders.filter(user_id=user_id)
-        file_path = os.path.join(BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime('%Y%m%d%H%M%S')}")
+        file_path = os.path.join(
+            BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime('%Y%m%d%H%M%S')}_{user_id}")
         with open(file_path, mode="w", newline="\n", encoding="utf-8") as csv_file:
             field_name = ["id", "user", "address", "total_price"]
             writer = csv.DictWriter(csv_file, fieldnames=field_name)
