@@ -10,7 +10,7 @@ class Command(BaseCommand):
         parser.add_argument("--birthday", default="2023-01-01")
         parser.add_argument("three_words", nargs=3)
         parser.add_argument("--active", action="store_true")
-        parser.add_argument("--color", choices=["Blue", "Red", "Yello"])
+        parser.add_argument("--color", choices=["Blue", "Red", "Yellow"])
         return super().add_arguments(parser)
     
     def handle(self, *args, **options):
