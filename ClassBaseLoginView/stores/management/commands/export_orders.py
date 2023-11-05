@@ -9,6 +9,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         orders = Orders.objects.all()
-        file_path = os.path.join(BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime("%Y%m%d%H%M%S")}")
+        file_path = os.path.join(BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime('%Y%m%d%H%M%S')}")
 
         return super().handle(*args, **options)
