@@ -1,4 +1,4 @@
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandParser
 from stores.models import Orders
 from ecsite_project.settings import BASE_DIR
 import os
@@ -7,8 +7,15 @@ from datetime import datetime
 
 class Command(BaseCommand):
 
+    def add_arguments(self, parser):
+        parser.add_argument("--user_id", default="all")
+        return super().add_arguments(parser)
+
     def handle(self, *args, **options):
         orders = Orders.objects.all()
+        user_id = options["user_id"]
+        if user_id == "all":
+            orders = orders.all()
         file_path = os.path.join(BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime('%Y%m%d%H%M%S')}")
         with open(file_path, mode="w", newline="\n", encoding="utf-8") as csv_file:
             field_name = ["id", "user", "address", "total_price"]
