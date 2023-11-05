@@ -7,7 +7,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument("name", type=str, help="Name")
         parser.add_argument("age", type=int)
-        parser.add_argument("--birthday")
+        parser.add_argument("--birthday", default="2023-01-01")
         return super().add_arguments(parser)
     
     def handle(self, *args, **options):
