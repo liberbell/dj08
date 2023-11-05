@@ -10,5 +10,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         orders = Orders.objects.all()
         file_path = os.path.join(BASE_DIR, "output", "orders", f"orders_{datetime.now().strftime('%Y%m%d%H%M%S')}")
+        with open(file_path, mode="w", newline="\n", encoding="utf-8") as csv_file:
+            field_name = ["id", "user", "address"]
 
         return super().handle(*args, **options)
