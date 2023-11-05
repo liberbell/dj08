@@ -21,5 +21,3 @@ class Command(BaseCommand):
                     "address": order.address,
                     "total_price": order.total_price
                 })
-
-        return super().handle(*args, **options)
