@@ -10,6 +10,7 @@ class Command(BaseCommand):
         parser.add_argument("--birthday", default="2023-01-01")
         parser.add_argument("three_words", nargs=3)
         parser.add_argument("--active", action="store_true")
+        parser.add_argument("--color", choices=["Blue", "Red", "Yello"])
         return super().add_arguments(parser)
     
     def handle(self, *args, **options):
@@ -18,6 +19,13 @@ class Command(BaseCommand):
         birthday = options["birthday"]
         three_words = options["three_words"]
         active = options["active"]
+        color = options["color"]
         print(active)
         print(type(age))
         print(f"name = {name}, age = {age}, birthday = {birthday}, Three words = {three_words}")
+        if color == "Blue":
+            print("BLUE")
+        elif color == "Red":
+            print("RED")
+        else:
+            print("YELLOW")
